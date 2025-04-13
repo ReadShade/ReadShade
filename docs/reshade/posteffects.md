@@ -16,12 +16,12 @@ The following post effects can be disabled in Unreal Engine 4 games:
 
 To disable these effects, follow these steps:
 
-1. **Locate the Engine.ini File**: Head over to `%APPDATA%` or `%LOCALAPPDATA%` and navigate to the game's configuration directory:
+1. **Locate the Engine.ini File:** Head over to `%APPDATA%` or `%LOCALAPPDATA%` and navigate to the game's configuration directory:
 
-    * **Steam**: `"GAME"\Saved\Config\WindowsNoEditor`
-    * **Windows Game Store**: `"GAME"\Saved\Config\WinGDK`
+    * **Steam:** `"GAME"\Saved\Config\WindowsNoEditor`
+    * **Windows Game Store:** `"GAME"\Saved\Config\WinGDK`
 
-2. **Edit the Engine.ini File**: Open the `Engine.ini` file and add the following lines at the bottom:
+2. **Edit the Engine.ini File:** Open the `Engine.ini` file and add the following lines at the bottom:
 
 ```ini
 [SystemSettings]
@@ -33,7 +33,7 @@ r.SceneColorFringe.Max=0
 r.SceneColorFringeQuality=0
 ```
 
-3. **Save and Set to Read-Only**: Save the file and set it to `Read Only` to prevent accidental changes.
+3. **Save and Set to Read-Only:** Save the file and set it to `Read Only` to prevent accidental changes.
 
 ### Notes
 
@@ -42,8 +42,6 @@ r.SceneColorFringeQuality=0
 * For more information on modding the `Engine.ini` file, visit the [PC Gaming Wiki](https://www.pcgamingwiki.com/).
 
 ## Unreal Engine 5
-
-**Note**: Unreal 5 games will be a **case-by-case basis** until we release an addon to disable specific effects.
 
 Unreal Engine 5 games require different settings to disable post effects. The following example is for HellBlade 2:
 
@@ -66,6 +64,10 @@ To remove letterboxing, add the following lines:
 r.NT.AllowAspectRatioHorizontalExtension=0
 r.NT.EnableConstrainAspectRatio=0
 ```
+
+### Note
+
+Unreal 5 games will be a **case-by-case basis** until we release an addon to disable specific effects.
 
 ## Shader Toggler
 

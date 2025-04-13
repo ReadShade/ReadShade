@@ -20,16 +20,16 @@ To fix the DPI scaling issue, follow these simple steps:
 
 ### Step 1: Accessing the Game's Properties
 
-1. **Locate the game's executable file**: Find the `.exe` file associated with the game you want to fix.
-2. **Right-click on the executable file**: Click on the game's executable file with your right mouse button.
-3. **Select Properties**: From the context menu, select the **Properties** option.
+1. **Locate the game's executable file:** Find the `.exe` file associated with the game you want to fix.
+2. **Right-click on the executable file:** Click on the game's executable file with your right mouse button.
+3. **Select Properties:** From the context menu, select the **Properties** option.
 
 ### Step 2: Adjusting the Compatibility Settings
 
-1. **Select the Compatibility tab**: In the Properties window, click on the **Compatibility** tab.
-2. **Click on Change High DPI Settings**: In the Compatibility tab, click on the **Change High DPI Settings** button.
-3. **Override high DPI scaling behavior**: At the bottom of the window, check the box next to **Override high DPI scaling behavior**.
-4. **Select the scaling mode**: Open the pull-down menu and select **Application**.
+1. **Select the Compatibility tab:** In the Properties window, click on the **Compatibility** tab.
+2. **Click on Change High DPI Settings:** In the Compatibility tab, click on the **Change High DPI Settings** button.
+3. **Override high DPI scaling behavior:** At the bottom of the window, check the box next to **Override high DPI scaling behavior**.
+4. **Select the scaling mode:** Open the pull-down menu and select **Application**.
 
 ### Example Screenshot
 

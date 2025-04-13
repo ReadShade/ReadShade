@@ -31,29 +31,29 @@ For a video tutorial, please refer to this [video guide](https://youtu.be/ovXh54
 
 To install ReShade and SuperDepth3D, follow these steps:
 
-1. **Download ReShade**: Download the add-on version of [ReShade](https://reshade.me/#download).
+1. **Download ReShade:** Download the add-on version of [ReShade](https://reshade.me/#download).
 
     ![](images/sr3.png)
 
-2. **Install ReShade**: Install ReShade by running the ReShade.exe.
+2. **Install ReShade:** Install ReShade by running the ReShade.exe.
 
     ![](images/sr4.png)
 
-3. **Select Game Executable**: Select or browse for the game's executable. In this example, we will install it in Forza Horizon 4.
+3. **Select Game Executable:** Select or browse for the game's executable. In this example, we will install it in Forza Horizon 4.
 
     ![](images/sr5.png)
 
 4. Click `Open`.
-5. **Select API**: Select the API and click next.
+5. **Select API:** Select the API and click next.
 
     ![](images/sr6.png)
 
-6. **Select SuperDepth3D**: Select the Depth3D Repo and check `SuperDepth3D.fx`.
+6. **Select SuperDepth3D:** Select the Depth3D Repo and check `SuperDepth3D.fx`.
 
     ![](images/sr7.png)
 
 7. Click `Next`.
-8. **Select 3DGameBridgeProjects Add-on**: Make sure to select the `3DGameBridgeProjects` add-on.
+8. **Select 3DGameBridgeProjects Add-on:** Make sure to select the `3DGameBridgeProjects` add-on.
 
     ![](images/sr9.png)
 
@@ -63,21 +63,21 @@ Click `Next` and then `Finish`.
 
 If you prefer a more manual approach, follow these steps:
 
-1. **Install ReShade**: Install ReShade or inject it into your game, ensuring you use the [add-on version of ReShade](https://reshade.me/#download).
+1. **Install ReShade:** Install ReShade or inject it into your game, ensuring you use the [add-on version of ReShade](https://reshade.me/#download).
 
     ![](images/sr10.png)
 
     If ReShade is already installed, you can skip this step.
 
-2. **Download 3DGameBridge**: Download the latest version of [3DGameBridge](https://github.com/JoeyAnthony/3DGameBridgeProjects/releases).
+2. **Download 3DGameBridge:** Download the latest version of [3DGameBridge](https://github.com/JoeyAnthony/3DGameBridgeProjects/releases).
 
     ![](images/sr11.png)
 
-3. **Copy Add-ons**: Copy both add-ons or just the one you need, based on the game's architecture.
+3. **Copy Add-ons:** Copy both add-ons or just the one you need, based on the game's architecture.
 
     ![](images/sr12.png)
 
-4. **Paste Add-ons**: Paste the add-ons where the game's executable is located or where the ReShade `.dll` is installed.
+4. **Paste Add-ons:** Paste the add-ons where the game's executable is located or where the ReShade `.dll` is installed.
 
     ![](images/sr13.png)
 

@@ -13,13 +13,13 @@ To access the display settings, navigate to the menu shown below.
 
 ![](images/PCSX2/PCSX2_Settings00.png)
 
-1. **Fullscreen Mode & Aspect Ratio**: Set the aspect ratio to "Fit to Window" as shown below.
+1. **Fullscreen Mode & Aspect Ratio:** Set the aspect ratio to "Fit to Window" as shown below.
 
     ![](images/PCSX2/PCSX2_Fullscreen_AR.png)
 
     > This is necessary because the depth buffer is set to this internally.
 
-2. **Anti-Blur**: Enable this option to minimize distortions.
+2. **Anti-Blur:** Enable this option to minimize distortions.
 
     ![](images/PCSX2/PCSX2_Anti-Blur.png)
 
@@ -33,13 +33,13 @@ To access the rendering settings, navigate to the menu shown below.
 
 ![](images/PCSX2/PCSX2_Settings01.png)
 
-1. **Rendering**: Set the rendering to "Direct3D 11" as shown below.
+1. **Rendering:** Set the rendering to "Direct3D 11" as shown below.
 
     ![](images/PCSX2/PCSX2_Renderer.png)
 
     > This ensures compatibility with most of ReShade's add-ons.
 
-2. **Internal Resolution**: Set the internal resolution to "Native" for most cases.
+2. **Internal Resolution:** Set the internal resolution to "Native" for most cases.
 
     ![](images/PCSX2/PCSX2_Rendering.png)
 
