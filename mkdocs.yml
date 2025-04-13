@@ -43,6 +43,7 @@ nav:
     - reshade/windpi.md
     - reshade/dlssframegen.md
     - reshade/posteffects.md
+    - reshade/laa.md
   - Add-Ons:
     - addons/index.md
     - addons/shadertoggler.md
