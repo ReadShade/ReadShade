@@ -53,6 +53,7 @@ To disable DLSS Frame Generation for a specific game, follow these steps:
 ## Example Screenshot
 
 Here's an example screenshot of the game with DLSS Frame Generation disabled:
+
 ![](images/dlssfg/dlssfg6.png)
 
 ## Conclusion
