@@ -23,7 +23,6 @@ Acknowledgements & Contributors
 .. toctree::
    :glob:
    :hidden:
-   :maxdepth: 2
 
    reshade/index
    */index
