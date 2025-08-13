@@ -25,4 +25,5 @@ Acknowledgements & Contributors
    :hidden:
    :maxdepth: 2
 
+   reshade/index
    */index
