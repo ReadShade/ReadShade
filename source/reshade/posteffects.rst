@@ -5,12 +5,12 @@ Disabling Post Effects on Unreal Engine
 Introduction
 ------------
 
-This guide provides instructions on how to delete or disable post effects on Unreal Engine 4 and Unreal Engine 5 games. The steps outlined in this guide can help improve performance and reduce visual issues.
+This guide explains how to remove or turn off post effects in games made with Unreal Engine 4 and 5. Doing this can make your games run better and look cleaner.
 
 Unreal Engine 4
 ---------------
 
-The following post effects can be disabled in Unreal Engine 4 games:
+You can turn off these post effects in Unreal Engine 4 games:
 
 - Motion Blur
 - Depth of Field
@@ -19,14 +19,14 @@ The following post effects can be disabled in Unreal Engine 4 games:
 Phase 1: Editing the Engine.ini File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To disable these effects, follow these steps:
+To turn off these effects, follow these steps:
 
-#. **Locate the Engine.ini File:** Head over to :file:`%APPDATA%` or :file:`%LOCALAPPDATA%` and navigate to the game's configuration directory:
+#. **Locate the Engine.ini File:** Go to :file:`%APPDATA%` or :file:`%LOCALAPPDATA%` and find your game's configuration folder:
 
    - **Steam:** :file:`"GAME"/Saved/Config/WindowsNoEditor`
    - **Windows Game Store:** :file:`"GAME"/Saved/Config/WinGDK`
 
-#. **Edit the Engine.ini File:** Open the :file:`Engine.ini` file and add the following lines at the bottom:
+#. **Edit the Engine.ini File:** Open the :file:`Engine.ini` file and add these lines at the very end:
 
    .. code-block:: ini
 
@@ -38,19 +38,19 @@ To disable these effects, follow these steps:
       r.SceneColorFringe.Max=0
       r.SceneColorFringeQuality=0
 
-#. **Save and Set to Read-Only:** Save the file and set it to `Read Only` to prevent accidental changes.
+#. **Save and Set to Read-Only:** Save the file, then set it to `Read Only` so it can't be changed by accident.
 
 .. admonition:: Notes
    :class: note
 
-   - Keep in mind that changing settings in-game may require a restart to apply the changes made to the :file:`Engine.ini` file.
-   - This method may not work in every instance, and results may vary.
-   - For more information on modding the :file:`Engine.ini` file, visit the `PC Gaming Wiki <https://www.pcgamingwiki.com/>`_.
+   - Remember that changing settings in-game might need a restart to apply the changes you made to the :file:`Engine.ini` file.
+   - This method might not always work, and results can be different.
+   - For more details on changing the :file:`Engine.ini` file, visit the `PC Gaming Wiki <https://www.pcgamingwiki.com/>`_.
 
 Unreal Engine 5
 ---------------
 
-Unreal Engine 5 games require different settings to disable post effects. The following example is for HellBlade 2:
+Unreal Engine 5 games need different settings to turn off post effects. Here's an example for HellBlade 2:
 
 .. code-block:: ini
 
@@ -65,7 +65,7 @@ Unreal Engine 5 games require different settings to disable post effects. The fo
    r.NT.DOF.NTBokehTransform=0
    r.FilmGrain=0
 
-To remove letterboxing, add the following lines:
+To get rid of letterboxing, add these lines:
 
 .. code-block:: ini
 
@@ -74,14 +74,14 @@ To remove letterboxing, add the following lines:
 
 .. note::
 
-   Unreal 5 games will be a **case-by-case basis** until we release an addon to disable specific effects.
+   For Unreal 5 games, you'll need to figure out the settings **case-by-case** until we release an add-on to turn off specific effects.
 
 Shader Toggler
 --------------
 
-The Shader Toggler is a free ReShade add-on that can disable certain effects that may cause issues with Depth3D. You can learn more about it in our `ReShade guide <../reshade/reshadeversions>`_.
+The Shader Toggler is a free ReShade add-on that can turn off certain effects that might cause problems with Depth3D. You can find out more about it in our `ReShade guide <../reshade/reshadeversions>`_.
 
 Upcoming Content
 ----------------
 
-A video guide on deleting post effects on Unreal Engine is coming soon. Stay tuned for more updates and tutorials! 📹
+A video guide on how to remove post effects in Unreal Engine is coming soon. Keep an eye out for more updates and tutorials! 📹

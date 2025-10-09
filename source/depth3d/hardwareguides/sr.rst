@@ -2,7 +2,7 @@
 Simulated Reality Displays
 ==========================
 
-Simulated Reality (SR) Displays, formerly known as Dimenco, are now backed by Leia Inc. This guide will help you get SuperDepth3D working on hardware with SR technology.
+Simulated Reality (SR) Displays, once called Dimenco, are now supported by Leia Inc. This guide will help you use SuperDepth3D with hardware that uses SR technology.
 
 .. rubric:: Main Website
 
@@ -23,9 +23,9 @@ Simulated Reality (SR) Displays, formerly known as Dimenco, are now backed by Le
 Getting Started with SuperDepth3D
 ---------------------------------
 
-To use SuperDepth3D with SR Displays, you can follow either the easy text guide or the manual guide.
+To use SuperDepth3D with SR Displays, you can follow either the simple text guide or the manual guide below.
 
-For a video tutorial, please refer to this `video guide <https://youtu.be/ovXh54DkKbU>`_.
+For a video tutorial, watch this `video guide <https://youtu.be/ovXh54DkKbU>`_.
 
 .. figure:: images/sr2.png
 
@@ -35,43 +35,43 @@ For a video tutorial, please refer to this `video guide <https://youtu.be/ovXh54
 Easy Text Guide
 ---------------
 
-To install ReShade and SuperDepth3D, follow these steps:
+To install ReShade and SuperDepth3D easily, follow these steps:
 
-#. **Download ReShade:** Download the add-on version of `ReShade <https://reshade.me/#download>`_.
+#. **Download ReShade:** Get the add-on version of `ReShade <https://reshade.me/#download>`_.
 
    .. figure:: images/sr3.png
 
       ReShade download page screenshot.
 
-#. **Install ReShade:** Install ReShade by running the ReShade.exe.
+#. **Install ReShade:** Run the ReShade.exe file to install it.
 
    .. figure:: images/sr4.png
 
       ReShade installer screenshot.
 
-#. **Select Game Executable:** Select or browse for the game's executable. In this example, we will install it in Forza Horizon 4.
+#. **Select Game Executable:** Choose or find your game's main file (executable). For example, we'll use Forza Horizon 4.
 
    .. figure:: images/sr5.png
 
       ReShade installer game selection screenshot.
 
-#. **Click Open:** Click the :guilabel:`Open` button.
+#. **Click Open:** Press the :guilabel:`Open` button.
 
-#. **Select API:** Select the API and click :guilabel:`Next`.
+#. **Select API:** Choose the API (like DirectX 11 or OpenGL) and click :guilabel:`Next`.
 
    .. figure:: images/sr6.png
 
       ReShade installer API selection screenshot.
 
-#. **Select SuperDepth3D:** Select the Depth3D Repo and check :file:`SuperDepth3D.fx`.
+#. **Select SuperDepth3D:** From the Depth3D Repository, check the box next to :file:`SuperDepth3D.fx`.
 
    .. figure:: images/sr7.png
 
       ReShade installer shader selection screenshot.
 
-#. **Click Next:** Click the :guilabel:`Next` button.
+#. **Click Next:** Press the :guilabel:`Next` button.
 
-#. **Select 3DGameBridgeProjects Add-on:** Make sure to select the :guilabel:`3DGameBridgeProjects` add-on.
+#. **Select 3DGameBridgeProjects Add-on:** Make sure to choose the :guilabel:`3DGameBridgeProjects` add-on.
 
    .. figure:: images/sr9.png
 
@@ -82,9 +82,9 @@ To install ReShade and SuperDepth3D, follow these steps:
 Manual Guide
 ------------
 
-If you prefer a more manual approach, follow these steps:
+If you prefer to install things yourself, follow these steps:
 
-#. **Install ReShade:** Install ReShade or inject it into your game, ensuring you use the `add-on version of ReShade <https://reshade.me/#download>`_.
+#. **Install ReShade:** Install ReShade or add it to your game. Make sure you use the `add-on version of ReShade <https://reshade.me/#download>`_.
 
    .. figure:: images/sr10.png
 
@@ -92,36 +92,36 @@ If you prefer a more manual approach, follow these steps:
 
    If ReShade is already installed, you can skip this step.
 
-#. **Download 3DGameBridge:** Download the latest version of `3DGameBridge <https://github.com/JoeyAnthony/3DGameBridgeProjects/releases>`_.
+#. **Download 3DGameBridge:** Get the newest version of `3DGameBridge <https://github.com/JoeyAnthony/3DGameBridgeProjects/releases>`_.
 
    .. figure:: images/sr11.png
 
       3DGameBridge GitHub page screenshot.
 
-#. **Copy Add-ons:** Copy both add-ons or just the one you need, based on the game's architecture.
+#. **Copy Add-ons:** Copy both add-ons, or just the one you need, depending on your game's setup.
 
    .. figure:: images/sr12.png
 
       Screenshot of the add-on files.
 
-#. **Paste Add-ons:** Paste the add-ons where the game's executable is located or where the ReShade `.dll` is installed.
+#. **Paste Add-ons:** Put the add-ons in the same folder as your game's executable file or where ReShade's `.dll` file is installed.
 
    .. figure:: images/sr13.png
 
       Screenshot of the game folder with the add-ons.
 
-   Please start the game to see if it works.
+   Start the game to check if it works.
 
 Important Notes
 ---------------
 
-When starting the game, you may need to set your primary monitor to the Simulated Reality Display. If not, the game may not select the correct screen, resulting in a black screen.
+When you start the game, you might need to set your main monitor to the Simulated Reality Display. If you don't, the game might not pick the right screen, and you'll see a black screen.
 
 .. figure:: images/sr14.png
 
    Screenshot of monitor settings.
 
-Additionally, ensure the game is running at its native resolution for the 3D display. If the resolution is too small, the image may appear distorted.
+Also, make sure the game runs at the correct resolution for your 3D display. If the resolution is too low, the image might look stretched or blurry.
 
 .. figure:: images/sr15.png
 

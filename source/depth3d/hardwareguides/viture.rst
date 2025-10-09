@@ -2,7 +2,7 @@
 VITURE
 ======
 
-VITURE is a leading brand in the AR glasses market, offering a unique gaming experience. This guide is designed to help you set up your VITURE Gen 1 Glasses with SuperDepth3D, depending on your GPU.
+VITURE is a top brand in AR glasses, providing a special gaming experience. This guide will help you set up your VITURE Gen 1 Glasses with SuperDepth3D, based on your graphics card (GPU).
 
 .. figure:: images/viture1.jpg
 
@@ -16,13 +16,13 @@ To use your VITURE AR Glasses with an Intel GPU, follow these steps:
 Initial Steps
 ^^^^^^^^^^^^^
 
-#. **Update your Arc Drivers:** Ensure you have the latest `Arc Drivers <https://www.intel.com/content/www/us/en/products/docs/discrete-gpus/arc/software/drivers.html>`_ installed.
+#. **Update your Arc Drivers:** Make sure you have the newest `Arc Drivers <https://www.intel.com/content/www/us/en/products/docs/discrete-gpus/arc/software/drivers.html>`_ installed.
 
    .. figure:: images/viture2.png
 
       Screenshot of the Intel Arc Drivers page.
 
-#. **Download Intel Graphics Command Center:** Install the `Intel Graphics Command Center <https://apps.microsoft.com/detail/9nmr79ztjftc?rtc=1&hl=en-us&gl=us>`_ beta application.
+#. **Download Intel Graphics Command Center:** Install the beta version of the `Intel Graphics Command Center <https://apps.microsoft.com/detail/9nmr79ztjftc?rtc=1&hl=en-us&gl=us>`_ application.
 
    .. figure:: images/viture3.png
 
@@ -31,9 +31,9 @@ Initial Steps
 Configuring VITURE with Intel GPU
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. **Switch to 3D Mode:** Plug in your VITURE AR Glasses and switch them to 3D Mode by holding down the first button for a few seconds.
+#. **Switch to 3D Mode:** Plug in your VITURE AR Glasses. Hold down the first button for a few seconds to switch them to 3D Mode.
 
-   Under Windows, it should be recognized as a 3840 x 1080p screen:
+   Windows should see it as a 3840 x 1080p screen:
 
    .. figure:: images/viture4.png
 
@@ -41,7 +41,7 @@ Configuring VITURE with Intel GPU
 
       If you see this, it's a good sign.
 
-#. **Launch Intel Graphics Command Center:** Start the Intel Graphics Command Center (BETA).
+#. **Launch Intel Graphics Command Center:** Open the Intel Graphics Command Center (BETA).
 
    .. figure:: images/viture5.png
 
@@ -53,7 +53,7 @@ Configuring VITURE with Intel GPU
 
       Screenshot showing the :guilabel:`Display` option in Intel Graphics Command Center.
 
-#. **Select VITURE Screen:** Click on the :guilabel:`VITURE` screen.
+#. **Select VITURE Screen:** Click on the screen labeled :guilabel:`VITURE`.
 
    .. figure:: images/viture7.png
 
@@ -88,19 +88,19 @@ Setting Up VITURE with NVIDIA GPU
 
 To use your VITURE AR Glasses with an NVIDIA GPU, follow these steps:
 
-#. **Update your NVIDIA Drivers:** Ensure you have the latest `NVIDIA Drivers <https://www.nvidia.com/en-us/drivers/>`_ installed.
+#. **Update your NVIDIA Drivers:** Make sure you have the newest `NVIDIA Drivers <https://www.nvidia.com/en-us/drivers/>`_ installed.
 
    .. figure:: images/viture12.png
 
       Screenshot of the NVIDIA drivers page.
 
-#. **Switch to 3D Mode:** Plug in your VITURE AR Glasses and switch them to 3D Mode by holding down the first button for a few seconds.
+#. **Switch to 3D Mode:** Plug in your VITURE AR Glasses. Hold down the first button for a few seconds to switch them to 3D Mode.
 
    .. figure:: images/viture13.jpg
 
       Image of VITURE glasses showing the button location.
 
-   Under Windows, it should be recognized as a 3840 x 1080p screen:
+   Windows should see it as a 3840 x 1080p screen:
 
    .. figure:: images/viture14.png
 
@@ -108,7 +108,7 @@ To use your VITURE AR Glasses with an NVIDIA GPU, follow these steps:
 
    If you see this, it's a good sign.
 
-#. **Launch NVIDIA Control Panel:** Start the NVIDIA Control Panel.
+#. **Launch NVIDIA Control Panel:** Open the NVIDIA Control Panel.
 
    .. figure:: images/viture15.png
 
@@ -120,7 +120,7 @@ To use your VITURE AR Glasses with an NVIDIA GPU, follow these steps:
 
       Screenshot of the NVIDIA resolution settings.
 
-#. **Adjust Desktop Size and Position:** Go to :guilabel:`Adjust Desktop size and Position`, set it to :guilabel:`Fullscreen`, and the rest should default to the correct values.
+#. **Adjust Desktop Size and Position:** Go to :guilabel:`Adjust Desktop size and Position`. Set it to :guilabel:`Fullscreen`, and the other settings should automatically be correct.
 
    .. figure:: images/viture17.png
 

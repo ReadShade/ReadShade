@@ -5,37 +5,37 @@ Game Windows DPI Settings
 Introduction to DPI Scaling Issues
 ----------------------------------
 
-Have you ever experienced blurry text, images, videos, websites, or games on your Windows system? This issue can also affect the performance and clarity of ReShade and Depth3D. The culprit behind this problem is often related to the Windows DPI \(Dots Per Inch\) settings. In this guide, we will walk you through a step-by-step process to resolve this issue and improve the overall visual quality of your games and applications.
+Do you see blurry text, images, videos, websites, or games on your Windows computer? This problem can also make ReShade and Depth3D look bad or perform poorly. The cause is often related to Windows DPI (Dots Per Inch) settings. This guide will show you how to fix this step-by-step to make your games and apps look better.
 
 Identifying the Problem
 -----------------------
 
-The symptoms of DPI scaling issues can manifest in various ways, including:
+Signs of DPI scaling problems include:
 
 * Blurry or pixelated text and images
-* Distorted or stretched videos and websites
-* Poor game performance and graphics quality
-* ReShade and Depth3D not functioning as expected
+* Videos and websites that look stretched or distorted
+* Games that run poorly or have bad graphics
+* ReShade and Depth3D not working as they should
 
 Resolving DPI Scaling Issues
 ----------------------------
 
-To fix the DPI scaling issue, follow these simple steps:
+To fix DPI scaling problems, follow these easy steps:
 
 Step 1: Accessing the Game's Properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. **Locate the game's executable file:** Find the :file:`.exe` file associated with the game you want to fix.
-#. **Right-click on the executable file:** Click on the game's executable file with your right mouse button.
-#. **Select Properties:** From the context menu, select the :guilabel:`Properties` option.
+#. **Locate the game's executable file:** Find the :file:`.exe` file for the game you want to fix.
+#. **Right-click on the executable file:** Right-click the game's executable file.
+#. **Select Properties:** From the menu that appears, choose the :guilabel:`Properties` option.
 
 Step 2: Adjusting the Compatibility Settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. **Select the Compatibility tab:** In the Properties window, click on the :guilabel:`Compatibility` tab.
-#. **Click on Change High DPI Settings:** In the Compatibility tab, click on the :guilabel:`Change High DPI Settings` button.
+#. **Select the Compatibility tab:** In the Properties window, click the :guilabel:`Compatibility` tab.
+#. **Click on Change High DPI Settings:** In the Compatibility tab, click the :guilabel:`Change High DPI Settings` button.
 #. **Override high DPI scaling behavior:** At the bottom of the window, check the box next to **Override high DPI scaling behavior**.
-#. **Select the scaling mode:** Open the pull-down menu and select :guilabel:`Application`.
+#. **Select the scaling mode:** Open the dropdown menu and choose :guilabel:`Application`.
 
 Example Screenshot
 ------------------
@@ -49,6 +49,6 @@ For reference, here is an example screenshot of the Windows DPI settings window:
 Global DPI Scaling Solution
 ---------------------------
 
-While the above steps provide a solution for individual games, there may be a global way to adjust the DPI settings for all applications. However, the effectiveness of this approach may vary across different versions of the Windows operating system. If you're interested in exploring a global solution, you can search for additional resources and tutorials online.
+While the steps above fix the problem for single games, there might be a way to change DPI settings for all applications at once. However, how well this works can differ depending on your Windows version. If you want to find a global fix, you can search online for more guides and information.
 
-By following these steps, you should be able to resolve the DPI scaling issue and enjoy clearer text, images, and videos in your games and applications.
+By following these steps, you should be able to fix DPI scaling issues and enjoy clearer text, images, and videos in your games and applications.

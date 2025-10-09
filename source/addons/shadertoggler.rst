@@ -9,12 +9,12 @@ For this guide, we will be using a free game called *Mimic Search*, which can be
 Preface
 -------
 
-To get started, you will need to download the ReShade add-on version. You can find more information on this `here <../reshade/reshadeversions.md>`_.
+First, download the ReShade add-on version. You can find more details `here <../reshade/reshadeversions.md>`_.
 
 Requirements
 ------------
 
-To use the Shader Toggler, you will need to download the add-on itself from the `official GitHub repository <https://github.com/FransBouma/ShaderToggler/releases>`_. Make sure to download the correct version for your game.
+To use the Shader Toggler, download the add-on from its `official GitHub page <https://github.com/FransBouma/ShaderToggler/releases>`_. Make sure to get the right version for your game.
 
 .. figure:: shadertoggler/shadertoggler.jpg
 
@@ -23,18 +23,18 @@ To use the Shader Toggler, you will need to download the add-on itself from the 
 Installation
 ------------
 
-Install the game and ReShade with the :file:`ShaderToggler.addon64`. Ensure that all other ReShade shaders are turned off to avoid conflicts.
+Install the game and ReShade along with the :file:`ShaderToggler.addon64`. Turn off all other ReShade shaders to prevent problems.
 
 1. Accessing the Add-on
 -----------------------
 
-Launch the game and access the ReShade menu. Navigate to the :guilabel:`add-on` tab:
+Start the game and open the ReShade menu. Go to the :guilabel:`add-on` tab:
 
 .. figure:: shadertoggler/shadertoggler2.png
 
    Screenshot of the ReShade :guilabel:`add-on` tab.
 
-Minimize other add-ons to make it clearer. Ensure you are in the game and have a problematic effect like Chromatic Aberration visible:
+Close other add-ons to make the view clearer. Make sure you are in the game and can see an effect you want to fix, like Chromatic Aberration:
 
 .. figure:: shadertoggler/shadertoggler3.png
 
@@ -43,7 +43,7 @@ Minimize other add-ons to make it clearer. Ensure you are in the game and have a
 2. Setting Up the Add-on
 ------------------------
 
-Move the ReShade menu to the right and press :guilabel:`New`. The menu will change, and you should click on :guilabel:`Edit`:
+Move the ReShade menu to the right side of your screen. Click :guilabel:`New`. The menu will change, then click :guilabel:`Edit`:
 
 .. figure:: shadertoggler/shadertoggler4.png
 
@@ -56,7 +56,7 @@ Move the ReShade menu to the right and press :guilabel:`New`. The menu will chan
 3. Configuring the Add-on
 -------------------------
 
-Enter a name for the effect, such as "CA 01," in the :guilabel:`Name Box`:
+Type a name for the effect, like "CA 01," into the :guilabel:`Name Box`:
 
 .. figure:: shadertoggler/shadertoggler6.png
 
@@ -65,30 +65,30 @@ Enter a name for the effect, such as "CA 01," in the :guilabel:`Name Box`:
 4. Setting Up a Shortcut
 ------------------------
 
-Set up a shortcut, such as :kbd:`Ctrl+1`, for the first group. Click the :guilabel:`Shortcut Box` and press the shortcut keys, then press :guilabel:`OK`:
+Create a shortcut for the first group, for example, :kbd:`Ctrl+1`. Click the :guilabel:`Shortcut Box`, press your chosen keys, then click :guilabel:`OK`:
 
 .. figure:: shadertoggler/shadertoggler7.png
 
    Screenshot showing the :guilabel:`Shortcut Box` with :kbd:`Ctrl+1` configured.
 
-You can choose to activate the add-on at startup or not. Press :guilabel:`OK` again.
+You can choose if the add-on starts automatically. Click :guilabel:`OK` again.
 
 5. Hunting for Shaders
 ----------------------
 
-Click the :guilabel:`Change shaders` button and let it run for a bit:
+Click the :guilabel:`Change shaders` button and let it run for a short time:
 
 .. figure:: shadertoggler/shadertoggler8.png
 
    Screenshot of the :guilabel:`Change shaders` button being clicked.
 
-The process will look like this:
+The process will first look like this:
 
 .. figure:: shadertoggler/shadertoggler9.png
 
    Screenshot showing the :guilabel:`Hunting for shaders` process in progress.
 
-And then change to this:
+Then it will change to this when finished:
 
 .. figure:: shadertoggler/shadertoggler10.png
 
@@ -97,13 +97,13 @@ And then change to this:
 6. Navigation and Saving
 ------------------------
 
-Use the Num Pad to navigate and save shaders:
+Use the Number Pad keys to move around and save shaders:
 
-* :kbd:`1` & :kbd:`2` Navigation and :kbd:`3` Save for Pixel Shaders
-* :kbd:`4` & :kbd:`5` Navigation and :kbd:`6` Save for Vertex Shaders
-* :kbd:`7` & :kbd:`8` Navigation and :kbd:`9` Save for Compute Shaders
+* :kbd:`1` & :kbd:`2` to move, and :kbd:`3` to save Pixel Shaders
+* :kbd:`4` & :kbd:`5` to move, and :kbd:`6` to save Vertex Shaders
+* :kbd:`7` & :kbd:`8` to move, and :kbd:`9` to save Compute Shaders
 
-In this case, we will use keys :kbd:`1` and :kbd:`2` to hunt for the shader. Once found, save it by pressing 3:
+For this example, use keys :kbd:`1` and :kbd:`2` to find the shader. Once you find it, save it by pressing :kbd:`3`:
 
 .. figure:: shadertoggler/shadertoggler11.png
 
@@ -113,7 +113,7 @@ In this case, we will use keys :kbd:`1` and :kbd:`2` to hunt for the shader. Onc
 
    Screenshot showing the "Save" button being pressed.
 
-Click :guilabel:`Done` and press the shortcut to activate the add-on:
+Click :guilabel:`Done` and then press your shortcut key to turn on the add-on:
 
 .. figure:: shadertoggler/shadertoggler13.png
 
@@ -123,18 +123,18 @@ Click :guilabel:`Done` and press the shortcut to activate the add-on:
 
    In-game screenshot with the Chromatic Aberration effect now disabled.
 
-The shader should now be disabled. Repeat the process for other shaders in the game.
+The shader should now be off. Do this again for any other shaders in the game.
 
 7. Saving Your Progress
 -----------------------
 
-Click the :guilabel:`Save all Toggle Groups` button to save your progress:
+Click the :guilabel:`Save all Toggle Groups` button to save what you've done:
 
 .. figure:: shadertoggler/shadertoggler15.png
 
    Screenshot of the :guilabel:`Save all Toggle Groups` button.
 
-The save file will be located where the game exe/add-on is. Here is an example of what the save file might look like:
+The save file will be in the same folder as the game's executable or the add-on. Here's an example of what the save file might look like:
 
 .. code-block:: ini
 
@@ -159,7 +159,7 @@ The save file will be located where the game exe/add-on is. Here is an example o
 Conclusion
 ----------
 
-With the Shader Toggler, you can now disable or toggle shaders in games. Remember to save your progress and repeat the process for other shaders. Good luck and happy shader hunting!
+Now you know how to use the Shader Toggler to turn off or switch shaders in games. Always remember to save your changes and repeat these steps for other shaders. Happy shader hunting!
 
 Here is an image from in-game with the effect disabled:
 

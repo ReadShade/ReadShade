@@ -3,17 +3,17 @@
 PCSX2
 =====
 
-This guide provides basic adjustments for ReShade and its use in PCSX2: Emulator.
+This guide shows you how to set up ReShade with the PCSX2 emulator.
 
 Introduction to PCSX2 Settings
 ------------------------------
 
-We will be using the DX11 API for this guide due to its compatibility with other add-ons.
+We'll use the DX11 API for this guide because it works well with other add-ons.
 
 Display Settings
 ^^^^^^^^^^^^^^^^
 
-To access the display settings, navigate to the menu shown below.
+To find the display settings, go to the menu shown below.
 
 .. figure:: images/pcsx2/PCSX2_Settings00.png
 
@@ -25,9 +25,9 @@ To access the display settings, navigate to the menu shown below.
 
       Screenshot showing :guilabel:`Fit to Window` aspect ratio selected.
 
-   This is necessary because the depth buffer is set to this internally.
+   This is important because the depth buffer is set this way internally.
 
-#. **Anti-Blur:** Enable this option to minimize distortions.
+#. **Anti-Blur:** Turn on this option to reduce blurry effects.
 
    .. figure:: images/pcsx2/PCSX2_Anti-Blur.png
 
@@ -36,12 +36,12 @@ To access the display settings, navigate to the menu shown below.
 Rendering
 ---------
 
-We will be using the DX11 API for rendering. You can try different APIs as long as you can get a depth buffer output.
+We'll use the DX11 API for rendering. You can try other APIs if they can output a depth buffer.
 
 Rendering Options
 ^^^^^^^^^^^^^^^^^
 
-To access the rendering settings, navigate to the menu shown below.
+To find the rendering settings, go to the menu shown below.
 
 .. figure:: images/pcsx2/PCSX2_Settings01.png
 
@@ -53,28 +53,28 @@ To access the rendering settings, navigate to the menu shown below.
 
       Screenshot showing :guilabel:`Direct3D 11` selected as the renderer.
 
-   This ensures compatibility with most of ReShade's add-ons.
+   This setting works best with most ReShade add-ons.
 
-#. **Internal Resolution:** Set the internal resolution to :guilabel:`Native` for most cases.
+#. **Internal Resolution:** For most games, set the internal resolution to :guilabel:`Native`.
 
    .. figure:: images/pcsx2/PCSX2_Rendering.png
 
       Screenshot showing :guilabel:`Native` resolution selected.
 
-   This also helps with ReShade's generic depth add-on.
+   This also helps ReShade's generic depth add-on work correctly.
 
 Installing and Configuring ReShade
 ----------------------------------
 
 To use ReShade with PCSX2, follow these steps:
 
-#. **Install ReShade:** Install ReShade under your current API setting. You can find the installation guide `here <../reshade/reshadeversions.md>`_.
+#. **Install ReShade:** Install ReShade using your current API setting. You can find the installation guide `here <../reshade/reshadeversions.md>`_.
 
 #. **Turn off the emulator and install ReShade.**
 
-#. **Start your game and go into the ReShade menu.**
+#. **Start your game and open the ReShade menu.**
 
-#. **Check the depth buffer:** Check the depth buffer in the add-ons tab.
+#. **Check the depth buffer:** In the add-ons tab, check the depth buffer.
 
    .. figure:: images/pcsx2/PCSX2_ReShade_Depth_Add-on.png
 
@@ -83,9 +83,9 @@ To use ReShade with PCSX2, follow these steps:
 Additional Information
 ----------------------
 
-Make sure to complete any additional setup, such as configuring games and BIOS, on your end.
+Make sure you finish any other setup, like configuring games and BIOS, on your own.
 
 Conclusion
 ----------
 
-This guide provides a good starting point for using ReShade with PCSX2. However, note that the optimal settings may vary depending on the game.
+This guide gives you a good start for using ReShade with PCSX2. Keep in mind that the best settings might be different for each game.
