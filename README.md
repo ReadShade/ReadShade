@@ -14,4 +14,3 @@ This project utilizes:
 - **[Furo Theme](https://pradyunsg.me/furo/):** The visual theme applied to the documentation.
 - **[Python](https://www.python.org/):** The programming language used for Sphinx.
 - **[pip](https://pip.pypa.io/):** Python package installer for managing dependencies.
-- **Makefile/make.bat:** For building the documentation on Unix-like systems and Windows, respectively.
