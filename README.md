@@ -20,7 +20,7 @@ This project utilizes:
 
 To view the documentation offline or build it locally, follow these steps:
 
-1.  **Download ReadShade:** You have two options to get the project files:
+1. **Download ReadShade:** You have two options to get the project files:
 
     - **Clone the repository (recommended):**
 
@@ -35,21 +35,23 @@ To view the documentation offline or build it locally, follow these steps:
         - Then, select "Download ZIP" or "Download TAR" and extract the contents to your desired location.
         - Navigate into the extracted directory.
 
-2.  **Install Dependencies:**
-    Ensure you have Python and pip installed. Then, install the project dependencies:
+2. **Install Dependencies:** Ensure you have Python and pip installed. Then, install the project dependencies:
+
     ```bash
     pip install -r requirements.txt
     ```
 
-3.  **Build Documentation:**
-    *   **On Unix-like systems (Linux, macOS):**
+3. **Build Documentation:**
+
+    - **On Unix-like systems (Linux, macOS):**
+
         ```bash
         make html
         ```
-    *   **On Windows:**
+    - **On Windows:**
+
         ```bash
         make.bat html
         ```
 
-4.  **View Documentation:**
-    The generated HTML files will be located in the `build/html` directory. Open `index.html` in your web browser to access the documentation.
+4. **View Documentation:** The generated HTML files will be located in the `build/html` directory. Open `index.html` in your web browser to access the documentation.
