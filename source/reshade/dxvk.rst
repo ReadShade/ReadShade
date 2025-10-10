@@ -55,8 +55,8 @@ Part 3: Verify and Configure
 #. **Open ReShade Menu:** Once in the game, press the `Home` key (or `Pos1` on some keyboards) to open the ReShade overlay.
 #. **Configure ReShade:** Follow the on-screen tutorial in ReShade to select and enable effects. You can create your own presets or download existing ones.
 
-Troubleshooting Tips:
-^^^^^^^^^^^^^^^^^^^^^
+Troubleshooting Tips
+--------------------
 
 - **Order Matters:** Always install DXVK *before* ReShade.
 - **API Selection:** Make sure you select "Vulkan" in the ReShade installer if you're using DXVK.
