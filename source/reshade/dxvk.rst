@@ -40,7 +40,7 @@ Part 2: Install ReShade Second
 #. **Run the ReShade Installer:**
 
    - Open the downloaded ReShade installer.
-   - Click "Click here to select a game and manage its ReShade installation."
+   - Click :guilabel:`Click here to select a game and manage its ReShade installation`.
    - Browse to your game's main executable file (the same :file:`.exe` you copied DXVK files to). Select it.
    - ReShade will then ask you to select a rendering API. **This is crucial:** Since you installed DXVK, your game is now effectively running on Vulkan. So, select :guilabel:`Vulkan` from the list.
    - ReShade will then ask you which effect packages you want to install. You can select all of them, or just the ones you think you'll use. Click :guilabel:`OK` or :guilabel:`Continue`.
@@ -58,6 +58,6 @@ Troubleshooting Tips
 --------------------
 
 - **Order Matters:** Always install DXVK *before* ReShade.
-- **API Selection:** Make sure you select "Vulkan" in the ReShade installer if you're using DXVK.
+- **API Selection:** Make sure you select :guilabel:`Vulkan` in the ReShade installer if you're using DXVK.
 - **DLL Conflicts:** If you encounter issues, it's often due to conflicting :file:`.dll` files. Ensure only one :file:`dxgi.dll` (or :file:`d3d9.dll` / :file:`d3d11.dll`) is present that is either from DXVK or ReShade, and that ReShade is configured to hook into the correct API (Vulkan). ReShade's Vulkan installation usually handles this by renaming its own DLL to :file:`dxgi.dll` or :file:`d3d11.dll` and then hooking into the DXVK-provided DLL.
 - **Game Updates:** Game updates can sometimes overwrite or remove these custom DLLs, so you might need to reinstall them after an update.
