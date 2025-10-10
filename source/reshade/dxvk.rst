@@ -37,15 +37,14 @@ Part 2: Install ReShade Second
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. **Download ReShade:** Go to the `official ReShade website <https://reshade.me/>`_ and download the latest version of the ReShade installer.
-
 #. **Run the ReShade Installer:**
 
-   * Open the downloaded ReShade installer.
-   * Click "Click here to select a game and manage its ReShade installation."
-   * Browse to your game's main executable file (the same :file:`.exe` you copied DXVK files to). Select it.
-   * ReShade will then ask you to select a rendering API. **This is crucial:** Since you installed DXVK, your game is now effectively running on Vulkan. So, select **"Vulkan"** from the list.
-   * ReShade will then ask you which effect packages you want to install. You can select all of them, or just the ones you think you'll use. Click "OK" or "Continue."
-   * The installer will download and install the necessary ReShade files.
+   - Open the downloaded ReShade installer.
+   - Click "Click here to select a game and manage its ReShade installation."
+   - Browse to your game's main executable file (the same :file:`.exe` you copied DXVK files to). Select it.
+   - ReShade will then ask you to select a rendering API. **This is crucial:** Since you installed DXVK, your game is now effectively running on Vulkan. So, select **"Vulkan"** from the list.
+   - ReShade will then ask you which effect packages you want to install. You can select all of them, or just the ones you think you'll use. Click "OK" or "Continue."
+   - The installer will download and install the necessary ReShade files.
 
 Part 3: Verify and Configure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
