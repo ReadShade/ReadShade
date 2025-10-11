@@ -23,7 +23,6 @@ These guides will focus on setting up your ``Game``, ``Hardware``, and getting e
 ----
 
 .. toctree::
-   :caption: Table of Contents
    :maxdepth: 2
    :glob:
 
