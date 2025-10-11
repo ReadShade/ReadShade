@@ -15,15 +15,15 @@ To set it up, you'll need to configure OpenTrack, ReShade, and your game's speci
 
 These guides will focus on setting up your ``Game``, ``Hardware``, and getting everything working, especially with most stereo 3D projectors and monitors.
 
-Useful Links
-------------
-
 - `WibbleWobble Project Page <https://github.com/PHARTGAMES/WibbleWobbleCore>`_
 - `WibbleWobble Discord Community <https://discord.gg/gGUufTdpgG>`_
 - `WibbleWobble Latest Releases <https://github.com/PHARTGAMES/WibbleWobbleCore/releases>`_
 - `Support WibbleWobble (Donate) <https://patreon.com/PHARTGAMES>`_
 
+----
+
 .. toctree::
+   :caption: Table of Contents
    :maxdepth: 2
    :glob:
 
