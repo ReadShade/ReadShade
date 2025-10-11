@@ -2,6 +2,11 @@
 WibbleWobble
 ============
 
+.. figure:: images/ww_logo.png
+   :align: right
+
+   WibbleWobble Logo.
+
 WibbleWobble is a powerful software created by the talented *PEZZALUCIFER*.
 
 This ReShade add-on allows you to play games in a VR-like immersive way. It does this by taking a single game view and spreading it across multiple monitors, using head tracking to adjust the view. This method helps save performance. WibbleWobble supports both single-eye (monoscopic) and 3D (stereoscopic) modes, including Frame Sequential 3D. It also lets you set custom fields of view (FOVs), making it flexible and usable even without a VR headset.
