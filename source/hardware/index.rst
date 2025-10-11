@@ -1,3 +1,8 @@
 
 Hardware
 ========
+
+.. toctree::
+   :glob:
+
+   */index
