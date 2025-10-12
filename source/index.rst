@@ -12,7 +12,7 @@ We aim to be fair and unbiased in our approach, avoiding any conflicts of intere
 Simple to Contribute
 --------------------
 
-We want to make it easy for anyone to add to ReadShade, no matter their technical skills. We use Python and Sphinx as our main tools. You can quickly start writing and editing documents with just these two. There's no need for complicated setup—just install Python and Sphinx, and you're ready.
+We want to make it easy for anyone to add to ReadShade, no matter their technical skills. We use Python and Sphinx as our main tools. You can quickly start writing and editing documents with just these two. There's no need for complicated setup, just install Python and Sphinx, and you're ready.
 
 Offline Download
 ----------------
