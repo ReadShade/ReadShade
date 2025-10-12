@@ -3,6 +3,7 @@ WibbleWobble
 ============
 
 .. figure:: images/ww_logo.png
+   :width: 25%
    :align: right
 
    WibbleWobble Logo.
