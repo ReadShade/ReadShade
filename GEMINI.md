@@ -14,6 +14,7 @@ The project aims to be a neutral and simple platform for sharing knowledge about
 *   **Emulation Guides:** Guides for using emulators.
 *   **Games:** Information about specific games.
 *   **Hardware:** Information about hardware related to the topics above.
+*   **Licensing:** Information about the project's licensing.
 
 # Building and Running
 
