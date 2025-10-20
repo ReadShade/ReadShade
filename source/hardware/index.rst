@@ -11,6 +11,8 @@ Key topics include:
   - **Frame Sequential (Monitor)**: Instructions on building and configuring an IR Emitter (IR Blaster) using an Arduino, breadboard, IR LED, and 3D glasses for Frame Sequential 3D on monitors. It includes wiring diagrams and software setup for the Arduino IDE and WibbleWobble.
   - **Frame Sequential (Projector)**: Guidance on setting up Frame Sequential 3D for DLP and other compatible projectors. This covers Windows operating system configurations (preferring the projector as the main display) and the installation of the WibbleWobbleCore application and add-on.
 
+----
+
 .. toctree::
    :glob:
 
