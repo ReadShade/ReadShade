@@ -1,0 +1,8 @@
+
+Licensing
+=========
+
+.. toctree::
+   :glob:
+
+   *
