@@ -86,6 +86,11 @@ As a general rule, for works created after January 1, 1978, copyright protection
 
 This information is based on guidelines from the U.S. Copyright Office.
 
+Disclaimer
+----------
+
+The authors of this page are not legal professionals. The information provided here is for general informational purposes only and does not constitute legal advice. For specific legal matters, please consult with a qualified legal professional.
+
 References
 ----------
 
