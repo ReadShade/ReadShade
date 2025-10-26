@@ -5,7 +5,7 @@ United States Copyright
 "What is copyright?"
 --------------------
 
-Copyright is a legal protection given to original works created by authors. These works must be in a "tangible form," meaning they can be seen, heard, or touched, like a book, a song, a photograph, a computer program, or a painting. You can access these works directly or with the help of devices, such as reading a book or listening to music on a player\ [1]_.
+Copyright is a legal protection given to original works created by authors. These works must be in a "tangible form," meaning they can be seen, heard, or touched, like a book, a song, a photograph, a computer program, or a painting. You can access these works directly or with the help of devices, such as reading a book or listening to music on a player [1]_.
 
 Essentially, copyright gives the creator certain exclusive rights over their work. These rights include:
 
@@ -17,7 +17,7 @@ Essentially, copyright gives the creator certain exclusive rights over their wor
 
 .. important::
 
-    It's important to understand what copyright *doesn't* protect. Copyright does not cover ideas, procedures, processes, systems, methods, concepts, principles, or discoveries. It only protects the *way* an idea is expressed, not the idea itself. This means that while you can't copy someone's specific story, you can still write your own story using a similar general idea. This rule helps make sure that basic ideas and facts remain free for everyone to use and build upon.\ [1]_
+    It's important to understand what copyright *doesn't* protect. Copyright does not cover ideas, procedures, processes, systems, methods, concepts, principles, or discoveries. It only protects the *way* an idea is expressed, not the idea itself. This means that while you can't copy someone's specific story, you can still write your own story using a similar general idea. This rule helps make sure that basic ideas and facts remain free for everyone to use and build upon. [1]_
 
 .. _limitations:
 
@@ -72,7 +72,7 @@ Additionally, you might find copyright notices directly within the source code f
 "Why do we need copyright?"
 ---------------------------
 
-In the United States, the primary purpose of copyright law is to "promote the Progress of Science and useful Arts." This means copyright aims to encourage creators to produce new works by giving them exclusive rights to their creations for a limited period.\ [1]_ Here's why this is important:
+In the United States, the primary purpose of copyright law is to "promote the Progress of Science and useful Arts." This means copyright aims to encourage creators to produce new works by giving them exclusive rights to their creations for a limited period. [1]_ Here's why this is important:
 
 - **Incentive for Creation:** By granting creators exclusive rights, copyright provides a financial and creative incentive. Knowing they can control and profit from their work encourages artists, writers, musicians, and developers to invest their time, effort, and resources into creating new content.
 - **Balance Between Creators and Public:** The "limited time" aspect is crucial. It ensures that after a certain period, copyrighted works eventually enter the public domain. Once in the public domain, anyone can use, adapt, and build upon these works without needing permission or paying royalties. This balance allows creators to benefit from their work while eventually enriching the public domain for future generations to access and innovate upon.
@@ -82,7 +82,7 @@ Without copyright, it would be much harder for creators to earn a living from th
 "How long does copyright last?"
 -------------------------------
 
-As a general rule, for works created after January 1, 1978, copyright protection lasts for the life of the author plus an additional 70 years.\ [2]_ This duration applies to most individual works. For works made for hire, anonymous works, or pseudonymous works, copyright protection lasts for 95 years from the year of its first publication or 120 years from the year of its creation, whichever expires first.
+As a general rule, for works created after January 1, 1978, copyright protection lasts for the life of the author plus an additional 70 years. [2]_ This duration applies to most individual works. For works made for hire, anonymous works, or pseudonymous works, copyright protection lasts for 95 years from the year of its first publication or 120 years from the year of its creation, whichever expires first.
 
 This information is based on guidelines from the U.S. Copyright Office.
 

@@ -10,9 +10,9 @@ Simulated Reality (SR) Displays, once called Dimenco, are now supported by Leia 
 
 .. rubric:: Hardware Developers Links
 
-* Acer `Spatiallabs <https://www.acer.com/us-en/spatiallabs>`_
-* ASUS `Spatial Vision <https://www.asus.com/content/asus-spatial-vision-technology/>`_
-* Sony `Spatial Reality <https://pro.sony/ue_US/products/spatial-reality-displays/3d-professional-images>`_
+- Acer `Spatiallabs <https://www.acer.com/us-en/spatiallabs>`_
+- ASUS `Spatial Vision <https://www.asus.com/content/asus-spatial-vision-technology/>`_
+- Sony `Spatial Reality <https://pro.sony/ue_US/products/spatial-reality-displays/3d-professional-images>`_
 
 .. admonition:: Please note that this guide is intended for hardware with the SR badge.
 

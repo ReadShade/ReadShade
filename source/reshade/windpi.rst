@@ -12,10 +12,10 @@ Identifying the Problem
 
 Signs of DPI scaling problems include:
 
-* Blurry or pixelated text and images
-* Videos and websites that look stretched or distorted
-* Games that run poorly or have bad graphics
-* ReShade and Depth3D not working as they should
+- Blurry or pixelated text and images
+- Videos and websites that look stretched or distorted
+- Games that run poorly or have bad graphics
+- ReShade and Depth3D not working as they should
 
 Resolving DPI Scaling Issues
 ----------------------------

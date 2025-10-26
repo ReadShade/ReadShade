@@ -99,9 +99,9 @@ Then it will change to this when finished:
 
 Use the Number Pad keys to move around and save shaders:
 
-* :kbd:`1` & :kbd:`2` to move, and :kbd:`3` to save Pixel Shaders
-* :kbd:`4` & :kbd:`5` to move, and :kbd:`6` to save Vertex Shaders
-* :kbd:`7` & :kbd:`8` to move, and :kbd:`9` to save Compute Shaders
+- :kbd:`1` & :kbd:`2` to move, and :kbd:`3` to save Pixel Shaders
+- :kbd:`4` & :kbd:`5` to move, and :kbd:`6` to save Vertex Shaders
+- :kbd:`7` & :kbd:`8` to move, and :kbd:`9` to save Compute Shaders
 
 For this example, use keys :kbd:`1` and :kbd:`2` to find the shader. Once you find it, save it by pressing :kbd:`3`:
 

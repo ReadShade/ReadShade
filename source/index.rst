@@ -77,8 +77,8 @@ This method is best for users who have Git installed and want to keep their loca
 Acknowledgements & Contributors
 -------------------------------
 
-* `The Depth3D Crew <https://blueskydefender.github.io/Depth3D/>`_
-* `[R-DEV]papadanku <https://github.com/papadanku>`_
+- `The Depth3D Crew <https://blueskydefender.github.io/Depth3D/>`_
+- `[R-DEV]papadanku <https://github.com/papadanku>`_
 
 .. toctree::
    :glob:
