@@ -94,5 +94,5 @@ The authors of this page are not legal professionals. The information provided h
 References
 ----------
 
-.. [1] Copyright basics. (2025). United States Patent and Trademark Office. `https://www.uspto.gov/ip-policy/copyright-policy/copyright-basics <https://www.uspto.gov/ip-policy/copyright-policy/copyright-basics>`_
-.. [2] Copyright duration. (2025). U.S. Copyright Office. `https://www.copyright.gov/help/faq/faq-duration.html <https://www.copyright.gov/help/faq/faq-duration.html>`_
+.. [1] Copyright basics. (2025). United States Patent and Trademark Office. https://www.uspto.gov/ip-policy/copyright-policy/copyright-basics
+.. [2] Copyright duration. (2025). U.S. Copyright Office. https://www.copyright.gov/help/faq/faq-duration.html

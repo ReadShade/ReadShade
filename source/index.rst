@@ -91,4 +91,5 @@ Acknowledgements & Contributors
 
    reshade/index
    licensing/index
+   learning/index
    */index
