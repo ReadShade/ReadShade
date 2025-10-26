@@ -90,4 +90,5 @@ Acknowledgements & Contributors
    :hidden:
 
    reshade/index
+   licensing/index
    */index
