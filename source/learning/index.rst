@@ -14,4 +14,4 @@ This section provides a comprehensive guide to learning resources for various to
 
    resources
    literature
-   *
+   */index
