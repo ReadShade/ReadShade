@@ -74,6 +74,11 @@ This method is best for users who have Git installed and want to keep their loca
 
 #. **Access the offline content:** The static site is now in the `_build` folder. You can see the documentation by opening the :file:`index.html` file in your web browser.
 
+AI Content Disclaimer
+---------------------
+
+The ReadShade team utilizes AI, specifically Google's Gemini CLI, to assist in the creation and revision of textual content within this documentation. We welcome and encourage feedback from our community to help us improve.
+
 Acknowledgements & Contributors
 -------------------------------
 
