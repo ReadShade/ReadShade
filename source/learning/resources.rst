@@ -3,40 +3,7 @@ Resources
 
 This page provides a curated list of learning resources for topics related to Shaders, Computer Graphics, Mathematics, and Programming, categorized by source type.
 
-Documentation
--------------
-
-Computer Graphics
-^^^^^^^^^^^^^^^^^
-
-DirectX-Specs (Microsoft) [6]_
-    Official documentation and specifications for DirectX, including HLSL. Essential for understanding the intricacies of shader development on DirectX platforms.
-
-HLSL (Microsoft Learn) [7]_
-    Official documentation for High-Level Shading Language (HLSL) from Microsoft Learn.
-
-OpenGL ES Shading Language (Khronos Group) [5]_
-    The official reference for GLSL ES, providing detailed specifications for writing shaders for OpenGL ES.
-
-Vulkan GLSL (Vulkan Docs) [12]_
-    Official documentation for GLSL in Vulkan from Vulkan Docs.
-
-Platforms / Tools
------------------
-
-Computer Graphics
-^^^^^^^^^^^^^^^^^
-
-ShaderToy [10]_ : Beginner Friendly
-    An online platform where users can create and share shaders, offering a visual and interactive way to learn shader programming through examples and experimentation.
-
-Programming
-^^^^^^^^^^^
-
-GeeksforGeeks [3]_
-    A popular platform for computer science and programming articles, tutorials, and interview preparations.
-
-Tutorials / Courses
+Courses / Tutorials
 -------------------
 
 Computer Graphics
@@ -65,6 +32,39 @@ Essence of Calculus by 3Blue1Brown [1]_
 
 Essence of Linear Algebra by 3Blue1Brown [2]_
     A visual and intuitive introduction to linear algebra, explaining core concepts with animations.
+
+Platforms / Tools
+-----------------
+
+Computer Graphics
+^^^^^^^^^^^^^^^^^
+
+ShaderToy [10]_ : Beginner Friendly
+    An online platform where users can create and share shaders, offering a visual and interactive way to learn shader programming through examples and experimentation.
+
+Programming
+^^^^^^^^^^^
+
+GeeksforGeeks [3]_
+    A popular platform for computer science and programming articles, tutorials, and interview preparations.
+
+Documentation
+-------------
+
+Computer Graphics
+^^^^^^^^^^^^^^^^^
+
+DirectX-Specs (Microsoft) [6]_
+    Official documentation and specifications for DirectX, including HLSL. Essential for understanding the intricacies of shader development on DirectX platforms.
+
+HLSL (Microsoft Learn) [7]_
+    Official documentation for High-Level Shading Language (HLSL) from Microsoft Learn.
+
+OpenGL ES Shading Language (Khronos Group) [5]_
+    The official reference for GLSL ES, providing detailed specifications for writing shaders for OpenGL ES.
+
+Vulkan GLSL (Vulkan Docs) [12]_
+    Official documentation for GLSL in Vulkan from Vulkan Docs.
 
 References
 ----------
