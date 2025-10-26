@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'ReadShade'
-copyright = '2025, The ReadShade Team'
+copyright = '%Y, The ReadShade Team'
 author = 'The ReadShade Team'
 
 # -- General configuration ---------------------------------------------------
@@ -24,4 +24,5 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
+html_title = "ReadShade"
 html_static_path = ['_static']
