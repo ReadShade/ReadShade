@@ -5,7 +5,7 @@ Basic Shader Structure
 Every shader in ReShade FX typically consists of a few main parts:
 
 Preprocessor Directives
-    These are instructions for the compiler that are processed before the main compilation begins. They are commonly used to include other files (like ``ReShade.fxh``, which provides essential ReShade functions and definitions) or to define constants.
+    These are instructions for the compiler that are processed before the main compilation begins. They are commonly used to include other files (like :file:`ReShade.fxh`, which provides essential ReShade functions and definitions) or to define constants.
 
     .. code-block:: hlsl
 
