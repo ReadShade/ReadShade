@@ -13,8 +13,6 @@ Key topics include:
 - **Large Address Aware (4G Patch)**: Explanation and application of the LAA patch, enabling older 32-bit DirectX 9.0 games to utilize up to 4GB of memory, which is vital for ReShade's proper functioning.
 - **Game Windows DPI Settings**: Solutions for Windows DPI scaling issues that cause blurry text, images, and poor performance in games and applications, including ReShade and Depth3D.
 
-----
-
 .. toctree::
    :glob:
 

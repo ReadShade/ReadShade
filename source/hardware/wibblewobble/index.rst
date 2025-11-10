@@ -20,8 +20,6 @@ These guides will focus on setting up your ``Game``, ``Hardware``, and getting e
 - `WibbleWobble Latest Releases <https://github.com/PHARTGAMES/WibbleWobbleCore/releases>`_
 - `Support WibbleWobble (Donate) <https://patreon.com/PHARTGAMES>`_
 
-----
-
 .. toctree::
    :maxdepth: 2
    :glob:

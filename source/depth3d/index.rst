@@ -20,8 +20,6 @@ Installation typically involves downloading the add-on version of ReShade, insta
 
 For game compatibility, users are directed to the PCGamingWiki, which maintains a list of ReShade's depth map compatibility.
 
-----
-
 .. toctree::
    :glob:
 
