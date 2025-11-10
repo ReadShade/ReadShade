@@ -1,50 +1,36 @@
 # Project Overview
 
-model: gemini-2.5-flash
+ReadShade is a Sphinx documentation project aimed at providing a neutral and simple platform for sharing knowledge about ReShade, Depth3D, emulators, games, and hardware. It emphasizes ease of contribution and accessibility of information.
 
-This is a Sphinx documentation project for "ReadShade". The documentation is written in reStructuredText (`.rst`) and the visual theme is `furo`.
+## Technologies Used
 
-The project aims to be a neutral and simple platform for sharing knowledge about ReShade, Depth3D, emulators, games, and hardware.
+*   **Sphinx:** Documentation generator.
+*   **reStructuredText (.rst):** Markup language for writing documentation.
+*   **Shibuya Theme:** The visual theme applied to the documentation.
+*   **Python:** The programming language used for Sphinx.
+*   **pip:** Python package installer for managing dependencies.
 
-# Key Sections
+## Building and Running
 
-*   **ReShade General:** Information about ReShade, including different versions.
-*   **Addons:** Guides and information about ReShade addons.
-*   **Depth3D:** Guides and information related to Depth3D.
-*   **Emulation Guides:** Guides for using emulators.
-*   **Games:** Information about specific games.
-*   **Hardware:** Information about hardware related to the topics above.
-*   **Licensing:** Information about the project's licensing.
+To build and run the documentation locally:
 
-# Building and Running
+1.  **Install Dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+2.  **Build HTML Documentation:**
+    ```bash
+    sphinx-build -b html . _build
+    ```
+    Alternatively, you can use the `Makefile`:
+    ```bash
+    make html
+    ```
+    The generated static site will be located in the `_build` directory. Open `_build/index.html` in your web browser to view it.
 
-To build the HTML documentation, you need to have Python and Sphinx installed. You can install the dependencies with pip:
+## Development Conventions
 
-```bash
-pip install -r requirements.txt
-```
-
-Then, you can build the documentation using the provided `Makefile` (for Unix-like systems) or `make.bat` (for Windows).
-
-**On Unix-like systems:**
-
-```bash
-make html
-```
-
-**On Windows:**
-
-```bash
-make.bat html
-```
-
-The generated HTML files will be in the `build/html` directory. You can open the `index.html` file in that directory to view the documentation.
-
-# Development Conventions
-
-*   All documentation is located in the `source` directory.
-*   The main entry point for the documentation is `source/index.rst`.
-*   Configuration for the Sphinx project is in `source/conf.py`.
-*   The documentation is structured into subdirectories for each topic (e.g., `reshade`, `depth3d`, etc.).
-*   Each subdirectory has its own `index.rst` file that serves as the entry point for that section.
-*   Images and other static files are stored in subdirectories within each section's directory.
+*   **Documentation Format:** All documentation is written in reStructuredText (`.rst`) files.
+*   **Build System:** Sphinx is used to generate the documentation from the `.rst` source files.
+*   **Content Creation:** The ReadShade team utilizes AI, specifically Google's Gemini CLI, to assist in the creation and revision of textual content.
+*   **Contribution:** The project aims for simple contributions, requiring only Python and Sphinx installed to start writing and editing documents.
