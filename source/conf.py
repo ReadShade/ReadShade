@@ -26,3 +26,7 @@ exclude_patterns = []
 html_static_path = ['_static']
 html_theme = "shibuya"
 html_title = "ReadShade"
+html_theme_options = {
+    "accent_color": "lime",
+    "github_url": "https://github.com/ReadShade/ReadShade",
+}
