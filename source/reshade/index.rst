@@ -14,6 +14,7 @@ Key topics include:
 - **Game Windows DPI Settings**: Solutions for Windows DPI scaling issues that cause blurry text, images, and poor performance in games and applications, including ReShade and Depth3D.
 
 .. toctree::
+   :caption: Table of Contents
    :glob:
 
    reshadeversions

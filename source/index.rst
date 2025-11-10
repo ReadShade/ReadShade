@@ -86,6 +86,7 @@ Acknowledgements & Contributors
 - `[R-DEV]papadanku <https://github.com/papadanku>`_
 
 .. toctree::
+   :caption: Table of Contents
    :glob:
    :hidden:
 
