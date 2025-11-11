@@ -11,6 +11,6 @@ This project utilizes:
 
 - **[Sphinx](https://www.sphinx-doc.org/):** For generating documentation.
 - **[reStructuredText (.rst)](https://docutils.sourceforge.io/rst.html):** The markup language used for writing documentation.
-- **[Furo Theme](https://pradyunsg.me/furo/):** The visual theme applied to the documentation.
+- **[Shibuya Theme](https://shibuya.lepture.com/):** The visual theme applied to the documentation.
 - **[Python](https://www.python.org/):** The programming language used for Sphinx.
 - **[pip](https://pip.pypa.io/):** Python package installer for managing dependencies.
