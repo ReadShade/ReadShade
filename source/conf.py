@@ -35,7 +35,7 @@ html_theme_options = {
             "children": [
                 {
                     "title": "BlueSkyDefender",
-                    "url": "https://blueskydefender.github.io/Depth3D/",
+                    "url": "https://github.com/BlueSkyDefender",
                     "summary": "Author of SuperDepth3D, AstrayFX, and various secret projects."
                 },
                 {
