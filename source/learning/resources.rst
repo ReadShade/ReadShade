@@ -10,28 +10,28 @@ Computer Graphics
 ^^^^^^^^^^^^^^^^^
 
 Introduction to Shaders (Unity Learn) [14]_ : Beginner Friendly
-    A beginner-friendly introduction to shaders specifically for Unity game developers, covering basic concepts and practical examples.
+   A beginner-friendly introduction to shaders specifically for Unity game developers, covering basic concepts and practical examples.
 
 LearnOpenGL [4]_
-    A comprehensive online tutorial series that teaches you how to use OpenGL. It covers a wide range of topics from basic concepts to advanced rendering techniques.
+   A comprehensive online tutorial series that teaches you how to use OpenGL. It covers a wide range of topics from basic concepts to advanced rendering techniques.
 
 Scratchapixel [11]_
-    A website dedicated to teaching computer graphics from first principles, covering topics like rasterization, ray tracing, and global illumination.
+   A website dedicated to teaching computer graphics from first principles, covering topics like rasterization, ray tracing, and global illumination.
 
 The Book of Shaders [10]_ : Beginner Friendly
-    An introductory guide to fragment shaders. It's an excellent resource for beginners to understand the fundamentals of shader programming.
+   An introductory guide to fragment shaders. It's an excellent resource for beginners to understand the fundamentals of shader programming.
 
 WebGPU Fundamentals [16]_ : Beginner Friendly
-    A comprehensive guide to WebGPU, which includes fundamental concepts of shader programming (WGSL) for web-based graphics.
+   A comprehensive guide to WebGPU, which includes fundamental concepts of shader programming (WGSL) for web-based graphics.
 
 Mathematics
 ^^^^^^^^^^^
 
 Essence of Calculus by 3Blue1Brown [1]_
-    Similar to the linear algebra series, this provides a visual understanding of calculus concepts.
+   Similar to the linear algebra series, this provides a visual understanding of calculus concepts.
 
 Essence of Linear Algebra by 3Blue1Brown [2]_
-    A visual and intuitive introduction to linear algebra, explaining core concepts with animations.
+   A visual and intuitive introduction to linear algebra, explaining core concepts with animations.
 
 Platforms / Tools
 -----------------
@@ -40,25 +40,25 @@ Computer Graphics
 ^^^^^^^^^^^^^^^^^
 
 ShaderToy [12]_ : Beginner Friendly
-    An online platform where users can create and share shaders, offering a visual and interactive way to learn shader programming through examples and experimentation.
+   An online platform where users can create and share shaders, offering a visual and interactive way to learn shader programming through examples and experimentation.
 
 Programming
 ^^^^^^^^^^^
 
 GeeksforGeeks [3]_
-    A popular platform for computer science and programming articles, tutorials, and interview preparations.
+   A popular platform for computer science and programming articles, tutorials, and interview preparations.
 
 Code Repositories
 ^^^^^^^^^^^^^^^^^
 
 Lygia [6]_
-    A shader library that provides a collection of functions and utilities for real-time graphics.
+   A shader library that provides a collection of functions and utilities for real-time graphics.
 
 DirectXTK [8]_
-    A collection of helper classes for writing DirectX 11 and DirectX 12 applications.
+   A collection of helper classes for writing DirectX 11 and DirectX 12 applications.
 
 Tixl [13]_
-    A functional reactive programming library for graphics.
+   A functional reactive programming library for graphics.
 
 Documentation
 -------------
@@ -67,16 +67,16 @@ Computer Graphics
 ^^^^^^^^^^^^^^^^^
 
 DirectX-Specs (Microsoft) [7]_
-    Official documentation and specifications for DirectX, including HLSL. Essential for understanding the intricacies of shader development on DirectX platforms.
+   Official documentation and specifications for DirectX, including HLSL. Essential for understanding the intricacies of shader development on DirectX platforms.
 
 HLSL (Microsoft Learn) [9]_
-    Official documentation for High-Level Shading Language (HLSL) from Microsoft Learn.
+   Official documentation for High-Level Shading Language (HLSL) from Microsoft Learn.
 
 OpenGL ES Shading Language (Khronos Group) [5]_
-    The official reference for GLSL ES, providing detailed specifications for writing shaders for OpenGL ES.
+   The official reference for GLSL ES, providing detailed specifications for writing shaders for OpenGL ES.
 
 Vulkan GLSL (Vulkan Docs) [15]_
-    Official documentation for GLSL in Vulkan from Vulkan Docs.
+   Official documentation for GLSL in Vulkan from Vulkan Docs.
 
 References
 ----------

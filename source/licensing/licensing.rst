@@ -26,13 +26,13 @@ Permissive Licenses
 These licenses impose minimal restrictions on how the software can be used, modified, and distributed. They often only require attribution.
 
 MIT License [#mit]_
-    A very short and simple license that allows users to do almost anything with the software, provided they include the original copyright and license notice. It's highly compatible with other licenses.
+   A very short and simple license that allows users to do almost anything with the software, provided they include the original copyright and license notice. It's highly compatible with other licenses.
 
 Apache License 2.0 [#apache]_
-    A permissive license that grants users a patent license, which is useful for preventing patent lawsuits. It also requires attribution and preservation of copyright notices.
+   A permissive license that grants users a patent license, which is useful for preventing patent lawsuits. It also requires attribution and preservation of copyright notices.
 
 BSD Licenses (2-clause and 3-clause) [#bsd]_
-    Similar to MIT, these are permissive licenses that primarily require attribution. The 3-clause version adds a clause preventing endorsement of products derived from the software without specific written permission.
+   Similar to MIT, these are permissive licenses that primarily require attribution. The 3-clause version adds a clause preventing endorsement of products derived from the software without specific written permission.
 
 Copyleft Licenses
 ^^^^^^^^^^^^^^^^^
@@ -40,13 +40,13 @@ Copyleft Licenses
 These licenses require that any derivative works also be released under the same or a compatible copyleft license. This ensures that the "freedom" of the software is preserved down the line.
 
 GNU General Public License (GPL) (various versions) [#gpl]_
-    A strong copyleft license. If you distribute software that includes GPL-licensed code, your entire software must also be licensed under the GPL. This is often referred to as the "viral" nature of GPL.
+   A strong copyleft license. If you distribute software that includes GPL-licensed code, your entire software must also be licensed under the GPL. This is often referred to as the "viral" nature of GPL.
 
 GNU Lesser General Public License (LGPL) [#lgpl]_
-    A weaker copyleft license than GPL. It allows proprietary software to link to LGPL-licensed libraries without requiring the proprietary software itself to be licensed under LGPL. However, if the LGPL-licensed code is modified, the modifications must be released under LGPL.
+   A weaker copyleft license than GPL. It allows proprietary software to link to LGPL-licensed libraries without requiring the proprietary software itself to be licensed under LGPL. However, if the LGPL-licensed code is modified, the modifications must be released under LGPL.
 
 Mozilla Public License (MPL) [#mpl]_
-    A "file-level" copyleft license. It requires modifications to MPL-licensed files to be released under MPL, but allows other files in the same project to be under different licenses.
+   A "file-level" copyleft license. It requires modifications to MPL-licensed files to be released under MPL, but allows other files in the same project to be under different licenses.
 
 License Compatibilities
 -----------------------

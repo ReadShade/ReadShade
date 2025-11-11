@@ -36,7 +36,7 @@ If the version you need isn't on the website anymore, try the `ReShade Repositor
 
 .. note::
 
-    You might need an older ReShade version for some games, like *Fallout: New Vegas*, *Fallout 3*, or *The Elder Scrolls IV: Oblivion*.
+   You might need an older ReShade version for some games, like *Fallout: New Vegas*, *Fallout 3*, or *The Elder Scrolls IV: Oblivion*.
 
 I want to play *Elden Ring*. It's an online game with EAC. Can I do this?
 -------------------------------------------------------------------------

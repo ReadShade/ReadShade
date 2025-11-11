@@ -17,7 +17,7 @@ Essentially, copyright gives the creator certain exclusive rights over their wor
 
 .. important::
 
-    It's important to understand what copyright *doesn't* protect. Copyright does not cover ideas, procedures, processes, systems, methods, concepts, principles, or discoveries. It only protects the *way* an idea is expressed, not the idea itself. This means that while you can't copy someone's specific story, you can still write your own story using a similar general idea. This rule helps make sure that basic ideas and facts remain free for everyone to use and build upon. [1]_
+   It's important to understand what copyright *doesn't* protect. Copyright does not cover ideas, procedures, processes, systems, methods, concepts, principles, or discoveries. It only protects the *way* an idea is expressed, not the idea itself. This means that while you can't copy someone's specific story, you can still write your own story using a similar general idea. This rule helps make sure that basic ideas and facts remain free for everyone to use and build upon. [1]_
 
 .. _limitations:
 
@@ -29,10 +29,10 @@ Copyright is primarily for individuals or organizations who want to protect thei
 For creators, copyright helps answer key questions:
 
 "Can I stop others from using my original work?"
-    Yes, copyright generally gives you the legal right to prevent others from copying, distributing, performing, or displaying your work without your permission. This means you can decide who gets to use your creation and under what conditions.
+   Yes, copyright generally gives you the legal right to prevent others from copying, distributing, performing, or displaying your work without your permission. This means you can decide who gets to use your creation and under what conditions.
 
 "Can I use another person's original work?"
-    Generally, no, not without permission from the copyright holder. If you want to use someone else's copyrighted material, you usually need to get a license or explicit consent. There are some exceptions, like "fair use" in the United States, which allows limited use of copyrighted material without permission for purposes such as criticism, comment, news reporting, teaching, scholarship, or research. However, fair use is a complex legal doctrine and its application depends on specific circumstances.
+   Generally, no, not without permission from the copyright holder. If you want to use someone else's copyrighted material, you usually need to get a license or explicit consent. There are some exceptions, like "fair use" in the United States, which allows limited use of copyrighted material without permission for purposes such as criticism, comment, news reporting, teaching, scholarship, or research. However, fair use is a complex legal doctrine and its application depends on specific circumstances.
 
 "When does my work get copyrighted?"
 ------------------------------------
@@ -58,16 +58,16 @@ For software and source code, you can typically find copyright information withi
 For shader developers, if you are browsing a shader repository on platforms like GitHub or GitLab, you can often find the licensing and copyright information by looking for a :guilabel:`License` tab or section directly on the repository's main page. Clicking on this will usually display the full text of the license.
 
 .. figure:: images/license1.png
-    :width: 50%
+   :width: 50%
 
-    The license tab of the `ReShade source code <https://github.com/crosire/reshade>`_.
+   The license tab of the `ReShade source code <https://github.com/crosire/reshade>`_.
 
 Additionally, you might find copyright notices directly within the source code files themselves, often at the top of each file as a comment. This practice helps ensure that the copyright information is readily available to anyone reviewing the code.
 
 .. figure:: images/license2.png
-    :width: 75%
+   :width: 75%
 
-    The copyright of the `ReShade port of Deband <https://github.com/crosire/reshade-shaders/blob/slim/Shaders/Deband.fx>`_.
+   The copyright of the `ReShade port of Deband <https://github.com/crosire/reshade-shaders/blob/slim/Shaders/Deband.fx>`_.
 
 "Why do we need copyright?"
 ---------------------------

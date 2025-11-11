@@ -7,25 +7,25 @@ Archives
 --------
 
 arXiv.org e-Print archive [1]_
-    A free distribution service and an open-access archive for scholarly articles in fields such as computer science and mathematics.
+   A free distribution service and an open-access archive for scholarly articles in fields such as computer science and mathematics.
 
 Journal Directories
 -------------------
 
 Directory of Open Access Journals (DOAJ) [2]_
-    A community-curated online directory that indexes and provides access to high-quality, open access, peer-reviewed journals.
+   A community-curated online directory that indexes and provides access to high-quality, open access, peer-reviewed journals.
 
 Journals
 --------
 
 International Journal of Computer Graphics & Animation (IJCGA) [3]_
-    An international peer-reviewed open-access journal that focuses on computer graphics and animation, including topics like modeling, rendering, and computer animation.
+   An international peer-reviewed open-access journal that focuses on computer graphics and animation, including topics like modeling, rendering, and computer animation.
 
 Journal of Computer Graphics Techniques (JCGT) [4]_
-    An open access, peer-reviewed journal dedicated to publishing high-quality research and practical techniques in computer graphics.
+   An open access, peer-reviewed journal dedicated to publishing high-quality research and practical techniques in computer graphics.
 
 Mathematics (MDPI) [5]_
-    A peer-reviewed, open-access journal that provides a platform for studies related to mathematics, including a section dedicated to Mathematics and Computer Science.
+   A peer-reviewed, open-access journal that provides a platform for studies related to mathematics, including a section dedicated to Mathematics and Computer Science.
 
 ----
 
