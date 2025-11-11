@@ -29,4 +29,30 @@ html_title = "ReadShade"
 html_theme_options = {
     "accent_color": "lime",
     "github_url": "https://github.com/ReadShade/ReadShade",
+    "nav_links": [
+        {
+            "title": "Contributors",
+            "children": [
+                {
+                    "title": "BlueSkyDefender",
+                    "url": "https://blueskydefender.github.io/Depth3D/",
+                    "summary": "Author of SuperDepth3D, AstrayFX, and various secret projects."
+                },
+                {
+                    "title": "papadanku",
+                    "url": "https://github.com/papadanku",
+                    "summary": "Hobbyist programmer. Contributor to the Project Reality game modification and CShade."
+                },
+                {
+                    "title": "PHARTGAMES / PEZZALUCIFER",
+                    "url": "https://github.com/PHARTGAMES",
+                    "summary": "Developed WibbleWobble, turning your display into a window to virtual worlds."
+                }
+            ]
+        },
+        {
+            "title": "ReShade Homepage",
+            "url": "https://reshade.me/"
+        }
+    ]
 }

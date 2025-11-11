@@ -79,12 +79,6 @@ AI Content Disclaimer
 
 The ReadShade team utilizes AI, specifically Google's Gemini CLI, to assist in the creation and revision of textual content within this documentation. We welcome and encourage feedback from our community to help us improve.
 
-Acknowledgements & Contributors
--------------------------------
-
-- `The Depth3D Crew <https://blueskydefender.github.io/Depth3D/>`_
-- `[R-DEV]papadanku <https://github.com/papadanku>`_
-
 .. toctree::
    :caption: Table of Contents
    :glob:
