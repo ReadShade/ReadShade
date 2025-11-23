@@ -1,6 +1,6 @@
 
-Disabling DLSS Frame Generation
-===============================
+Disable DLSS Frame Generation
+=============================
 
 Introduction
 ------------

@@ -1,6 +1,6 @@
 
-Large Address Aware · 4G Patch
-==============================
+Use Large Address Aware
+=======================
 
 If a 32-bit program is "Large Address Aware," it can use up to 4.0 Gigabytes of memory on 64-bit Windows. This is important for ReShade to work with older DirectX 9.0 games that have memory limits.
 

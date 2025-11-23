@@ -1,6 +1,6 @@
 
-ReShade and You
-===============
+Change ReShade Version
+======================
 
 Introduction
 ------------

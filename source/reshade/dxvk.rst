@@ -1,5 +1,5 @@
-DXVK with ReShade
-=================
+Install ReShade with DXVK  
+=========================
 
 Introduction
 ------------

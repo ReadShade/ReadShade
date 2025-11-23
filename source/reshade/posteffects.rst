@@ -1,6 +1,6 @@
 
-Disabling Post Effects on Unreal Engine
-=======================================
+Disable Unreal Engine's Post Effects
+====================================
 
 Introduction
 ------------

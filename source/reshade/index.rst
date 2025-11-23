@@ -17,5 +17,4 @@ Key topics include:
    :caption: Table of Contents
    :glob:
 
-   reshadeversions
    *
