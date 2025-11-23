@@ -1,7 +1,28 @@
-Resources
-=========
+Tools & Resources
+=================
 
-This page provides a curated list of learning resources for topics related to Shaders, Computer Graphics, Mathematics, and Programming, categorized by source type.
+This page provides a curated list of tools and learning resources for topics related to Shaders, Computer Graphics, Mathematics, and Programming, categorized by source type.
+
+Development Tools
+-----------------
+
+`Visual Studio Code <https://code.visualstudio.com/>`_
+   Open core, cross-platform code editor with native HLSL syntax highlighting support through extensions. Excellent for shader development and general text editing.
+
+`Zotero <https://www.zotero.org/>`_
+   Open source research organization software for managing references, PDFs, and generating bibliographies. Useful for academic research related to ReShade and graphics.
+
+`GitHub <https://github.com/>`_
+   Web-based platform for version control and collaboration, primarily used for hosting source code repositories. Essential for contributing to open-source projects.
+
+`DirectXTex <https://github.com/microsoft/DirectXTex>`_
+   A library for reading, writing, and processing textures. Primarily for advanced shader developers working with specific texture formats and operations.
+
+`AMD Compressonator <https://gpuopen.com/compressonator/>`_
+   An application for viewing, analyzing, and compressing various texture and 3D model formats. Valuable for advanced shader developers optimizing asset pipelines.
+
+`GIMP (GNU Image Manipulation Program) <https://www.gimp.org/>`_
+   Free and open-source raster graphics editor. Useful for creating and modifying textures, icons, and other visual assets required for ReShade presets or documentation.
 
 Courses / Tutorials
 -------------------
