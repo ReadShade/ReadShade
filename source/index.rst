@@ -80,11 +80,24 @@ AI Content Disclaimer
 The ReadShade team utilizes AI, specifically Google's Gemini CLI, to assist in the creation and revision of textual content within this documentation. We welcome and encourage feedback from our community to help us improve.
 
 .. toctree::
-   :caption: Table of Contents
+   :caption: ReShade Guide
    :glob:
    :hidden:
 
-   reshade/index
-   licensing/index
-   learning/index
-   */index
+   reshade/general/index
+   reshade/licensing/index
+   reshade/learning/index
+
+.. toctree::
+   :caption: Software guides
+   :glob:
+   :hidden:
+
+   software/*/index
+
+.. toctree::
+   :caption: Third-Party Guides
+   :glob:
+   :hidden:
+
+   thirdparty/*/index

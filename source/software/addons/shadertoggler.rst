@@ -16,7 +16,7 @@ Requirements
 
 To use the Shader Toggler, download the add-on from its `official GitHub page <https://github.com/FransBouma/ShaderToggler/releases>`_. Make sure to get the right version for your game.
 
-.. figure:: shadertoggler/shadertoggler.jpg
+.. figure:: images/shadertoggler/shadertoggler.jpg
 
    Screenshot of the Shader Toggler GitHub page.
 
@@ -30,13 +30,13 @@ Install the game and ReShade along with the :file:`ShaderToggler.addon64`. Turn 
 
 Start the game and open the ReShade menu. Go to the :guilabel:`add-on` tab:
 
-.. figure:: shadertoggler/shadertoggler2.png
+.. figure:: images/shadertoggler/shadertoggler2.png
 
    Screenshot of the ReShade :guilabel:`add-on` tab.
 
 Close other add-ons to make the view clearer. Make sure you are in the game and can see an effect you want to fix, like Chromatic Aberration:
 
-.. figure:: shadertoggler/shadertoggler3.png
+.. figure:: images/shadertoggler/shadertoggler3.png
 
    In-game screenshot showing a visible Chromatic Aberration effect.
 
@@ -45,11 +45,11 @@ Close other add-ons to make the view clearer. Make sure you are in the game and 
 
 Move the ReShade menu to the right side of your screen. Click :guilabel:`New`. The menu will change, then click :guilabel:`Edit`:
 
-.. figure:: shadertoggler/shadertoggler4.png
+.. figure:: images/shadertoggler/shadertoggler4.png
 
    Screenshot of the ReShade menu with the :guilabel:`New` button highlighted.
 
-.. figure:: shadertoggler/shadertoggler5.png
+.. figure:: images/shadertoggler/shadertoggler5.png
 
    Screenshot of the ReShade menu with the :guilabel:`Edit` button highlighted.
 
@@ -58,7 +58,7 @@ Move the ReShade menu to the right side of your screen. Click :guilabel:`New`. T
 
 Type a name for the effect, like "CA 01," into the :guilabel:`Name Box`:
 
-.. figure:: shadertoggler/shadertoggler6.png
+.. figure:: images/shadertoggler/shadertoggler6.png
 
    Screenshot showing the :guilabel:`Name Box` with "CA 01" entered.
 
@@ -67,7 +67,7 @@ Type a name for the effect, like "CA 01," into the :guilabel:`Name Box`:
 
 Create a shortcut for the first group, for example, :kbd:`Ctrl+1`. Click the :guilabel:`Shortcut Box`, press your chosen keys, then click :guilabel:`OK`:
 
-.. figure:: shadertoggler/shadertoggler7.png
+.. figure:: images/shadertoggler/shadertoggler7.png
 
    Screenshot showing the :guilabel:`Shortcut Box` with :kbd:`Ctrl+1` configured.
 
@@ -78,19 +78,19 @@ You can choose if the add-on starts automatically. Click :guilabel:`OK` again.
 
 Click the :guilabel:`Change shaders` button and let it run for a short time:
 
-.. figure:: shadertoggler/shadertoggler8.png
+.. figure:: images/shadertoggler/shadertoggler8.png
 
    Screenshot of the :guilabel:`Change shaders` button being clicked.
 
 The process will first look like this:
 
-.. figure:: shadertoggler/shadertoggler9.png
+.. figure:: images/shadertoggler/shadertoggler9.png
 
    Screenshot showing the :guilabel:`Hunting for shaders` process in progress.
 
 Then it will change to this when finished:
 
-.. figure:: shadertoggler/shadertoggler10.png
+.. figure:: images/shadertoggler/shadertoggler10.png
 
    Screenshot showing the :guilabel:`Hunting for shaders` process completed.
 
@@ -105,21 +105,21 @@ Use the Number Pad keys to move around and save shaders:
 
 For this example, use keys :kbd:`1` and :kbd:`2` to find the shader. Once you find it, save it by pressing :kbd:`3`:
 
-.. figure:: shadertoggler/shadertoggler11.png
+.. figure:: images/shadertoggler/shadertoggler11.png
 
    Screenshot showing a shader being highlighted for saving.
 
-.. figure:: shadertoggler/shadertoggler12.png
+.. figure:: images/shadertoggler/shadertoggler12.png
 
    Screenshot showing the "Save" button being pressed.
 
 Click :guilabel:`Done` and then press your shortcut key to turn on the add-on:
 
-.. figure:: shadertoggler/shadertoggler13.png
+.. figure:: images/shadertoggler/shadertoggler13.png
 
    Screenshot showing the :guilabel:`Done` button.
 
-.. figure:: shadertoggler/shadertoggler14.png
+.. figure:: images/shadertoggler/shadertoggler14.png
 
    In-game screenshot with the Chromatic Aberration effect now disabled.
 
@@ -130,7 +130,7 @@ The shader should now be off. Do this again for any other shaders in the game.
 
 Click the :guilabel:`Save all Toggle Groups` button to save what you've done:
 
-.. figure:: shadertoggler/shadertoggler15.png
+.. figure:: images/shadertoggler/shadertoggler15.png
 
    Screenshot of the :guilabel:`Save all Toggle Groups` button.
 
@@ -163,6 +163,6 @@ Now you know how to use the Shader Toggler to turn off or switch shaders in game
 
 Here is an image from in-game with the effect disabled:
 
-.. figure:: shadertoggler/shadertoggler16.png
+.. figure:: images/shadertoggler/shadertoggler16.png
 
    Final in-game screenshot with the Chromatic Aberration effect disabled.

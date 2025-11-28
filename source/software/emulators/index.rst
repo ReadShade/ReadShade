@@ -1,6 +1,6 @@
 
-Emulation Guides
-================
+Emulators
+=========
 
 This section offers guides and tutorials for integrating ReShade and its add-ons with various emulators, enhancing the visual experience of classic games.
 

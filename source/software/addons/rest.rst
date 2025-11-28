@@ -154,7 +154,7 @@ Troubleshooting
 You might see problems with the center crosshair. Here are three ways to fix this:
 
 1. See if the game lets you remove it.
-2. Use the :doc:`ShaderToggler <../../addons/shadertoggler>`.
+2. Use the :doc:`ShaderToggler <shadertoggler>`.
 3. Change the game files (mod) to remove the texture.
 
 Cursor Adjustments
