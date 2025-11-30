@@ -18,7 +18,7 @@ Key topics include:
 
 - `WibbleWobble Project Page <https://github.com/PHARTGAMES/WibbleWobbleCore>`_
 - `WibbleWobble Discord Community <https://discord.gg/gGUufTdpgG>`_
-- `WibbleWobble Latest Releases <https://github.com/PHARTGAMES/PHARTGAMES/WibbleWobbleCore/releases>`_
+- `WibbleWobble Latest Releases <https://github.com/PHARTGAMES/WibbleWobbleCore/releases>`_
 - `Support WibbleWobble (Donate) <https://patreon.com/PHARTGAMES>`_
 
 .. toctree::
