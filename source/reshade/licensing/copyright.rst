@@ -9,11 +9,11 @@ Copyright is a legal protection given to original works created by authors. Thes
 
 Essentially, copyright gives the creator certain exclusive rights over their work. These rights include:
 
-- **Reproduction:** Making copies of the work.
-- **Distribution:** Selling or giving away copies of the work.
-- **Public Performance:** Performing the work publicly (e.g., playing a song in a concert).
-- **Public Display:** Showing the work publicly (e.g., displaying a painting in a gallery).
-- **Derivative Works:** Creating new works based on the original (e.g., a movie based on a book).
+- **Reproduction**: Making copies of the work.
+- **Distribution**: Selling or giving away copies of the work.
+- **Public Performance**: Performing the work publicly (e.g., playing a song in a concert).
+- **Public Display**: Showing the work publicly (e.g., displaying a painting in a gallery).
+- **Derivative Works**: Creating new works based on the original (e.g., a movie based on a book).
 
 .. important::
 
@@ -41,9 +41,9 @@ In the United States, your work is automatically copyrighted the moment it is cr
 
 However, while automatic copyright protection exists, registering your work with the U.S. Copyright Office offers significant benefits:
 
-- **Public Record:** It creates a public record of your copyright claim.
-- **Ability to Sue:** You generally cannot sue someone for copyright infringement in federal court until your work is registered.
-- **Statutory Damages and Attorney's Fees:** If you register your work before an infringement occurs (or within three months of publication), you may be eligible to receive statutory damages and attorney's fees in a lawsuit, which can be much easier to prove than actual damages.
+- **Public Record**: It creates a public record of your copyright claim.
+- **Ability to Sue**: You generally cannot sue someone for copyright infringement in federal court until your work is registered.
+- **Statutory Damages and Attorney's Fees**: If you register your work before an infringement occurs (or within three months of publication), you may be eligible to receive statutory damages and attorney's fees in a lawsuit, which can be much easier to prove than actual damages.
 
 Regarding the example of photographic work, if you are hired by a company to take photos, the copyright might belong to the company, not you. This is often the case with "work for hire" agreements, where the employer or commissioning party is considered the author and copyright owner of the work created by an employee within the scope of their employment, or a specially ordered or commissioned work if certain conditions are met and agreed upon in writing.
 
@@ -74,8 +74,8 @@ Additionally, you might find copyright notices directly within the source code f
 
 In the United States, the primary purpose of copyright law is to "promote the Progress of Science and useful Arts." This means copyright aims to encourage creators to produce new works by giving them exclusive rights to their creations for a limited period. [1]_ Here's why this is important:
 
-- **Incentive for Creation:** By granting creators exclusive rights, copyright provides a financial and creative incentive. Knowing they can control and profit from their work encourages artists, writers, musicians, and developers to invest their time, effort, and resources into creating new content.
-- **Balance Between Creators and Public:** The "limited time" aspect is crucial. It ensures that after a certain period, copyrighted works eventually enter the public domain. Once in the public domain, anyone can use, adapt, and build upon these works without needing permission or paying royalties. This balance allows creators to benefit from their work while eventually enriching the public domain for future generations to access and innovate upon.
+- **Incentive for Creation**: By granting creators exclusive rights, copyright provides a financial and creative incentive. Knowing they can control and profit from their work encourages artists, writers, musicians, and developers to invest their time, effort, and resources into creating new content.
+- **Balance Between Creators and Public**: The "limited time" aspect is crucial. It ensures that after a certain period, copyrighted works eventually enter the public domain. Once in the public domain, anyone can use, adapt, and build upon these works without needing permission or paying royalties. This balance allows creators to benefit from their work while eventually enriching the public domain for future generations to access and innovate upon.
 
 Without copyright, it would be much harder for creators to earn a living from their work, potentially leading to less new creative content being produced. It helps foster a vibrant environment for innovation and artistic expression.
 

@@ -39,46 +39,46 @@ Easy Text Guide
 
 To install ReShade and SuperDepth3D easily, follow these steps:
 
-#. **Download ReShade:** Get the add-on version of `ReShade <https://reshade.me/#download>`_.
+#. **Download ReShade**: Get the add-on version of `ReShade <https://reshade.me/#download>`_.
 
    .. figure:: images/sr3.png
       :width: 75%
 
       ReShade download page screenshot.
 
-#. **Install ReShade:** Run the ReShade.exe file to install it.
+#. **Install ReShade**: Run the ReShade.exe file to install it.
 
    .. figure:: images/sr4.png
       :width: 75%
 
       ReShade installer screenshot.
 
-#. **Select Game Executable:** Choose or find your game's main file (executable). For example, we'll use Forza Horizon 4.
+#. **Select Game Executable**: Choose or find your game's main file (executable). For example, we'll use Forza Horizon 4.
 
    .. figure:: images/sr5.png
       :width: 75%
 
       ReShade installer game selection screenshot.
 
-#. **Click Open:** Press the :guilabel:`Open` button.
+#. **Click Open**: Press the :guilabel:`Open` button.
 
-#. **Select API:** Choose the API (like DirectX 11 or OpenGL) and click :guilabel:`Next`.
+#. **Select API**: Choose the API (like DirectX 11 or OpenGL) and click :guilabel:`Next`.
 
    .. figure:: images/sr6.png
       :width: 75%
 
       ReShade installer API selection screenshot.
 
-#. **Select SuperDepth3D:** From the Depth3D Repository, check the box next to :file:`SuperDepth3D.fx`.
+#. **Select SuperDepth3D**: From the Depth3D Repository, check the box next to :file:`SuperDepth3D.fx`.
 
    .. figure:: images/sr7.png
       :width: 75%
 
       ReShade installer shader selection screenshot.
 
-#. **Click Next:** Press the :guilabel:`Next` button.
+#. **Click Next**: Press the :guilabel:`Next` button.
 
-#. **Select 3DGameBridgeProjects Add-on:** Make sure to choose the :guilabel:`3DGameBridgeProjects` add-on.
+#. **Select 3DGameBridgeProjects Add-on**: Make sure to choose the :guilabel:`3DGameBridgeProjects` add-on.
 
    .. figure:: images/sr9.png
       :width: 75%
@@ -92,7 +92,7 @@ Manual Guide
 
 If you prefer to install things yourself, follow these steps:
 
-#. **Install ReShade:** Install ReShade or add it to your game. Make sure you use the `add-on version of ReShade <https://reshade.me/#download>`_.
+#. **Install ReShade**: Install ReShade or add it to your game. Make sure you use the `add-on version of ReShade <https://reshade.me/#download>`_.
 
    .. figure:: images/sr10.png
       :width: 75%
@@ -101,21 +101,21 @@ If you prefer to install things yourself, follow these steps:
 
    If ReShade is already installed, you can skip this step.
 
-#. **Download 3DGameBridge:** Get the newest version of `3DGameBridge <https://github.com/JoeyAnthony/3DGameBridgeProjects/releases>`_.
+#. **Download 3DGameBridge**: Get the newest version of `3DGameBridge <https://github.com/JoeyAnthony/3DGameBridgeProjects/releases>`_.
 
    .. figure:: images/sr11.png
       :width: 75%
 
       3DGameBridge GitHub page screenshot.
 
-#. **Copy Add-ons:** Copy both add-ons, or just the one you need, depending on your game's setup.
+#. **Copy Add-ons**: Copy both add-ons, or just the one you need, depending on your game's setup.
 
    .. figure:: images/sr12.png
       :width: 75%
 
       Screenshot of the add-on files.
 
-#. **Paste Add-ons:** Put the add-ons in the same folder as your game's executable file or where ReShade's `.dll` file is installed.
+#. **Paste Add-ons**: Put the add-ons in the same folder as your game's executable file or where ReShade's `.dll` file is installed.
 
    .. figure:: images/sr13.png
       :width: 75%

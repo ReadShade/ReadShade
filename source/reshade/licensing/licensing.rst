@@ -10,10 +10,10 @@ Software licenses are legal instruments that govern the use and distribution of 
 
 Key purposes of software licenses include:
 
-- **Protecting Creator Rights:** Licenses allow creators to retain ownership and control over their work, specifying how it can be used, copied, distributed, and adapted.
-- **Granting User Permissions:** They provide users with explicit permissions to interact with the software, such as running it, studying its code, modifying it, or distributing it.
-- **Establishing Legal Framework:** Licenses create a clear legal framework, reducing ambiguity and potential disputes regarding software usage.
-- **Promoting Collaboration and Innovation:** Open-source licenses, in particular, encourage collaboration by allowing others to build upon existing work, fostering innovation within communities.
+- **Protecting Creator Rights**: Licenses allow creators to retain ownership and control over their work, specifying how it can be used, copied, distributed, and adapted.
+- **Granting User Permissions**: They provide users with explicit permissions to interact with the software, such as running it, studying its code, modifying it, or distributing it.
+- **Establishing Legal Framework**: Licenses create a clear legal framework, reducing ambiguity and potential disputes regarding software usage.
+- **Promoting Collaboration and Innovation**: Open-source licenses, in particular, encourage collaboration by allowing others to build upon existing work, fostering innovation within communities.
 
 Common Open-Source Licenses
 ---------------------------
@@ -63,14 +63,14 @@ What to Do If There Is No License
 
 If a piece of software, including a ReShadeFX shader, does not explicitly include a license, it is generally considered to be under **exclusive copyright** by default. This means:
 
-- **No Permissions Granted:** You do not have permission to use, copy, distribute, or modify the software without explicit authorization from the copyright holder.
-- **Risk of Infringement:** Using unlicensed software without permission can lead to copyright infringement claims.
+- **No Permissions Granted**: You do not have permission to use, copy, distribute, or modify the software without explicit authorization from the copyright holder.
+- **Risk of Infringement**: Using unlicensed software without permission can lead to copyright infringement claims.
 
 Therefore, if you encounter software without a license:
 
-#. **Assume Exclusive Copyright:** Operate under the assumption that you have no rights to use the software beyond what fair use (if applicable) might allow.
-#. **Contact the Author:** The best course of action is to contact the author or creator and request clarification on licensing or seek explicit permission for your intended use.
-#. **Avoid Use if Unsure:** If you cannot obtain clear licensing information or permission, it is safest to avoid using the software to prevent potential legal issues.
+#. **Assume Exclusive Copyright**: Operate under the assumption that you have no rights to use the software beyond what fair use (if applicable) might allow.
+#. **Contact the Author**: The best course of action is to contact the author or creator and request clarification on licensing or seek explicit permission for your intended use.
+#. **Avoid Use if Unsure**: If you cannot obtain clear licensing information or permission, it is safest to avoid using the software to prevent potential legal issues.
 
 For ReShadeFX shaders, always check for a :file:`LICENSE` file, a :file:`README` section on licensing, or comments within the shader code itself that specify the license. If none are present, reach out to the shader's creator.
 

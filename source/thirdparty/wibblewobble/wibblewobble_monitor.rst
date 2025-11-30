@@ -22,37 +22,37 @@ To build your IR Emitter, you will need some basic electronic components: an Ard
 Below are some affiliate links to Amazon products that can be used for this project. Please select one item from each category.
 
 Arduino or Compatible Boards:
-   - **Arduino UNO:** https://amzn.to/3DfaJ6a
-   - **KEYESTUDIO Leonardo:** https://amzn.to/3ZBlFT7
+   - **Arduino UNO**: https://amzn.to/3DfaJ6a
+   - **KEYESTUDIO Leonardo**: https://amzn.to/3ZBlFT7
 
 Breadboard Kits with Cables:
-   - **Option One:** https://amzn.to/3ZUcfU6
-   - **Option Two:** https://amzn.to/49FLxSd
+   - **Option One**: https://amzn.to/3ZUcfU6
+   - **Option Two**: https://amzn.to/49FLxSd
 
 Resistors - 220 Ohms:
-   - **Option One:** https://amzn.to/3ZD3QmG
-   - **Option Two:** https://amzn.to/4geNrMf
+   - **Option One**: https://amzn.to/3ZD3QmG
+   - **Option Two**: https://amzn.to/4geNrMf
 
 IR LEDs:
-   - **Option One:** https://amzn.to/3ZUcfU6
-   - **Option Two:** https://amzn.to/3VGQRzd
-   - **Option Three:** https://amzn.to/3DmpvrJ
+   - **Option One**: https://amzn.to/3ZUcfU6
+   - **Option Two**: https://amzn.to/3VGQRzd
+   - **Option Three**: https://amzn.to/3DmpvrJ
 
 3D Glasses:
-   - **144Hz Rechargeable DLP Glasses:** https://amzn.to/41ElhWu
-   - **XPAND X105-IR-X1 Rechargeable 3D Infrared Glasses:** https://amzn.to/49I7Ref
+   - **144Hz Rechargeable DLP Glasses**: https://amzn.to/41ElhWu
+   - **XPAND X105-IR-X1 Rechargeable 3D Infrared Glasses**: https://amzn.to/49I7Ref
 
    .. note::
       When choosing 3D glasses, pay close attention to their polarization:
 
-      - **Vertically Polarized Glasses:** These will block the image on your screen if your monitor is in portrait mode.
-      - **Horizontally Polarized Glasses:** These will block the image on your screen if your monitor is in the normal landscape (horizontal) position.
+      - **Vertically Polarized Glasses**: These will block the image on your screen if your monitor is in portrait mode.
+      - **Horizontally Polarized Glasses**: These will block the image on your screen if your monitor is in the normal landscape (horizontal) position.
 
 If you choose the Arduino UNO, you will also need a USB B cable.
 
 Extra Items (USB Cables):
-   - **3 Foot USB A to USB B Cable:** https://amzn.to/3OXlwnQ
-   - **6.6 Foot USB B to USB C Cable:** https://amzn.to/3OYQMTz
+   - **3 Foot USB A to USB B Cable**: https://amzn.to/3OXlwnQ
+   - **6.6 Foot USB B to USB C Cable**: https://amzn.to/3OYQMTz
 
 .. important::
    Understanding the polarization of your 3D glasses is crucial for screen compatibility. For example, if you plan to play 3D pinball games, which often use vertically oriented screens, you would typically need horizontally polarized glasses.

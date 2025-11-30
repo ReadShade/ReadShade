@@ -25,17 +25,17 @@ To fix DPI scaling problems, follow these easy steps:
 Step 1: Accessing the Game's Properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. **Locate the game's executable file:** Find the :file:`.exe` file for the game you want to fix.
-#. **Right-click on the executable file:** Right-click the game's executable file.
-#. **Select Properties:** From the menu that appears, choose the :guilabel:`Properties` option.
+#. **Locate the game's executable file**: Find the :file:`.exe` file for the game you want to fix.
+#. **Right-click on the executable file**: Right-click the game's executable file.
+#. **Select Properties**: From the menu that appears, choose the :guilabel:`Properties` option.
 
 Step 2: Adjusting the Compatibility Settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. **Select the Compatibility tab:** In the Properties window, click the :guilabel:`Compatibility` tab.
-#. **Click on Change High DPI Settings:** In the Compatibility tab, click the :guilabel:`Change High DPI Settings` button.
-#. **Override high DPI scaling behavior:** At the bottom of the window, check the box next to **Override high DPI scaling behavior**.
-#. **Select the scaling mode:** Open the dropdown menu and choose :guilabel:`Application`.
+#. **Select the Compatibility tab**: In the Properties window, click the :guilabel:`Compatibility` tab.
+#. **Click on Change High DPI Settings**: In the Compatibility tab, click the :guilabel:`Change High DPI Settings` button.
+#. **Override high DPI scaling behavior**: At the bottom of the window, check the box next to **Override high DPI scaling behavior**.
+#. **Select the scaling mode**: Open the dropdown menu and choose :guilabel:`Application`.
 
 Example Screenshot
 ------------------

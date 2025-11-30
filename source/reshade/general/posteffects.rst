@@ -21,12 +21,12 @@ Phase 1: Editing the Engine.ini File
 
 To turn off these effects, follow these steps:
 
-#. **Locate the Engine.ini File:** Go to :file:`%APPDATA%` or :file:`%LOCALAPPDATA%` and find your game's configuration folder:
+#. **Locate the Engine.ini File**: Go to :file:`%APPDATA%` or :file:`%LOCALAPPDATA%` and find your game's configuration folder:
 
-   - **Steam:** :file:`"GAME"/Saved/Config/WindowsNoEditor`
-   - **Windows Game Store:** :file:`"GAME"/Saved/Config/WinGDK`
+   - **Steam**: :file:`"GAME"/Saved/Config/WindowsNoEditor`
+   - **Windows Game Store**: :file:`"GAME"/Saved/Config/WinGDK`
 
-#. **Edit the Engine.ini File:** Open the :file:`Engine.ini` file and add these lines at the very end:
+#. **Edit the Engine.ini File**: Open the :file:`Engine.ini` file and add these lines at the very end:
 
    .. code-block:: ini
 
@@ -38,7 +38,7 @@ To turn off these effects, follow these steps:
       r.SceneColorFringe.Max=0
       r.SceneColorFringeQuality=0
 
-#. **Save and Set to Read-Only:** Save the file, then set it to `Read Only` so it can't be changed by accident.
+#. **Save and Set to Read-Only**: Save the file, then set it to `Read Only` so it can't be changed by accident.
 
 .. admonition:: Notes
    :class: note

@@ -17,14 +17,14 @@ To use your VITURE AR Glasses with an Intel GPU, follow these steps:
 Initial Steps
 ^^^^^^^^^^^^^
 
-#. **Update your Arc Drivers:** Make sure you have the newest `Arc Drivers <https://www.intel.com/content/www/us/en/products/docs/discrete-gpus/arc/software/drivers.html>`_ installed.
+#. **Update your Arc Drivers**: Make sure you have the newest `Arc Drivers <https://www.intel.com/content/www/us/en/products/docs/discrete-gpus/arc/software/drivers.html>`_ installed.
 
    .. figure:: images/viture2.png
       :width: 90%
 
       Screenshot of the Intel Arc Drivers page.
 
-#. **Download Intel Graphics Command Center:** Install the beta version of the `Intel Graphics Command Center <https://apps.microsoft.com/detail/9nmr79ztjftc?rtc=1&hl=en-us&gl=us>`_ application.
+#. **Download Intel Graphics Command Center**: Install the beta version of the `Intel Graphics Command Center <https://apps.microsoft.com/detail/9nmr79ztjftc?rtc=1&hl=en-us&gl=us>`_ application.
 
    .. figure:: images/viture3.png
       :width: 90%
@@ -34,7 +34,7 @@ Initial Steps
 Configuring VITURE with Intel GPU
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. **Switch to 3D Mode:** Plug in your VITURE AR Glasses. Hold down the first button for a few seconds to switch them to 3D Mode.
+#. **Switch to 3D Mode**: Plug in your VITURE AR Glasses. Hold down the first button for a few seconds to switch them to 3D Mode.
 
    Windows should see it as a 3840 x 1080p screen:
 
@@ -45,28 +45,28 @@ Configuring VITURE with Intel GPU
 
       If you see this, it's a good sign.
 
-#. **Launch Intel Graphics Command Center:** Open the Intel Graphics Command Center (BETA).
+#. **Launch Intel Graphics Command Center**: Open the Intel Graphics Command Center (BETA).
 
    .. figure:: images/viture5.png
       :width: 90%
 
       Screenshot of the Intel Graphics Command Center application.
 
-#. **Select Display Settings:** Click on :guilabel:`Display`.
+#. **Select Display Settings**: Click on :guilabel:`Display`.
 
    .. figure:: images/viture6.png
       :width: 90%
 
       Screenshot showing the :guilabel:`Display` option in Intel Graphics Command Center.
 
-#. **Select VITURE Screen:** Click on the screen labeled :guilabel:`VITURE`.
+#. **Select VITURE Screen**: Click on the screen labeled :guilabel:`VITURE`.
 
    .. figure:: images/viture7.png
       :width: 90%
 
       Screenshot showing the VITURE screen selected.
 
-#. **Change Resolution:** Go to settings and change the resolution from :guilabel:`3840 x 1080` to :guilabel:`1920 x 1080`.
+#. **Change Resolution**: Go to settings and change the resolution from :guilabel:`3840 x 1080` to :guilabel:`1920 x 1080`.
 
    .. figure:: images/viture8.png
       :width: 90%
@@ -78,14 +78,14 @@ Configuring VITURE with Intel GPU
 
       Screenshot showing the resolution changed.
 
-#. **Set Scale Size:** Change the scale size to :guilabel:`Stretched`.
+#. **Set Scale Size**: Change the scale size to :guilabel:`Stretched`.
 
    .. figure:: images/viture10.png
       :width: 90%
 
       Screenshot of the scale size options.
 
-#. **Verify Settings:** Your settings should now look like this:
+#. **Verify Settings**: Your settings should now look like this:
 
    .. figure:: images/viture11.png
       :width: 90%
@@ -99,14 +99,14 @@ Setting Up VITURE with NVIDIA GPU
 
 To use your VITURE AR Glasses with an NVIDIA GPU, follow these steps:
 
-#. **Update your NVIDIA Drivers:** Make sure you have the newest `NVIDIA Drivers <https://www.nvidia.com/en-us/drivers/>`_ installed.
+#. **Update your NVIDIA Drivers**: Make sure you have the newest `NVIDIA Drivers <https://www.nvidia.com/en-us/drivers/>`_ installed.
 
    .. figure:: images/viture12.png
       :width: 90%
 
       Screenshot of the NVIDIA drivers page.
 
-#. **Switch to 3D Mode:** Plug in your VITURE AR Glasses. Hold down the first button for a few seconds to switch them to 3D Mode.
+#. **Switch to 3D Mode**: Plug in your VITURE AR Glasses. Hold down the first button for a few seconds to switch them to 3D Mode.
 
    .. figure:: images/viture13.jpg
       :width: 90%
@@ -122,21 +122,21 @@ To use your VITURE AR Glasses with an NVIDIA GPU, follow these steps:
 
    If you see this, it's a good sign.
 
-#. **Launch NVIDIA Control Panel:** Open the NVIDIA Control Panel.
+#. **Launch NVIDIA Control Panel**: Open the NVIDIA Control Panel.
 
    .. figure:: images/viture15.png
       :width: 90%
 
       Screenshot of the NVIDIA Control Panel.
 
-#. **Change Resolution:** Click on :guilabel:`Change Resolution` and set it to 1920 x 1080.
+#. **Change Resolution**: Click on :guilabel:`Change Resolution` and set it to 1920 x 1080.
 
    .. figure:: images/viture16.png
       :width: 90%
 
       Screenshot of the NVIDIA resolution settings.
 
-#. **Adjust Desktop Size and Position:** Go to :guilabel:`Adjust Desktop size and Position`. Set it to :guilabel:`Fullscreen`, and the other settings should automatically be correct.
+#. **Adjust Desktop Size and Position**: Go to :guilabel:`Adjust Desktop size and Position`. Set it to :guilabel:`Fullscreen`, and the other settings should automatically be correct.
 
    .. figure:: images/viture17.png
       :width: 90%
