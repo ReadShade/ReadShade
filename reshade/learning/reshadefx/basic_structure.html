@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="lime" data-content_root="../../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>2. Basic Shader Structure - ReadShade</title><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="3. Create a New .fx File" href="step1.html" /><link rel="prev" title="1. Introduction to Shaders and ReShade FX" href="introduction.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d1c6635e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/shibuya.css?v=a318c5d4" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../../_static/print.css?v=20ff2c19" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="2. Basic Shader Structure"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="../../../index.html">
+      
+      
+      <strong>ReadShade</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"><ul>
+      <li class="link"><button class="js-menu" type="button" id="nav-trigger-1" aria-controls="nav-children-1">
+            <span>Contributors</span>
+            <i class="i-lucide chevron-down"></i>
+          </button>
+        <ul id="nav-children-1" aria-labelledby="nav-trigger-1"><li><a href="https://github.com/BlueSkyDefender">
+                <span>BlueSkyDefender</span>
+                <small>Author of SuperDepth3D, AstrayFX, and various secret projects.</small>
+              </a></li><li><a href="https://github.com/papadanku">
+                <span>papadanku</span>
+                <small>Hobbyist programmer. Contributor to the Project Reality game modification and CShade.</small>
+              </a></li><li><a href="https://github.com/PHARTGAMES">
+                <span>PHARTGAMES / PEZZALUCIFER</span>
+                <small>Developed WibbleWobble, turning your display into a window to virtual worlds.</small>
+              </a></li></ul>
+      </li><li class="link">
+          <a href="https://reshade.me/">
+            <span>ReShade Homepage</span></a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="../../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">ReShade Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../general/index.html">ReShade General</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../general/dlss.html">Disable DLSS Frame Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../general/dxvk.html">Install ReShade with DXVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../general/laa.html">Use Large Address Aware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../general/posteffects.html">Disable Unreal Engine’s Post Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../general/reshadeversions.html">Change ReShade Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../general/windpi.html">Game Windows DPI Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../licensing/index.html">Licensing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../licensing/copyright.html">United States Copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../licensing/licensing.html">Software Licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Learning</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../resources.html">Tools &amp; Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../literature.html">Literature</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Writing Shaders</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">1. Introduction to Shaders and ReShade FX</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2. Basic Shader Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step1.html">3. Create a New .fx File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step2.html">4. Add the Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step3.html">5. Implement the Grayscale Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step4.html">6. Apply the Shader in ReShade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="key_concepts.html">7. Understanding Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="further_exploration.html">8. Further Exploration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Software guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/addons/index.html">Addons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/addons/genericdepth.html">Generic Depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/addons/rest.html">Reshade Effect Shader Toggler (R.E.S.T)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/addons/shadertoggler.html">Shader Toggler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/emulators/index.html">Emulators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/emulators/pcsx2.html">PCSX2</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Third-Party Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../thirdparty/depth3d/index.html">Depth3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../thirdparty/depth3d/hardwareguides/index.html">Hardware Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../thirdparty/depth3d/hardwareguides/sr.html">Simulated Reality Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../thirdparty/depth3d/hardwareguides/viture.html">VITURE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../thirdparty/wibblewobble/index.html">WibbleWobble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../thirdparty/wibblewobble/wibblewobble_monitor.html">Frame Sequential (Monitor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../thirdparty/wibblewobble/wibblewobble_projector.html">Frame Sequential (Projector)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#preprocessor-directives">2.1. Preprocessor Directives</a></li>
+<li><a class="reference internal" href="#uniform-variables">2.2. Uniform Variables</a></li>
+<li><a class="reference internal" href="#textures-and-samplers">2.3. Textures and Samplers</a></li>
+<li><a class="reference internal" href="#functions-vertex-and-pixel-shaders">2.4. Functions (Vertex and Pixel Shaders)</a><ul>
+<li><a class="reference internal" href="#vertex-shader-vs">2.4.1. Vertex Shader (VS)</a></li>
+<li><a class="reference internal" href="#pixel-shader-ps">2.4.2. Pixel Shader (PS)</a></li>
+<li><a class="reference internal" href="#techniques">2.4.3. Techniques</a></li>
+</ul>
+</li>
+</ul>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../../index.html"><span itemprop="name">ReadShade</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../index.html"><span itemprop="name">Learning</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Writing Shaders</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="3" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name"><span class="section-number">2. </span>Basic Shader Structure</strong>
+        <meta itemprop="position" content="4" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="basic-shader-structure">
+<h1><span class="section-number">2. </span>Basic Shader Structure<a class="headerlink" href="#basic-shader-structure" title="Link to this heading">¶</a></h1>
+<p>Every shader in ReShade FX typically consists of a few main parts:</p>
+<section id="preprocessor-directives">
+<h2><span class="section-number">2.1. </span>Preprocessor Directives<a class="headerlink" href="#preprocessor-directives" title="Link to this heading">¶</a></h2>
+<p>These are instructions for the compiler that are processed before the main compilation begins. They are commonly used to include other files (like <code class="file docutils literal notranslate"><span class="pre">ReShade.fxh</span></code>, which provides essential ReShade functions and definitions) or to define constants.</p>
+<div class="highlight-hlsl notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="cp">#include &quot;ReShade.fxh&quot; // Includes the standard ReShade header</span>
+</span></pre></div>
+</div>
+</section>
+<section id="uniform-variables">
+<h2><span class="section-number">2.2. </span>Uniform Variables<a class="headerlink" href="#uniform-variables" title="Link to this heading">¶</a></h2>
+<p>These are variables that remain constant across all pixels or vertices processed in a single shader pass, but their values can be changed from outside the shader, typically through the ReShade in-game user interface (UI). This allows for dynamic adjustments to your effects without recompiling the shader.</p>
+<div class="highlight-hlsl notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="k">uniform</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">Brightness</span><span class="w"> </span><span class="o">&lt;</span>
+</span><span data-line="2"><span class="w">   </span><span class="n">ui_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;slider&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Defines this variable as a slider in the ReShade UI</span>
+</span><span data-line="3"><span class="w">   </span><span class="n">ui_min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">1.0</span><span class="p">;</span><span class="w"> </span><span class="n">ui_max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Sets the minimum and maximum values for the slider</span>
+</span><span data-line="4"><span class="w">   </span><span class="n">ui_tooltip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Adjusts the overall brightness of the scene.&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Tooltip for the UI</span>
+</span><span data-line="5"><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Default value for the brightness</span>
+</span></pre></div>
+</div>
+</section>
+<section id="textures-and-samplers">
+<h2><span class="section-number">2.3. </span>Textures and Samplers<a class="headerlink" href="#textures-and-samplers" title="Link to this heading">¶</a></h2>
+<p><strong>Textures</strong> are essentially image data or other data grids that the shader can read from. The most frequently used texture is <code class="docutils literal notranslate"><span class="pre">BackBufferTex</span></code>, which contains the rendered image of your game before any ReShade effects are applied.</p>
+<p><strong>Samplers</strong> act as the interface for reading from textures. They define <em>how</em> a texture is accessed, including aspects like how to handle coordinates that fall outside the texture’s boundaries (e.g., <code class="docutils literal notranslate"><span class="pre">CLAMP</span></code>, <code class="docutils literal notranslate"><span class="pre">WRAP</span></code>) and the method of filtering (e.g., <code class="docutils literal notranslate"><span class="pre">LINEAR</span></code> for smooth blending, <code class="docutils literal notranslate"><span class="pre">POINT</span></code> for sharp pixels).</p>
+<div class="highlight-hlsl notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="c1">// Texture declaration (often found pre-defined in ReShade.fxh)</span>
+</span><span data-line="2"><span class="k">texture</span><span class="w"> </span><span class="n">BackBufferTex</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">COLOR</span><span class="p">;</span><span class="w"> </span><span class="c1">// Declares a texture to hold color data</span>
+</span><span data-line="3">
+</span><span data-line="4"><span class="c1">// Sampler declaration</span>
+</span><span data-line="5"><span class="k">sampler</span><span class="w"> </span><span class="n">BackBuffer</span>
+</span><span data-line="6"><span class="p">{</span>
+</span><span data-line="7"><span class="w">   </span><span class="n">Texture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BackBufferTex</span><span class="p">;</span><span class="w"> </span><span class="c1">// Links this sampler to the BackBufferTex</span>
+</span><span data-line="8"><span class="w">   </span><span class="n">AddressU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CLAMP</span><span class="p">;</span><span class="w"> </span><span class="c1">// Clamps texture coordinates to the edge of the texture</span>
+</span><span data-line="9"><span class="w">   </span><span class="n">AddressV</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CLAMP</span><span class="p">;</span><span class="w"> </span><span class="c1">// Clamps texture coordinates to the edge of the texture</span>
+</span><span data-line="10"><span class="w">   </span><span class="n">MagFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LINEAR</span><span class="p">;</span><span class="w"> </span><span class="c1">// Uses linear interpolation for magnification</span>
+</span><span data-line="11"><span class="w">   </span><span class="n">MinFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LINEAR</span><span class="p">;</span><span class="w"> </span><span class="c1">// Uses linear interpolation for minification</span>
+</span><span data-line="12"><span class="p">};</span>
+</span></pre></div>
+</div>
+</section>
+<section id="functions-vertex-and-pixel-shaders">
+<h2><span class="section-number">2.4. </span>Functions (Vertex and Pixel Shaders)<a class="headerlink" href="#functions-vertex-and-pixel-shaders" title="Link to this heading">¶</a></h2>
+<section id="vertex-shader-vs">
+<h3><span class="section-number">2.4.1. </span>Vertex Shader (VS)<a class="headerlink" href="#vertex-shader-vs" title="Link to this heading">¶</a></h3>
+<p>This shader stage processes the “vertices” (corner points) of the 3D models in your game world. In the context of ReShade, which primarily deals with post-processing, the vertex shader is often simplified. Its main role is to set up a full-screen rectangle (or “quad”) that covers the entire screen, providing the canvas for the pixel shader. You will commonly encounter the standard <code class="docutils literal notranslate"><span class="pre">PostProcessVS</span></code> function for this purpose, which is usually provided by ReShade.</p>
+<div class="highlight-hlsl notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="c1">// Standard Vertex Shader for full-screen effects (often found in ReShade.fxh)</span>
+</span><span data-line="2"><span class="kt">void</span><span class="w"> </span><span class="n">PostProcessVS</span><span class="p">(</span><span class="k">in</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nd">SV_VertexID</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">float4</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nd">SV_Position</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">float2</span><span class="w"> </span><span class="n">texcoord</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">TEXCOORD</span><span class="p">)</span>
+</span><span data-line="3"><span class="p">{</span>
+</span><span data-line="4"><span class="w">   </span><span class="c1">// This code generates vertex positions and texture coordinates for a full-screen quad.</span>
+</span><span data-line="5"><span class="w">   </span><span class="c1">// SV_VertexID is a system-generated ID for each vertex.</span>
+</span><span data-line="6"><span class="w">   </span><span class="n">texcoord</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+</span><span data-line="7"><span class="w">   </span><span class="n">texcoord</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+</span><span data-line="8"><span class="w">   </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">float4</span><span class="p">(</span><span class="n">texcoord</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kt">float2</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">2.0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">float2</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">),</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
+</span><span data-line="9"><span class="p">}</span>
+</span></pre></div>
+</div>
+</section>
+<section id="pixel-shader-ps">
+<h3><span class="section-number">2.4.2. </span>Pixel Shader (PS)<a class="headerlink" href="#pixel-shader-ps" title="Link to this heading">¶</a></h3>
+<p>This is where the core visual effects logic resides. The pixel shader executes for <em>every single pixel</em> on your screen (or within the area defined by the vertex shader) and determines its final color. It takes input such as texture coordinates and outputs a color value. Most of your creative work in ReShade FX will happen within pixel shaders.</p>
+<div class="highlight-hlsl notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="c1">// A simple Pixel Shader that just returns the original color from the back buffer</span>
+</span><span data-line="2"><span class="kt">float3</span><span class="w"> </span><span class="n">PS_Passthrough</span><span class="p">(</span><span class="kt">float4</span><span class="w"> </span><span class="n">vpos</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nd">SV_Position</span><span class="p">,</span><span class="w"> </span><span class="kt">float2</span><span class="w"> </span><span class="n">texcoord</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">TexCoord</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nd">SV_Target</span>
+</span><span data-line="3"><span class="p">{</span>
+</span><span data-line="4"><span class="w">   </span><span class="c1">// tex2D reads a color from the &#39;BackBuffer&#39; sampler at the given &#39;texcoord&#39;.</span>
+</span><span data-line="5"><span class="w">   </span><span class="kt">float3</span><span class="w"> </span><span class="n">originalColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tex2D</span><span class="p">(</span><span class="n">BackBuffer</span><span class="p">,</span><span class="w"> </span><span class="n">texcoord</span><span class="p">).</span><span class="n">rgb</span><span class="p">;</span>
+</span><span data-line="6"><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">originalColor</span><span class="p">;</span><span class="w"> </span><span class="c1">// Returns the color for the current pixel</span>
+</span><span data-line="7"><span class="p">}</span>
+</span></pre></div>
+</div>
+</section>
+<section id="techniques">
+<h3><span class="section-number">2.4.3. </span>Techniques<a class="headerlink" href="#techniques" title="Link to this heading">¶</a></h3>
+<p>A <strong>technique</strong> acts as a complete rendering pipeline, combining a vertex shader, a pixel shader, and various other rendering settings into a single, executable unit. A single <code class="docutils literal notranslate"><span class="pre">.fx</span></code> file can define multiple techniques, each representing a different effect or a variation of an effect.</p>
+<div class="highlight-hlsl notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="k">technique</span><span class="w"> </span><span class="n">MySimpleEffect</span>
+</span><span data-line="2"><span class="p">{</span>
+</span><span data-line="3"><span class="w">   </span><span class="k">pass</span><span class="w"> </span><span class="c1">// A technique can consist of one or more passes</span>
+</span><span data-line="4"><span class="w">   </span><span class="p">{</span>
+</span><span data-line="5"><span class="w">      </span><span class="kt">VertexShader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PostProcessVS</span><span class="p">;</span><span class="w"> </span><span class="c1">// Assigns the vertex shader for this pass</span>
+</span><span data-line="6"><span class="w">      </span><span class="kt">PixelShader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PS_Passthrough</span><span class="p">;</span><span class="w"> </span><span class="c1">// Assigns our pixel shader for this pass</span>
+</span><span data-line="7"><span class="w">   </span><span class="p">}</span>
+</span><span data-line="8"><span class="p">}</span>
+</span></pre></div>
+</div>
+</section>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="introduction.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span><div class="title"><span class="section-number">1. </span>Introduction to Shaders and ReShade FX</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="step1.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title"><span class="section-number">3. </span>Create a New .fx File</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2026, The ReadShade Team</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../_static/shibuya.js?v=cac61aee"></script></body>
+</html>

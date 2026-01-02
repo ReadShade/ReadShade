@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="lime" data-content_root="../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Install ReShade with DXVK - ReadShade</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Use Large Address Aware" href="laa.html" /><link rel="prev" title="Disable DLSS Frame Generation" href="dlss.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1c6635e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/shibuya.css?v=a318c5d4" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../_static/print.css?v=20ff2c19" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="Install ReShade with DXVK"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="../../index.html">
+      
+      
+      <strong>ReadShade</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"><ul>
+      <li class="link"><button class="js-menu" type="button" id="nav-trigger-1" aria-controls="nav-children-1">
+            <span>Contributors</span>
+            <i class="i-lucide chevron-down"></i>
+          </button>
+        <ul id="nav-children-1" aria-labelledby="nav-trigger-1"><li><a href="https://github.com/BlueSkyDefender">
+                <span>BlueSkyDefender</span>
+                <small>Author of SuperDepth3D, AstrayFX, and various secret projects.</small>
+              </a></li><li><a href="https://github.com/papadanku">
+                <span>papadanku</span>
+                <small>Hobbyist programmer. Contributor to the Project Reality game modification and CShade.</small>
+              </a></li><li><a href="https://github.com/PHARTGAMES">
+                <span>PHARTGAMES / PEZZALUCIFER</span>
+                <small>Developed WibbleWobble, turning your display into a window to virtual worlds.</small>
+              </a></li></ul>
+      </li><li class="link">
+          <a href="https://reshade.me/">
+            <span>ReShade Homepage</span></a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">ReShade Guide</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">ReShade General</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dlss.html">Disable DLSS Frame Generation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Install ReShade with DXVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="laa.html">Use Large Address Aware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="posteffects.html">Disable Unreal Engine’s Post Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reshadeversions.html">Change ReShade Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windpi.html">Game Windows DPI Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licensing/index.html">Licensing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licensing/copyright.html">United States Copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licensing/licensing.html">Software Licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../learning/index.html">Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../learning/resources.html">Tools &amp; Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/literature.html">Literature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/reshadefx/index.html">Writing Shaders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/introduction.html">1. Introduction to Shaders and ReShade FX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/basic_structure.html">2. Basic Shader Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step1.html">3. Create a New .fx File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step2.html">4. Add the Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step3.html">5. Implement the Grayscale Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step4.html">6. Apply the Shader in ReShade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/key_concepts.html">7. Understanding Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/further_exploration.html">8. Further Exploration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Software guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../software/addons/index.html">Addons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/genericdepth.html">Generic Depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/rest.html">Reshade Effect Shader Toggler (R.E.S.T)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/shadertoggler.html">Shader Toggler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../software/emulators/index.html">Emulators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../software/emulators/pcsx2.html">PCSX2</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Third-Party Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/depth3d/index.html">Depth3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/index.html">Hardware Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/sr.html">Simulated Reality Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/viture.html">VITURE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/wibblewobble/index.html">WibbleWobble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_monitor.html">Frame Sequential (Monitor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_projector.html">Frame Sequential (Projector)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#why-use-them-together">Why use them together?</a></li>
+<li><a class="reference internal" href="#how-to-install-dxvk-with-reshade-step-by-step">How to Install DXVK with ReShade (Step-by-Step):</a><ul>
+<li><a class="reference internal" href="#part-1-install-dxvk-first">Part 1: Install DXVK First</a></li>
+<li><a class="reference internal" href="#part-2-install-reshade-second">Part 2: Install ReShade Second</a></li>
+<li><a class="reference internal" href="#part-3-verify-and-configure">Part 3: Verify and Configure</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#troubleshooting-tips">Troubleshooting Tips</a></li>
+</ul>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../index.html"><span itemprop="name">ReadShade</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">ReShade General</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Install ReShade with DXVK</strong>
+        <meta itemprop="position" content="3" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="install-reshade-with-dxvk">
+<h1>Install ReShade with DXVK<a class="headerlink" href="#install-reshade-with-dxvk" title="Link to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>This guide will walk you through installing DXVK alongside ReShade. This combination can improve game performance and allow for advanced post-processing effects.</p>
+<ul class="simple">
+<li><p><strong>DXVK</strong>: Translates DirectX 9, 10, or 11 games to Vulkan, often leading to better performance or compatibility, especially on Linux, but sometimes on Windows too.</p></li>
+<li><p><strong>ReShade</strong>: A post-processing injector that adds advanced graphics filters to games, allowing you to enhance visuals with effects like depth of field, ambient occlusion, and color correction.</p></li>
+</ul>
+</section>
+<section id="why-use-them-together">
+<h2>Why use them together?<a class="headerlink" href="#why-use-them-together" title="Link to this heading">¶</a></h2>
+<p>You might use DXVK for a performance boost or better compatibility, and then use ReShade on top of that to make your game look even better.</p>
+</section>
+<section id="how-to-install-dxvk-with-reshade-step-by-step">
+<h2>How to Install DXVK with ReShade (Step-by-Step):<a class="headerlink" href="#how-to-install-dxvk-with-reshade-step-by-step" title="Link to this heading">¶</a></h2>
+<section id="part-1-install-dxvk-first">
+<h3>Part 1: Install DXVK First<a class="headerlink" href="#part-1-install-dxvk-first" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Download DXVK</strong>: Go to the official <a class="reference external" href="https://github.com/doitsujin/dxvk/releases">DXVK GitHub releases page</a>. Look for the latest stable release, which will typically be a <code class="file docutils literal notranslate"><span class="pre">.tar.gz</span></code> file (e.g., <code class="file docutils literal notranslate"><span class="pre">dxvk-1.2.3.tar.gz</span></code>). Download this file.</p></li>
+<li><p><strong>Extract DXVK</strong>: Extract the contents of the downloaded <code class="file docutils literal notranslate"><span class="pre">.tar.gz</span></code> file using an archiving tool like 7-Zip or WinRAR. After extraction, you’ll find a folder containing <code class="file docutils literal notranslate"><span class="pre">x32</span></code> and <code class="file docutils literal notranslate"><span class="pre">x64</span></code> subfolders. These subfolders contain the necessary <code class="file docutils literal notranslate"><span class="pre">d3d9.dll</span></code>, <code class="file docutils literal notranslate"><span class="pre">d3d10.dll</span></code>, <code class="file docutils literal notranslate"><span class="pre">d3d11.dll</span></code>, and <code class="file docutils literal notranslate"><span class="pre">dxgi.dll</span></code> files.</p></li>
+<li><p><strong>Identify your game’s architecture</strong>: Most modern games are 64-bit. If unsure, check the game’s installation directory for an <code class="file docutils literal notranslate"><span class="pre">x64</span></code> folder or the game’s executable properties. Older games might be 32-bit.</p></li>
+<li><p><strong>Copy DXVK files to your game</strong>:</p>
+<ul class="simple">
+<li><p>Navigate to your game’s main executable folder (where the <code class="file docutils literal notranslate"><span class="pre">.exe</span></code> file that launches the game is located).</p></li>
+<li><p>From the extracted DXVK folder, go into either the <code class="file docutils literal notranslate"><span class="pre">x64</span></code> or <code class="file docutils literal notranslate"><span class="pre">x32</span></code> folder (depending on your game’s architecture).</p></li>
+<li><p>Copy the <code class="file docutils literal notranslate"><span class="pre">d3d9.dll</span></code>, <code class="file docutils literal notranslate"><span class="pre">d3d10.dll</span></code>, <code class="file docutils literal notranslate"><span class="pre">d3d11.dll</span></code>, and <code class="file docutils literal notranslate"><span class="pre">dxgi.dll</span></code> files from the DXVK folder directly into your game’s main executable folder.</p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You only need the DLLs for the DirectX version your game uses. For example, if your game is DirectX 11, you primarily need <code class="file docutils literal notranslate"><span class="pre">d3d11.dll</span></code> and <code class="file docutils literal notranslate"><span class="pre">dxgi.dll</span></code>. Copying all of them usually doesn’t cause issues.</p>
+</div>
+</section>
+<section id="part-2-install-reshade-second">
+<h3>Part 2: Install ReShade Second<a class="headerlink" href="#part-2-install-reshade-second" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Download ReShade</strong>: Go to the <a class="reference external" href="https://reshade.me/">official ReShade website</a> and download the latest version of the ReShade installer.</p></li>
+<li><p><strong>Run the ReShade Installer</strong>:</p>
+<ul class="simple">
+<li><p>Open the downloaded ReShade installer.</p></li>
+<li><p>Click <span class="guilabel">Click here to select a game and manage its ReShade installation</span>.</p></li>
+<li><p>Browse to your game’s main executable file (the same <code class="file docutils literal notranslate"><span class="pre">.exe</span></code> you copied DXVK files to). Select it.</p></li>
+<li><p>ReShade will then ask you to select a rendering API. <strong>This is crucial</strong>: Since you installed DXVK, your game is now effectively running on Vulkan. So, select <span class="guilabel">Vulkan</span> from the list.</p></li>
+<li><p>ReShade will then ask you which effect packages you want to install. You can select all of them, or just the ones you think you’ll use. Click <span class="guilabel">OK</span> or <span class="guilabel">Continue</span>.</p></li>
+<li><p>The installer will download and install the necessary ReShade files.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="part-3-verify-and-configure">
+<h3>Part 3: Verify and Configure<a class="headerlink" href="#part-3-verify-and-configure" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Launch the Game</strong>: Start your game as you normally would.</p></li>
+<li><p><strong>Check for ReShade</strong>: You should see a small gray text overlay at the top of your screen during game startup, indicating that ReShade is loading.</p></li>
+<li><p><strong>Open ReShade Menu</strong>: Once in the game, press the <kbd class="kbd docutils literal notranslate">Home</kbd> key (or <kbd class="kbd docutils literal notranslate">Pos1</kbd> on some keyboards) to open the ReShade overlay.</p></li>
+<li><p><strong>Configure ReShade</strong>: Follow the on-screen tutorial in ReShade to select and enable effects. You can create your own presets or download existing ones.</p></li>
+</ol>
+</section>
+</section>
+<section id="troubleshooting-tips">
+<h2>Troubleshooting Tips<a class="headerlink" href="#troubleshooting-tips" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Order Matters</strong>: Always install DXVK <em>before</em> ReShade.</p></li>
+<li><p><strong>API Selection</strong>: Make sure you select <span class="guilabel">Vulkan</span> in the ReShade installer if you’re using DXVK.</p></li>
+<li><p><strong>DLL Conflicts</strong>: If you encounter issues, it’s often due to conflicting <code class="file docutils literal notranslate"><span class="pre">.dll</span></code> files. Ensure only one <code class="file docutils literal notranslate"><span class="pre">dxgi.dll</span></code> (or <code class="file docutils literal notranslate"><span class="pre">d3d9.dll</span></code> / <code class="file docutils literal notranslate"><span class="pre">d3d11.dll</span></code>) is present that is either from DXVK or ReShade, and that ReShade is configured to hook into the correct API (Vulkan). ReShade’s Vulkan installation usually handles this by renaming its own DLL to <code class="file docutils literal notranslate"><span class="pre">dxgi.dll</span></code> or <code class="file docutils literal notranslate"><span class="pre">d3d11.dll</span></code> and then hooking into the DXVK-provided DLL.</p></li>
+<li><p><strong>Game Updates</strong>: Game updates can sometimes overwrite or remove these custom DLLs, so you might need to reinstall them after an update.</p></li>
+</ul>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="dlss.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span><div class="title">Disable DLSS Frame Generation</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="laa.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">Use Large Address Aware</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2026, The ReadShade Team</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/shibuya.js?v=cac61aee"></script></body>
+</html>

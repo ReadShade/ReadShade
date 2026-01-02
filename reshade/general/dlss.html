@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="lime" data-content_root="../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Disable DLSS Frame Generation - ReadShade</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Install ReShade with DXVK" href="dxvk.html" /><link rel="prev" title="ReShade General" href="index.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1c6635e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/shibuya.css?v=a318c5d4" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../_static/print.css?v=20ff2c19" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="Disable DLSS Frame Generation"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="../../index.html">
+      
+      
+      <strong>ReadShade</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"><ul>
+      <li class="link"><button class="js-menu" type="button" id="nav-trigger-1" aria-controls="nav-children-1">
+            <span>Contributors</span>
+            <i class="i-lucide chevron-down"></i>
+          </button>
+        <ul id="nav-children-1" aria-labelledby="nav-trigger-1"><li><a href="https://github.com/BlueSkyDefender">
+                <span>BlueSkyDefender</span>
+                <small>Author of SuperDepth3D, AstrayFX, and various secret projects.</small>
+              </a></li><li><a href="https://github.com/papadanku">
+                <span>papadanku</span>
+                <small>Hobbyist programmer. Contributor to the Project Reality game modification and CShade.</small>
+              </a></li><li><a href="https://github.com/PHARTGAMES">
+                <span>PHARTGAMES / PEZZALUCIFER</span>
+                <small>Developed WibbleWobble, turning your display into a window to virtual worlds.</small>
+              </a></li></ul>
+      </li><li class="link">
+          <a href="https://reshade.me/">
+            <span>ReShade Homepage</span></a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">ReShade Guide</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">ReShade General</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Disable DLSS Frame Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dxvk.html">Install ReShade with DXVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="laa.html">Use Large Address Aware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="posteffects.html">Disable Unreal Engine’s Post Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reshadeversions.html">Change ReShade Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windpi.html">Game Windows DPI Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licensing/index.html">Licensing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licensing/copyright.html">United States Copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licensing/licensing.html">Software Licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../learning/index.html">Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../learning/resources.html">Tools &amp; Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/literature.html">Literature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/reshadefx/index.html">Writing Shaders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/introduction.html">1. Introduction to Shaders and ReShade FX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/basic_structure.html">2. Basic Shader Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step1.html">3. Create a New .fx File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step2.html">4. Add the Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step3.html">5. Implement the Grayscale Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step4.html">6. Apply the Shader in ReShade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/key_concepts.html">7. Understanding Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/further_exploration.html">8. Further Exploration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Software guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../software/addons/index.html">Addons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/genericdepth.html">Generic Depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/rest.html">Reshade Effect Shader Toggler (R.E.S.T)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/shadertoggler.html">Shader Toggler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../software/emulators/index.html">Emulators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../software/emulators/pcsx2.html">PCSX2</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Third-Party Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/depth3d/index.html">Depth3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/index.html">Hardware Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/sr.html">Simulated Reality Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/viture.html">VITURE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/wibblewobble/index.html">WibbleWobble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_monitor.html">Frame Sequential (Monitor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_projector.html">Frame Sequential (Projector)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#method-1-global-disable">Method 1: Global Disable</a><ul>
+<li><a class="reference internal" href="#step-by-step-instructions">Step-by-Step Instructions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#method-2-game-specific-disable">Method 2: Game-Specific Disable</a><ul>
+<li><a class="reference internal" href="#id1">Step-by-Step Instructions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#example-screenshot">Example Screenshot</a></li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../index.html"><span itemprop="name">ReadShade</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">ReShade General</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Disable DLSS Frame Generation</strong>
+        <meta itemprop="position" content="3" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="disable-dlss-frame-generation">
+<h1>Disable DLSS Frame Generation<a class="headerlink" href="#disable-dlss-frame-generation" title="Link to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>This guide shows two ways to turn off DLSS Frame Generation, which can sometimes make games crash. The first way turns it off for all games on Windows, and the second shows how to turn it off for just one game.</p>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>You don’t need to do this if you have an Intel or AMD graphics card.</p>
+</div>
+</section>
+<section id="method-1-global-disable">
+<h2>Method 1: Global Disable<a class="headerlink" href="#method-1-global-disable" title="Link to this heading">¶</a></h2>
+<p>To turn off DLSS Frame Generation for all games, follow these steps:</p>
+<section id="step-by-step-instructions">
+<h3>Step-by-Step Instructions<a class="headerlink" href="#step-by-step-instructions" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p><strong>Access Display Settings</strong>: Go to <span class="guilabel">Display Settings</span> on your Windows computer.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/dlssfg1.png"><img alt="../../_images/dlssfg1.png" src="../../_images/dlssfg1.png" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Display Settings page.</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Navigate to Graphics Settings</strong>: Next, go to <span class="menuselection">System ‣ Display ‣ Graphics</span> and click on <span class="guilabel">Change default graphics settings</span>.</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../../_images/dlssfg2.png"><img alt="../../_images/dlssfg2.png" src="../../_images/dlssfg2.png" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Graphics settings page.</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Locate Hardware Accelerated GPU Scheduling</strong>: After clicking the option above, find <strong>Hardware Accelerated GPU Scheduling</strong>.</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../_images/dlssfg3.png"><img alt="../../_images/dlssfg3.png" src="../../_images/dlssfg3.png" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Hardware Accelerated GPU Scheduling option.</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Disable Hardware Accelerated GPU Scheduling</strong>: Turn off <strong>Hardware Accelerated GPU Scheduling</strong>.</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../_images/dlssfg4.png"><img alt="../../_images/dlssfg4.png" src="../../_images/dlssfg4.png" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text"><strong>Hardware Accelerated GPU Scheduling</strong> turned off.</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Restart Your PC</strong>: Restart your computer for the changes to take effect. This should turn off Frame Generation everywhere.</p></li>
+</ol>
+</section>
+</section>
+<section id="method-2-game-specific-disable">
+<h2>Method 2: Game-Specific Disable<a class="headerlink" href="#method-2-game-specific-disable" title="Link to this heading">¶</a></h2>
+<p>We’ll use <strong>Ghost Runner 2</strong> as an example here. Most games will have a similar process.</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../_images/dlssfg5.png"><img alt="../../_images/dlssfg5.png" src="../../_images/dlssfg5.png" style="width: 25%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Ghost Runner 2 game title.</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>To turn off DLSS Frame Generation for a specific game, follow these steps:</p>
+<section id="id1">
+<h3>Step-by-Step Instructions<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p><strong>Locate the nvngx_dlssg.dll File</strong>: Look for a file named <code class="file docutils literal notranslate"><span class="pre">nvngx_dlssg.dll</span></code>. In this example, it’s in the <a class="reference external" href="https://developer.nvidia.com/rtx/streamline">Streamline</a> folder:</p>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../../_images/dlssfg7.png"><img alt="../../_images/dlssfg7.png" src="../../_images/dlssfg7.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Location of the nvngx_dlssg.dll file.</span><a class="headerlink" href="#id7" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Rename the nvngx_dlssg.dll File</strong>: Change the name of <code class="file docutils literal notranslate"><span class="pre">nvngx_dlssg.dll</span></code> to <code class="file docutils literal notranslate"><span class="pre">nvngx_dlssg.back</span></code>.</p>
+<figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="../../_images/dlssfg8.png"><img alt="../../_images/dlssfg8.png" src="../../_images/dlssfg8.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">File being renamed.</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+</section>
+<section id="example-screenshot">
+<h2>Example Screenshot<a class="headerlink" href="#example-screenshot" title="Link to this heading">¶</a></h2>
+<p>Here’s an example screenshot of the game with DLSS Frame Generation disabled:</p>
+<figure class="align-default" id="id9">
+<a class="reference internal image-reference" href="../../_images/dlssfg6.png"><img alt="../../_images/dlssfg6.png" src="../../_images/dlssfg6.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Game screenshot with DLSS Frame Generation disabled.</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
+<figure class="align-default" id="id10">
+<a class="reference internal image-reference" href="../../_images/dlssfg9.png"><img alt="../../_images/dlssfg9.png" src="../../_images/dlssfg9.png" style="width: 75%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Thank you for reading the guide.</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>That’s all for now. We’ll add more examples for other games later. We hope this guide helped you fix any issues with DLSS Frame Generation!</p>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="index.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span><div class="title">ReShade General</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="dxvk.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">Install ReShade with DXVK</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2026, The ReadShade Team</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/shibuya.js?v=cac61aee"></script></body>
+</html>

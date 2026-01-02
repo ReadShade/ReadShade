@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="lime" data-content_root="../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Software Licensing - ReadShade</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Learning" href="../learning/index.html" /><link rel="prev" title="United States Copyright" href="copyright.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1c6635e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/shibuya.css?v=a318c5d4" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../_static/print.css?v=20ff2c19" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="Software Licensing"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="../../index.html">
+      
+      
+      <strong>ReadShade</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"><ul>
+      <li class="link"><button class="js-menu" type="button" id="nav-trigger-1" aria-controls="nav-children-1">
+            <span>Contributors</span>
+            <i class="i-lucide chevron-down"></i>
+          </button>
+        <ul id="nav-children-1" aria-labelledby="nav-trigger-1"><li><a href="https://github.com/BlueSkyDefender">
+                <span>BlueSkyDefender</span>
+                <small>Author of SuperDepth3D, AstrayFX, and various secret projects.</small>
+              </a></li><li><a href="https://github.com/papadanku">
+                <span>papadanku</span>
+                <small>Hobbyist programmer. Contributor to the Project Reality game modification and CShade.</small>
+              </a></li><li><a href="https://github.com/PHARTGAMES">
+                <span>PHARTGAMES / PEZZALUCIFER</span>
+                <small>Developed WibbleWobble, turning your display into a window to virtual worlds.</small>
+              </a></li></ul>
+      </li><li class="link">
+          <a href="https://reshade.me/">
+            <span>ReShade Homepage</span></a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">ReShade Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../general/index.html">ReShade General</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general/dlss.html">Disable DLSS Frame Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/dxvk.html">Install ReShade with DXVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/laa.html">Use Large Address Aware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/posteffects.html">Disable Unreal Engine’s Post Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/reshadeversions.html">Change ReShade Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/windpi.html">Game Windows DPI Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Licensing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="copyright.html">United States Copyright</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Software Licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../learning/index.html">Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../learning/resources.html">Tools &amp; Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/literature.html">Literature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/reshadefx/index.html">Writing Shaders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/introduction.html">1. Introduction to Shaders and ReShade FX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/basic_structure.html">2. Basic Shader Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step1.html">3. Create a New .fx File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step2.html">4. Add the Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step3.html">5. Implement the Grayscale Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step4.html">6. Apply the Shader in ReShade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/key_concepts.html">7. Understanding Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/further_exploration.html">8. Further Exploration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Software guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../software/addons/index.html">Addons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/genericdepth.html">Generic Depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/rest.html">Reshade Effect Shader Toggler (R.E.S.T)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/shadertoggler.html">Shader Toggler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../software/emulators/index.html">Emulators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../software/emulators/pcsx2.html">PCSX2</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Third-Party Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/depth3d/index.html">Depth3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/index.html">Hardware Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/sr.html">Simulated Reality Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/viture.html">VITURE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/wibblewobble/index.html">WibbleWobble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_monitor.html">Frame Sequential (Monitor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_projector.html">Frame Sequential (Projector)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#purpose-of-licenses">Purpose of Licenses</a></li>
+<li><a class="reference internal" href="#common-open-source-licenses">Common Open-Source Licenses</a><ul>
+<li><a class="reference internal" href="#permissive-licenses">Permissive Licenses</a></li>
+<li><a class="reference internal" href="#copyleft-licenses">Copyleft Licenses</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#license-compatibilities">License Compatibilities</a></li>
+<li><a class="reference internal" href="#what-to-do-if-there-is-no-license">What to Do If There Is No License</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+<li><a class="reference internal" href="#disclaimer">Disclaimer</a></li>
+</ul>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../index.html"><span itemprop="name">ReadShade</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Licensing</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Software Licensing</strong>
+        <meta itemprop="position" content="3" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="software-licensing">
+<h1>Software Licensing<a class="headerlink" href="#software-licensing" title="Link to this heading">¶</a></h1>
+<p>This guide provides an overview of software licensing, with a particular focus on its relevance to ReShadeFX shaders. Understanding licensing is crucial for both creators and users to ensure proper usage, distribution, and modification of software.</p>
+<section id="purpose-of-licenses">
+<h2>Purpose of Licenses<a class="headerlink" href="#purpose-of-licenses" title="Link to this heading">¶</a></h2>
+<p>Software licenses are legal instruments that govern the use and distribution of software. They define the rights and restrictions that apply to a piece of software, protecting the intellectual property of the creator while enabling others to use, share, or modify the work under specified conditions.</p>
+<p>Key purposes of software licenses include:</p>
+<ul class="simple">
+<li><p><strong>Protecting Creator Rights</strong>: Licenses allow creators to retain ownership and control over their work, specifying how it can be used, copied, distributed, and adapted.</p></li>
+<li><p><strong>Granting User Permissions</strong>: They provide users with explicit permissions to interact with the software, such as running it, studying its code, modifying it, or distributing it.</p></li>
+<li><p><strong>Establishing Legal Framework</strong>: Licenses create a clear legal framework, reducing ambiguity and potential disputes regarding software usage.</p></li>
+<li><p><strong>Promoting Collaboration and Innovation</strong>: Open-source licenses, in particular, encourage collaboration by allowing others to build upon existing work, fostering innovation within communities.</p></li>
+</ul>
+</section>
+<section id="common-open-source-licenses">
+<h2>Common Open-Source Licenses<a class="headerlink" href="#common-open-source-licenses" title="Link to this heading">¶</a></h2>
+<p>Open-source licenses are designed to make source code available for use, modification, and distribution under terms that ensure its openness. They generally fall into two main categories: <strong>permissive</strong> and <strong>copyleft</strong>.</p>
+<section id="permissive-licenses">
+<h3>Permissive Licenses<a class="headerlink" href="#permissive-licenses" title="Link to this heading">¶</a></h3>
+<p>These licenses impose minimal restrictions on how the software can be used, modified, and distributed. They often only require attribution.</p>
+<dl class="simple">
+<dt>MIT License <a class="footnote-reference brackets" href="#mit" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></dt><dd><p>A very short and simple license that allows users to do almost anything with the software, provided they include the original copyright and license notice. It’s highly compatible with other licenses.</p>
+</dd>
+<dt>Apache License 2.0 <a class="footnote-reference brackets" href="#apache" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></dt><dd><p>A permissive license that grants users a patent license, which is useful for preventing patent lawsuits. It also requires attribution and preservation of copyright notices.</p>
+</dd>
+<dt>BSD Licenses (2-clause and 3-clause) <a class="footnote-reference brackets" href="#bsd" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></dt><dd><p>Similar to MIT, these are permissive licenses that primarily require attribution. The 3-clause version adds a clause preventing endorsement of products derived from the software without specific written permission.</p>
+</dd>
+</dl>
+</section>
+<section id="copyleft-licenses">
+<h3>Copyleft Licenses<a class="headerlink" href="#copyleft-licenses" title="Link to this heading">¶</a></h3>
+<p>These licenses require that any derivative works also be released under the same or a compatible copyleft license. This ensures that the “freedom” of the software is preserved down the line.</p>
+<dl class="simple">
+<dt>GNU General Public License (GPL) (various versions) <a class="footnote-reference brackets" href="#gpl" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></dt><dd><p>A strong copyleft license. If you distribute software that includes GPL-licensed code, your entire software must also be licensed under the GPL. This is often referred to as the “viral” nature of GPL.</p>
+</dd>
+<dt>GNU Lesser General Public License (LGPL) <a class="footnote-reference brackets" href="#lgpl" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></dt><dd><p>A weaker copyleft license than GPL. It allows proprietary software to link to LGPL-licensed libraries without requiring the proprietary software itself to be licensed under LGPL. However, if the LGPL-licensed code is modified, the modifications must be released under LGPL.</p>
+</dd>
+<dt>Mozilla Public License (MPL) <a class="footnote-reference brackets" href="#mpl" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></dt><dd><p>A “file-level” copyleft license. It requires modifications to MPL-licensed files to be released under MPL, but allows other files in the same project to be under different licenses.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="license-compatibilities">
+<h2>License Compatibilities<a class="headerlink" href="#license-compatibilities" title="Link to this heading">¶</a></h2>
+<p>Understanding license compatibility is crucial when combining code from different sources. Incompatible licenses can create legal issues, preventing the distribution of a combined work.</p>
+<ul class="simple">
+<li><p><strong>Permissive licenses</strong> are generally highly compatible with each other and with copyleft licenses, as they impose few restrictions. For example, MIT-licensed code can often be incorporated into GPL-licensed projects.</p></li>
+<li><p><strong>Copyleft licenses</strong> have stricter compatibility requirements. For instance, combining GPL-licensed code with code under an incompatible license (even another copyleft license) can be problematic, as the terms of both licenses might conflict regarding how the combined work must be licensed.</p></li>
+</ul>
+<p>When in doubt, it is always best to consult legal counsel or choose components with clearly compatible licenses.</p>
+</section>
+<section id="what-to-do-if-there-is-no-license">
+<h2>What to Do If There Is No License<a class="headerlink" href="#what-to-do-if-there-is-no-license" title="Link to this heading">¶</a></h2>
+<p>If a piece of software, including a ReShadeFX shader, does not explicitly include a license, it is generally considered to be under <strong>exclusive copyright</strong> by default. This means:</p>
+<ul class="simple">
+<li><p><strong>No Permissions Granted</strong>: You do not have permission to use, copy, distribute, or modify the software without explicit authorization from the copyright holder.</p></li>
+<li><p><strong>Risk of Infringement</strong>: Using unlicensed software without permission can lead to copyright infringement claims.</p></li>
+</ul>
+<p>Therefore, if you encounter software without a license:</p>
+<ol class="arabic simple">
+<li><p><strong>Assume Exclusive Copyright</strong>: Operate under the assumption that you have no rights to use the software beyond what fair use (if applicable) might allow.</p></li>
+<li><p><strong>Contact the Author</strong>: The best course of action is to contact the author or creator and request clarification on licensing or seek explicit permission for your intended use.</p></li>
+<li><p><strong>Avoid Use if Unsure</strong>: If you cannot obtain clear licensing information or permission, it is safest to avoid using the software to prevent potential legal issues.</p></li>
+</ol>
+<p>For ReShadeFX shaders, always check for a <code class="file docutils literal notranslate"><span class="pre">LICENSE</span></code> file, a <code class="file docutils literal notranslate"><span class="pre">README</span></code> section on licensing, or comments within the shader code itself that specify the license. If none are present, reach out to the shader’s creator.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="apache" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Apache License 2.0: <a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+</aside>
+<aside class="footnote brackets" id="bsd" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>BSD 3-Clause License: <a class="reference external" href="https://opensource.org/licenses/BSD-3-Clause">https://opensource.org/licenses/BSD-3-Clause</a></p>
+</aside>
+<aside class="footnote brackets" id="gpl" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>GNU General Public License v3: <a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.html">https://www.gnu.org/licenses/gpl-3.0.html</a></p>
+</aside>
+<aside class="footnote brackets" id="lgpl" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
+<p>GNU Lesser General Public License v3: <a class="reference external" href="https://www.gnu.org/licenses/lgpl-3.0.html">https://www.gnu.org/licenses/lgpl-3.0.html</a></p>
+</aside>
+<aside class="footnote brackets" id="mit" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">5</a><span class="fn-bracket">]</span></span>
+<p>MIT License: <a class="reference external" href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a></p>
+</aside>
+<aside class="footnote brackets" id="mpl" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+<p>Mozilla Public License 2.0: <a class="reference external" href="https://www.mozilla.org/MPL/2.0/">https://www.mozilla.org/MPL/2.0/</a></p>
+</aside>
+</aside>
+</section>
+<section id="disclaimer">
+<h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Link to this heading">¶</a></h2>
+<p>The authors of this page are not legal professionals. The information provided here is for general informational purposes only and does not constitute legal advice. For specific legal matters, please consult with a qualified legal professional.</p>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="copyright.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span><div class="title">United States Copyright</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="../learning/index.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">Learning</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2026, The ReadShade Team</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/shibuya.js?v=cac61aee"></script></body>
+</html>

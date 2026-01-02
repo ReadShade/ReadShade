@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="lime" data-content_root="../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Change ReShade Version - ReadShade</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Game Windows DPI Settings" href="windpi.html" /><link rel="prev" title="Disable Unreal Engine’s Post Effects" href="posteffects.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1c6635e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/shibuya.css?v=a318c5d4" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../_static/print.css?v=20ff2c19" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="Change ReShade Version"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="../../index.html">
+      
+      
+      <strong>ReadShade</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"><ul>
+      <li class="link"><button class="js-menu" type="button" id="nav-trigger-1" aria-controls="nav-children-1">
+            <span>Contributors</span>
+            <i class="i-lucide chevron-down"></i>
+          </button>
+        <ul id="nav-children-1" aria-labelledby="nav-trigger-1"><li><a href="https://github.com/BlueSkyDefender">
+                <span>BlueSkyDefender</span>
+                <small>Author of SuperDepth3D, AstrayFX, and various secret projects.</small>
+              </a></li><li><a href="https://github.com/papadanku">
+                <span>papadanku</span>
+                <small>Hobbyist programmer. Contributor to the Project Reality game modification and CShade.</small>
+              </a></li><li><a href="https://github.com/PHARTGAMES">
+                <span>PHARTGAMES / PEZZALUCIFER</span>
+                <small>Developed WibbleWobble, turning your display into a window to virtual worlds.</small>
+              </a></li></ul>
+      </li><li class="link">
+          <a href="https://reshade.me/">
+            <span>ReShade Homepage</span></a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">ReShade Guide</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">ReShade General</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dlss.html">Disable DLSS Frame Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dxvk.html">Install ReShade with DXVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="laa.html">Use Large Address Aware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="posteffects.html">Disable Unreal Engine’s Post Effects</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Change ReShade Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windpi.html">Game Windows DPI Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licensing/index.html">Licensing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licensing/copyright.html">United States Copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licensing/licensing.html">Software Licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../learning/index.html">Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../learning/resources.html">Tools &amp; Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/literature.html">Literature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../learning/reshadefx/index.html">Writing Shaders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/introduction.html">1. Introduction to Shaders and ReShade FX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/basic_structure.html">2. Basic Shader Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step1.html">3. Create a New .fx File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step2.html">4. Add the Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step3.html">5. Implement the Grayscale Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/step4.html">6. Apply the Shader in ReShade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/key_concepts.html">7. Understanding Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../learning/reshadefx/further_exploration.html">8. Further Exploration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Software guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../software/addons/index.html">Addons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/genericdepth.html">Generic Depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/rest.html">Reshade Effect Shader Toggler (R.E.S.T)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/shadertoggler.html">Shader Toggler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../software/emulators/index.html">Emulators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../software/emulators/pcsx2.html">PCSX2</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Third-Party Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/depth3d/index.html">Depth3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/index.html">Hardware Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/sr.html">Simulated Reality Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/viture.html">VITURE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/wibblewobble/index.html">WibbleWobble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_monitor.html">Frame Sequential (Monitor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_projector.html">Frame Sequential (Projector)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#am-i-going-to-play-online-or-offline">Am I going to play online or offline?</a></li>
+<li><a class="reference internal" href="#do-i-need-a-special-version-of-reshade-for-the-game">Do I need a special version of ReShade for the game?</a></li>
+<li><a class="reference internal" href="#where-can-i-get-an-older-version-of-reshade">Where can I get an older version of ReShade?</a><ul>
+<li><a class="reference internal" href="#alternative-method">Alternative Method</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#i-want-to-play-elden-ring-it-s-an-online-game-with-eac-can-i-do-this">I want to play <em>Elden Ring</em>. It&#8217;s an online game with EAC. Can I do this?</a></li>
+</ul>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../index.html"><span itemprop="name">ReadShade</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">ReShade General</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Change ReShade Version</strong>
+        <meta itemprop="position" content="3" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="change-reshade-version">
+<h1>Change ReShade Version<a class="headerlink" href="#change-reshade-version" title="Link to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>Picking the right ReShade version can be tricky, but we’re here to help. This guide will show you how to choose the best ReShade version for what you need.</p>
+</section>
+<section id="am-i-going-to-play-online-or-offline">
+<h2>Am I going to play online or offline?<a class="headerlink" href="#am-i-going-to-play-online-or-offline" title="Link to this heading">¶</a></h2>
+<p>This is an important question because it helps you decide which ReShade version to use. If you’re playing an online game, you should use the <strong>add-on version</strong>. This version has <strong>Network Detection</strong> turned off. You can download it from the <a class="reference external" href="https://reshade.me/">official ReShade website</a> by scrolling to the bottom and clicking the second button.</p>
+<p>Keep in mind that the add-on version isn’t always necessary. If you’re playing a single-player game, the regular ReShade version is fine. You can also download it from the same website, but click the first button this time.</p>
+</section>
+<section id="do-i-need-a-special-version-of-reshade-for-the-game">
+<h2>Do I need a special version of ReShade for the game?<a class="headerlink" href="#do-i-need-a-special-version-of-reshade-for-the-game" title="Link to this heading">¶</a></h2>
+<p>Sometimes, you might need a specific ReShade version for a certain game. For example, <a class="reference external" href="https://discord.com/channels/305472403977404416/1160012733652148274/1221669091870244954">this version of ReShade</a> is made to work with <em>Dragon’s Dogma 2</em> along with <em>REFramework</em>.</p>
+<p>If you’re playing a single-player game but need an add-on, you can download the ReShade version that supports add-ons from the <a class="reference external" href="https://reshade.me/">official website</a>. This version works with almost all add-ons, including those found <a class="reference external" href="https://discord.com/channels/305472403977404416/1081018051526406195">here</a>.</p>
+</section>
+<section id="where-can-i-get-an-older-version-of-reshade">
+<h2>Where can I get an older version of ReShade?<a class="headerlink" href="#where-can-i-get-an-older-version-of-reshade" title="Link to this heading">¶</a></h2>
+<p>If you need an older ReShade version, you have a few options. For versions 3.0.0 and earlier:</p>
+<ol class="arabic simple">
+<li><p>You can download it directly from the ReShade website: <cite>https://reshade.me/downloads/ReShade_Setup_x.x.x.exe</cite></p></li>
+<li><p>For versions 5.0.0 and later, use <a class="reference external" href="https://reshade.me/downloads/ReShade_Setup_6.1.1_Addon.exe">this link</a>.</p></li>
+</ol>
+<section id="alternative-method">
+<h3>Alternative Method<a class="headerlink" href="#alternative-method" title="Link to this heading">¶</a></h3>
+<p>If the version you need isn’t on the website anymore, try the <a class="reference external" href="https://www.mediafire.com/folder/8ar1jhh1809cl/ReShade_Repository">ReShade Repository</a> or <a class="reference external" href="https://mega.nz/#!5eRxTCLZ!DuHO3dqJgZU4TJ5WP9H-eAJVPOJvDFa3U6hyypQkt5A">this Mega.nz link</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You might need an older ReShade version for some games, like <em>Fallout: New Vegas</em>, <em>Fallout 3</em>, or <em>The Elder Scrolls IV: Oblivion</em>.</p>
+</div>
+</section>
+</section>
+<section id="i-want-to-play-elden-ring-it-s-an-online-game-with-eac-can-i-do-this">
+<h2>I want to play <em>Elden Ring</em>. It’s an online game with EAC. Can I do this?<a class="headerlink" href="#i-want-to-play-elden-ring-it-s-an-online-game-with-eac-can-i-do-this" title="Link to this heading">¶</a></h2>
+<p>Yes, you can play <em>Elden Ring</em> with ReShade. The game’s creators allow ReShade, so you can use the add-on version. However, not all games with EAC will work with ReShade. For example, <em>Lords of the Fallen</em> won’t start with any ReShade version, and you’ll need to turn off EAC to use it. If you do turn off EAC, use the add-on version of ReShade.</p>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="posteffects.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span><div class="title">Disable Unreal Engine’s Post Effects</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="windpi.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">Game Windows DPI Settings</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2026, The ReadShade Team</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/shibuya.js?v=cac61aee"></script></body>
+</html>

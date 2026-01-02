@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="lime" data-content_root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ReadShade</title><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="ReShade General" href="reshade/general/index.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1c6635e" />
+    <link rel="stylesheet" type="text/css" href="_static/shibuya.css?v=a318c5d4" />
+    <link media="print" rel="stylesheet" type="text/css" href="_static/print.css?v=20ff2c19" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="Welcome to ReadShade"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="#">
+      
+      
+      <strong>ReadShade</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"><ul>
+      <li class="link"><button class="js-menu" type="button" id="nav-trigger-1" aria-controls="nav-children-1">
+            <span>Contributors</span>
+            <i class="i-lucide chevron-down"></i>
+          </button>
+        <ul id="nav-children-1" aria-labelledby="nav-trigger-1"><li><a href="https://github.com/BlueSkyDefender">
+                <span>BlueSkyDefender</span>
+                <small>Author of SuperDepth3D, AstrayFX, and various secret projects.</small>
+              </a></li><li><a href="https://github.com/papadanku">
+                <span>papadanku</span>
+                <small>Hobbyist programmer. Contributor to the Project Reality game modification and CShade.</small>
+              </a></li><li><a href="https://github.com/PHARTGAMES">
+                <span>PHARTGAMES / PEZZALUCIFER</span>
+                <small>Developed WibbleWobble, turning your display into a window to virtual worlds.</small>
+              </a></li></ul>
+      </li><li class="link">
+          <a href="https://reshade.me/">
+            <span>ReShade Homepage</span></a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">ReShade Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reshade/general/index.html">ReShade General</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reshade/general/dlss.html">Disable DLSS Frame Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reshade/general/dxvk.html">Install ReShade with DXVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reshade/general/laa.html">Use Large Address Aware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reshade/general/posteffects.html">Disable Unreal Engine’s Post Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reshade/general/reshadeversions.html">Change ReShade Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reshade/general/windpi.html">Game Windows DPI Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reshade/licensing/index.html">Licensing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reshade/licensing/copyright.html">United States Copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reshade/licensing/licensing.html">Software Licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reshade/learning/index.html">Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reshade/learning/resources.html">Tools &amp; Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reshade/learning/literature.html">Literature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reshade/learning/reshadefx/index.html">Writing Shaders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reshade/learning/reshadefx/introduction.html">1. Introduction to Shaders and ReShade FX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshade/learning/reshadefx/basic_structure.html">2. Basic Shader Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshade/learning/reshadefx/step1.html">3. Create a New .fx File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshade/learning/reshadefx/step2.html">4. Add the Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshade/learning/reshadefx/step3.html">5. Implement the Grayscale Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshade/learning/reshadefx/step4.html">6. Apply the Shader in ReShade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshade/learning/reshadefx/key_concepts.html">7. Understanding Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshade/learning/reshadefx/further_exploration.html">8. Further Exploration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Software guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="software/addons/index.html">Addons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="software/addons/genericdepth.html">Generic Depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/addons/rest.html">Reshade Effect Shader Toggler (R.E.S.T)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/addons/shadertoggler.html">Shader Toggler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software/emulators/index.html">Emulators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="software/emulators/pcsx2.html">PCSX2</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Third-Party Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="thirdparty/depth3d/index.html">Depth3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="thirdparty/depth3d/hardwareguides/index.html">Hardware Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="thirdparty/depth3d/hardwareguides/sr.html">Simulated Reality Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="thirdparty/depth3d/hardwareguides/viture.html">VITURE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="thirdparty/wibblewobble/index.html">WibbleWobble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="thirdparty/wibblewobble/wibblewobble_monitor.html">Frame Sequential (Monitor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thirdparty/wibblewobble/wibblewobble_projector.html">Frame Sequential (Projector)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#striving-for-neutrality">Striving for Neutrality</a></li>
+<li><a class="reference internal" href="#simple-to-contribute">Simple to Contribute</a></li>
+<li><a class="reference internal" href="#offline-download">Offline Download</a><ul>
+<li><a class="reference internal" href="#method-1-download-from-the-gh-pages-branch">Method 1: Download from the gh-pages branch</a></li>
+<li><a class="reference internal" href="#method-2-download-the-zip-file">Method 2: Download the ZIP file</a></li>
+<li><a class="reference internal" href="#method-3-clone-the-repository">Method 3: Clone the repository</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ai-content-disclaimer">AI Content Disclaimer</a><ul>
+</ul>
+</li>
+</ul>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="#"><span itemprop="name">ReadShade</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Welcome to ReadShade</strong>
+        <meta itemprop="position" content="2" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="welcome-to-readshade">
+<h1>Welcome to ReadShade<a class="headerlink" href="#welcome-to-readshade" title="Link to this heading">¶</a></h1>
+<p>ReadShade is a simple and unbiased documentation site. Our goal is to create an easy-to-use platform where everyone can share and learn. We’ve removed complex steps and obstacles so anyone can join our community.</p>
+<section id="striving-for-neutrality">
+<h2>Striving for Neutrality<a class="headerlink" href="#striving-for-neutrality" title="Link to this heading">¶</a></h2>
+<p>We aim to be fair and unbiased in our approach, avoiding any conflicts of interest.</p>
+</section>
+<section id="simple-to-contribute">
+<h2>Simple to Contribute<a class="headerlink" href="#simple-to-contribute" title="Link to this heading">¶</a></h2>
+<p>We want to make it easy for anyone to add to ReadShade, no matter their technical skills. We use Python and Sphinx as our main tools. You can quickly start writing and editing documents with just these two. There’s no need for complicated setup, just install Python and Sphinx, and you’re ready.</p>
+</section>
+<section id="offline-download">
+<h2>Offline Download<a class="headerlink" href="#offline-download" title="Link to this heading">¶</a></h2>
+<p>You can download a full, static version of this documentation site to use offline. This is helpful for looking at guides and information when you don’t have internet. The instructions below show three ways to get the site onto your computer.</p>
+<section id="method-1-download-from-the-gh-pages-branch">
+<h3>Method 1: Download from the gh-pages branch<a class="headerlink" href="#method-1-download-from-the-gh-pages-branch" title="Link to this heading">¶</a></h3>
+<p>This is the easiest way to get the ready-made static website without needing to install Python and Sphinx.</p>
+<ol class="arabic simple">
+<li><p><strong>Go to the repository</strong>: Visit the <a class="reference external" href="https://github.com/ReadShade/ReadShade">ReadShade repository on GitHub</a>.</p></li>
+<li><p><strong>Switch branches</strong>: Click the branch dropdown menu (it usually says <span class="guilabel">main</span>) and choose the <span class="guilabel">gh-pages</span> branch.</p></li>
+<li><p><strong>Download the content</strong>: Click the green <span class="guilabel">Code</span> button and select <span class="guilabel">Download ZIP</span>.</p></li>
+<li><p><strong>Extract and view</strong>: Unzip the downloaded file and open the <code class="file docutils literal notranslate"><span class="pre">index.html</span></code> file in your web browser. This folder contains the complete, pre-built website.</p></li>
+</ol>
+</section>
+<section id="method-2-download-the-zip-file">
+<h3>Method 2: Download the ZIP file<a class="headerlink" href="#method-2-download-the-zip-file" title="Link to this heading">¶</a></h3>
+<p>This is the simplest method for users who don’t have Git installed.</p>
+<ol class="arabic">
+<li><p><strong>Download the repository</strong>: Go to the <a class="reference external" href="https://github.com/ReadShade/ReadShade">ReadShade repository on GitHub</a>.</p></li>
+<li><p><strong>Click on the “Code” button</strong>: In the top-right corner of the repository page, click the green <span class="guilabel">Code</span> button.</p></li>
+<li><p><strong>Select “Download ZIP”</strong>: From the dropdown menu, click <span class="guilabel">Download ZIP</span> to save a compressed file of the repository to your computer.</p></li>
+<li><p><strong>Extract the files</strong>: Unzip the downloaded file to a location on your computer.</p></li>
+<li><p><strong>Build the site</strong>: Open a terminal or command prompt, go to the extracted folder, and run these commands to install what’s needed and build the site:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="go">pip install -r requirements.txt</span>
+</span><span data-line="2"><span class="go">sphinx-build -b html . _build</span>
+</span></pre></div>
+</div>
+</li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><p><strong>Access the offline content</strong>: The static site is now in the <cite>_build</cite> folder. You can see the documentation by opening the <code class="file docutils literal notranslate"><span class="pre">index.html</span></code> file in your web browser.</p></li>
+</ol>
+</section>
+<section id="method-3-clone-the-repository">
+<h3>Method 3: Clone the repository<a class="headerlink" href="#method-3-clone-the-repository" title="Link to this heading">¶</a></h3>
+<p>This method is best for users who have Git installed and want to keep their local copy updated.</p>
+<ol class="arabic">
+<li><p><strong>Clone the repository</strong>: Open your terminal or command prompt and run this command to copy the documentation site’s repository to your computer.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="go">git clone https://github.com/ReadShade/ReadShade.git</span>
+</span></pre></div>
+</div>
+</li>
+<li><p><strong>Navigate to the directory</strong>: Change your current directory to the folder you just cloned.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="go">cd ReadShade</span>
+</span></pre></div>
+</div>
+</li>
+<li><p><strong>Install requirements and build the site</strong>: Run these commands to install the necessary Python packages and build the static HTML site.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="go">pip install -r requirements.txt</span>
+</span><span data-line="2"><span class="go">sphinx-build -b html . _build</span>
+</span></pre></div>
+</div>
+</li>
+<li><p><strong>Access the offline content</strong>: The static site is now in the <cite>_build</cite> folder. You can see the documentation by opening the <code class="file docutils literal notranslate"><span class="pre">index.html</span></code> file in your web browser.</p></li>
+</ol>
+</section>
+</section>
+<section id="ai-content-disclaimer">
+<h2>AI Content Disclaimer<a class="headerlink" href="#ai-content-disclaimer" title="Link to this heading">¶</a></h2>
+<p>The ReadShade team utilizes AI, specifically Google’s Gemini CLI, to assist in the creation and revision of textual content within this documentation. We welcome and encourage feedback from our community to help us improve.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-next">
+    <a href="reshade/general/index.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">ReShade General</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2026, The ReadShade Team</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/shibuya.js?v=cac61aee"></script></body>
+</html>

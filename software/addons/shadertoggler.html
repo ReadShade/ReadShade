@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="lime" data-content_root="../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Shader Toggler - ReadShade</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Emulators" href="../emulators/index.html" /><link rel="prev" title="Reshade Effect Shader Toggler (R.E.S.T)" href="rest.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1c6635e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/shibuya.css?v=a318c5d4" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../_static/print.css?v=20ff2c19" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="Shader Toggler"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="../../index.html">
+      
+      
+      <strong>ReadShade</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"><ul>
+      <li class="link"><button class="js-menu" type="button" id="nav-trigger-1" aria-controls="nav-children-1">
+            <span>Contributors</span>
+            <i class="i-lucide chevron-down"></i>
+          </button>
+        <ul id="nav-children-1" aria-labelledby="nav-trigger-1"><li><a href="https://github.com/BlueSkyDefender">
+                <span>BlueSkyDefender</span>
+                <small>Author of SuperDepth3D, AstrayFX, and various secret projects.</small>
+              </a></li><li><a href="https://github.com/papadanku">
+                <span>papadanku</span>
+                <small>Hobbyist programmer. Contributor to the Project Reality game modification and CShade.</small>
+              </a></li><li><a href="https://github.com/PHARTGAMES">
+                <span>PHARTGAMES / PEZZALUCIFER</span>
+                <small>Developed WibbleWobble, turning your display into a window to virtual worlds.</small>
+              </a></li></ul>
+      </li><li class="link">
+          <a href="https://reshade.me/">
+            <span>ReShade Homepage</span></a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">ReShade Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reshade/general/index.html">ReShade General</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/general/dlss.html">Disable DLSS Frame Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/general/dxvk.html">Install ReShade with DXVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/general/laa.html">Use Large Address Aware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/general/posteffects.html">Disable Unreal Engine’s Post Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/general/reshadeversions.html">Change ReShade Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/general/windpi.html">Game Windows DPI Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reshade/licensing/index.html">Licensing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/licensing/copyright.html">United States Copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/licensing/licensing.html">Software Licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reshade/learning/index.html">Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/learning/resources.html">Tools &amp; Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/learning/literature.html">Literature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/learning/reshadefx/index.html">Writing Shaders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/introduction.html">1. Introduction to Shaders and ReShade FX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/basic_structure.html">2. Basic Shader Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/step1.html">3. Create a New .fx File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/step2.html">4. Add the Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/step3.html">5. Implement the Grayscale Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/step4.html">6. Apply the Shader in ReShade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/key_concepts.html">7. Understanding Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/further_exploration.html">8. Further Exploration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Software guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Addons</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="genericdepth.html">Generic Depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest.html">Reshade Effect Shader Toggler (R.E.S.T)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Shader Toggler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../emulators/index.html">Emulators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../emulators/pcsx2.html">PCSX2</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Third-Party Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/depth3d/index.html">Depth3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/index.html">Hardware Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/sr.html">Simulated Reality Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/viture.html">VITURE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/wibblewobble/index.html">WibbleWobble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_monitor.html">Frame Sequential (Monitor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_projector.html">Frame Sequential (Projector)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#preface">Preface</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#accessing-the-add-on">1. Accessing the Add-on</a></li>
+<li><a class="reference internal" href="#setting-up-the-add-on">2. Setting Up the Add-on</a></li>
+<li><a class="reference internal" href="#configuring-the-add-on">3. Configuring the Add-on</a></li>
+<li><a class="reference internal" href="#setting-up-a-shortcut">4. Setting Up a Shortcut</a></li>
+<li><a class="reference internal" href="#hunting-for-shaders">5. Hunting for Shaders</a></li>
+<li><a class="reference internal" href="#navigation-and-saving">6. Navigation and Saving</a></li>
+<li><a class="reference internal" href="#saving-your-progress">7. Saving Your Progress</a></li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../index.html"><span itemprop="name">ReadShade</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Addons</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Shader Toggler</strong>
+        <meta itemprop="position" content="3" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="shader-toggler">
+<h1>Shader Toggler<a class="headerlink" href="#shader-toggler" title="Link to this heading">¶</a></h1>
+<p>The Shader Toggler is a powerful tool for disabling or toggling shaders in games. This guide will walk you through the process of using the Shader Toggler add-on with ReShade.</p>
+<p>For this guide, we will be using a free game called <em>Mimic Search</em>, which can be downloaded from <a class="reference external" href="https://store.steampowered.com/app/2713460/Mimic_Search/">Steam</a>.</p>
+<section id="preface">
+<h2>Preface<a class="headerlink" href="#preface" title="Link to this heading">¶</a></h2>
+<p>First, download the ReShade add-on version. You can find more details <a class="reference external" href="../reshade/reshadeversions.md">here</a>.</p>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<p>To use the Shader Toggler, download the add-on from its <a class="reference external" href="https://github.com/FransBouma/ShaderToggler/releases">official GitHub page</a>. Make sure to get the right version for your game.</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/shadertoggler.jpg" src="../../_images/shadertoggler.jpg" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the Shader Toggler GitHub page.</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>Install the game and ReShade along with the <code class="file docutils literal notranslate"><span class="pre">ShaderToggler.addon64</span></code>. Turn off all other ReShade shaders to prevent problems.</p>
+</section>
+<section id="accessing-the-add-on">
+<h2>1. Accessing the Add-on<a class="headerlink" href="#accessing-the-add-on" title="Link to this heading">¶</a></h2>
+<p>Start the game and open the ReShade menu. Go to the <span class="guilabel">add-on</span> tab:</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/shadertoggler2.png" src="../../_images/shadertoggler2.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the ReShade <span class="guilabel">add-on</span> tab.</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Close other add-ons to make the view clearer. Make sure you are in the game and can see an effect you want to fix, like Chromatic Aberration:</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/shadertoggler3.png" src="../../_images/shadertoggler3.png" />
+<figcaption>
+<p><span class="caption-text">In-game screenshot showing a visible Chromatic Aberration effect.</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="setting-up-the-add-on">
+<h2>2. Setting Up the Add-on<a class="headerlink" href="#setting-up-the-add-on" title="Link to this heading">¶</a></h2>
+<p>Move the ReShade menu to the right side of your screen. Click <span class="guilabel">New</span>. The menu will change, then click <span class="guilabel">Edit</span>:</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/shadertoggler4.png" src="../../_images/shadertoggler4.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the ReShade menu with the <span class="guilabel">New</span> button highlighted.</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id5">
+<img alt="../../_images/shadertoggler5.png" src="../../_images/shadertoggler5.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the ReShade menu with the <span class="guilabel">Edit</span> button highlighted.</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="configuring-the-add-on">
+<h2>3. Configuring the Add-on<a class="headerlink" href="#configuring-the-add-on" title="Link to this heading">¶</a></h2>
+<p>Type a name for the effect, like “CA 01,” into the <span class="guilabel">Name Box</span>:</p>
+<figure class="align-default" id="id6">
+<img alt="../../_images/shadertoggler6.png" src="../../_images/shadertoggler6.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot showing the <span class="guilabel">Name Box</span> with “CA 01” entered.</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="setting-up-a-shortcut">
+<h2>4. Setting Up a Shortcut<a class="headerlink" href="#setting-up-a-shortcut" title="Link to this heading">¶</a></h2>
+<p>Create a shortcut for the first group, for example, <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">1</kbd>. Click the <span class="guilabel">Shortcut Box</span>, press your chosen keys, then click <span class="guilabel">OK</span>:</p>
+<figure class="align-default" id="id7">
+<img alt="../../_images/shadertoggler7.png" src="../../_images/shadertoggler7.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot showing the <span class="guilabel">Shortcut Box</span> with <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">1</kbd> configured.</span><a class="headerlink" href="#id7" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>You can choose if the add-on starts automatically. Click <span class="guilabel">OK</span> again.</p>
+</section>
+<section id="hunting-for-shaders">
+<h2>5. Hunting for Shaders<a class="headerlink" href="#hunting-for-shaders" title="Link to this heading">¶</a></h2>
+<p>Click the <span class="guilabel">Change shaders</span> button and let it run for a short time:</p>
+<figure class="align-default" id="id8">
+<img alt="../../_images/shadertoggler8.png" src="../../_images/shadertoggler8.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the <span class="guilabel">Change shaders</span> button being clicked.</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The process will first look like this:</p>
+<figure class="align-default" id="id9">
+<img alt="../../_images/shadertoggler9.png" src="../../_images/shadertoggler9.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot showing the <span class="guilabel">Hunting for shaders</span> process in progress.</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Then it will change to this when finished:</p>
+<figure class="align-default" id="id10">
+<img alt="../../_images/shadertoggler10.png" src="../../_images/shadertoggler10.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot showing the <span class="guilabel">Hunting for shaders</span> process completed.</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="navigation-and-saving">
+<h2>6. Navigation and Saving<a class="headerlink" href="#navigation-and-saving" title="Link to this heading">¶</a></h2>
+<p>Use the Number Pad keys to move around and save shaders:</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">1</kbd> &amp; <kbd class="kbd docutils literal notranslate">2</kbd> to move, and <kbd class="kbd docutils literal notranslate">3</kbd> to save Pixel Shaders</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">4</kbd> &amp; <kbd class="kbd docutils literal notranslate">5</kbd> to move, and <kbd class="kbd docutils literal notranslate">6</kbd> to save Vertex Shaders</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">7</kbd> &amp; <kbd class="kbd docutils literal notranslate">8</kbd> to move, and <kbd class="kbd docutils literal notranslate">9</kbd> to save Compute Shaders</p></li>
+</ul>
+<p>For this example, use keys <kbd class="kbd docutils literal notranslate">1</kbd> and <kbd class="kbd docutils literal notranslate">2</kbd> to find the shader. Once you find it, save it by pressing <kbd class="kbd docutils literal notranslate">3</kbd>:</p>
+<figure class="align-default" id="id11">
+<img alt="../../_images/shadertoggler11.png" src="../../_images/shadertoggler11.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot showing a shader being highlighted for saving.</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id12">
+<img alt="../../_images/shadertoggler12.png" src="../../_images/shadertoggler12.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot showing the “Save” button being pressed.</span><a class="headerlink" href="#id12" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Click <span class="guilabel">Done</span> and then press your shortcut key to turn on the add-on:</p>
+<figure class="align-default" id="id13">
+<img alt="../../_images/shadertoggler13.png" src="../../_images/shadertoggler13.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot showing the <span class="guilabel">Done</span> button.</span><a class="headerlink" href="#id13" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id14">
+<img alt="../../_images/shadertoggler14.png" src="../../_images/shadertoggler14.png" />
+<figcaption>
+<p><span class="caption-text">In-game screenshot with the Chromatic Aberration effect now disabled.</span><a class="headerlink" href="#id14" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The shader should now be off. Do this again for any other shaders in the game.</p>
+</section>
+<section id="saving-your-progress">
+<h2>7. Saving Your Progress<a class="headerlink" href="#saving-your-progress" title="Link to this heading">¶</a></h2>
+<p>Click the <span class="guilabel">Save all Toggle Groups</span> button to save what you’ve done:</p>
+<figure class="align-default" id="id15">
+<img alt="../../_images/shadertoggler15.png" src="../../_images/shadertoggler15.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the <span class="guilabel">Save all Toggle Groups</span> button.</span><a class="headerlink" href="#id15" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The save file will be in the same folder as the game’s executable or the add-on. Here’s an example of what the save file might look like:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span data-line="1"><span class="k">[General]</span>
+</span><span data-line="2"><span class="na">AmountGroups</span><span class="o">=</span><span class="s">1</span>
+</span><span data-line="3">
+</span><span data-line="4"><span class="k">[Group0_VertexShaders]</span>
+</span><span data-line="5"><span class="na">AmountHashes</span><span class="o">=</span><span class="s">0</span>
+</span><span data-line="6">
+</span><span data-line="7"><span class="k">[Group0_PixelShaders]</span>
+</span><span data-line="8"><span class="na">ShaderHash0</span><span class="o">=</span><span class="s">3090188387</span>
+</span><span data-line="9"><span class="na">AmountHashes</span><span class="o">=</span><span class="s">1</span>
+</span><span data-line="10">
+</span><span data-line="11"><span class="k">[Group0_ComputeShaders]</span>
+</span><span data-line="12"><span class="na">AmountHashes</span><span class="o">=</span><span class="s">0</span>
+</span><span data-line="13">
+</span><span data-line="14"><span class="k">[Group0]</span>
+</span><span data-line="15"><span class="na">Name</span><span class="o">=</span><span class="s">CA 01</span>
+</span><span data-line="16"><span class="na">ToggleKey</span><span class="o">=</span><span class="s">822083840</span>
+</span><span data-line="17"><span class="na">IsActiveAtStartup</span><span class="o">=</span><span class="s">False</span>
+</span></pre></div>
+</div>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
+<p>Now you know how to use the Shader Toggler to turn off or switch shaders in games. Always remember to save your changes and repeat these steps for other shaders. Happy shader hunting!</p>
+<p>Here is an image from in-game with the effect disabled:</p>
+<figure class="align-default" id="id16">
+<img alt="../../_images/shadertoggler16.png" src="../../_images/shadertoggler16.png" />
+<figcaption>
+<p><span class="caption-text">Final in-game screenshot with the Chromatic Aberration effect disabled.</span><a class="headerlink" href="#id16" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="rest.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span><div class="title">Reshade Effect Shader Toggler (R.E.S.T)</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="../emulators/index.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">Emulators</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2026, The ReadShade Team</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/shibuya.js?v=cac61aee"></script></body>
+</html>

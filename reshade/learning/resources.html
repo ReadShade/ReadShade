@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="lime" data-content_root="../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tools &amp; Resources - ReadShade</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Literature" href="literature.html" /><link rel="prev" title="Learning" href="index.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1c6635e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/shibuya.css?v=a318c5d4" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../_static/print.css?v=20ff2c19" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="Tools &amp; Resources"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="../../index.html">
+      
+      
+      <strong>ReadShade</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"><ul>
+      <li class="link"><button class="js-menu" type="button" id="nav-trigger-1" aria-controls="nav-children-1">
+            <span>Contributors</span>
+            <i class="i-lucide chevron-down"></i>
+          </button>
+        <ul id="nav-children-1" aria-labelledby="nav-trigger-1"><li><a href="https://github.com/BlueSkyDefender">
+                <span>BlueSkyDefender</span>
+                <small>Author of SuperDepth3D, AstrayFX, and various secret projects.</small>
+              </a></li><li><a href="https://github.com/papadanku">
+                <span>papadanku</span>
+                <small>Hobbyist programmer. Contributor to the Project Reality game modification and CShade.</small>
+              </a></li><li><a href="https://github.com/PHARTGAMES">
+                <span>PHARTGAMES / PEZZALUCIFER</span>
+                <small>Developed WibbleWobble, turning your display into a window to virtual worlds.</small>
+              </a></li></ul>
+      </li><li class="link">
+          <a href="https://reshade.me/">
+            <span>ReShade Homepage</span></a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">ReShade Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../general/index.html">ReShade General</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general/dlss.html">Disable DLSS Frame Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/dxvk.html">Install ReShade with DXVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/laa.html">Use Large Address Aware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/posteffects.html">Disable Unreal Engine’s Post Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/reshadeversions.html">Change ReShade Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/windpi.html">Game Windows DPI Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../licensing/index.html">Licensing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../licensing/copyright.html">United States Copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../licensing/licensing.html">Software Licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Learning</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tools &amp; Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="literature.html">Literature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reshadefx/index.html">Writing Shaders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reshadefx/introduction.html">1. Introduction to Shaders and ReShade FX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshadefx/basic_structure.html">2. Basic Shader Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshadefx/step1.html">3. Create a New .fx File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshadefx/step2.html">4. Add the Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshadefx/step3.html">5. Implement the Grayscale Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshadefx/step4.html">6. Apply the Shader in ReShade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshadefx/key_concepts.html">7. Understanding Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reshadefx/further_exploration.html">8. Further Exploration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Software guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../software/addons/index.html">Addons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/genericdepth.html">Generic Depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/rest.html">Reshade Effect Shader Toggler (R.E.S.T)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/addons/shadertoggler.html">Shader Toggler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../software/emulators/index.html">Emulators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../software/emulators/pcsx2.html">PCSX2</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Third-Party Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/depth3d/index.html">Depth3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/index.html">Hardware Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/sr.html">Simulated Reality Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/viture.html">VITURE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/wibblewobble/index.html">WibbleWobble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_monitor.html">Frame Sequential (Monitor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_projector.html">Frame Sequential (Projector)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#development-tools">Development Tools</a></li>
+<li><a class="reference internal" href="#courses-tutorials">Courses / Tutorials</a><ul>
+<li><a class="reference internal" href="#computer-graphics">Computer Graphics</a></li>
+<li><a class="reference internal" href="#mathematics">Mathematics</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#platforms-tools">Platforms / Tools</a><ul>
+<li><a class="reference internal" href="#id8">Computer Graphics</a></li>
+<li><a class="reference internal" href="#programming">Programming</a></li>
+<li><a class="reference internal" href="#code-repositories">Code Repositories</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#documentation">Documentation</a><ul>
+<li><a class="reference internal" href="#id14">Computer Graphics</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../index.html"><span itemprop="name">ReadShade</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Learning</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Tools &amp; Resources</strong>
+        <meta itemprop="position" content="3" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="tools-resources">
+<h1>Tools &amp; Resources<a class="headerlink" href="#tools-resources" title="Link to this heading">¶</a></h1>
+<p>This page provides a curated list of tools and learning resources for topics related to Shaders, Computer Graphics, Mathematics, and Programming, categorized by source type.</p>
+<section id="development-tools">
+<h2>Development Tools<a class="headerlink" href="#development-tools" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a></dt><dd><p>Open core, cross-platform code editor with native HLSL syntax highlighting support through extensions. Excellent for shader development and general text editing.</p>
+</dd>
+<dt><a class="reference external" href="https://www.zotero.org/">Zotero</a></dt><dd><p>Open source research organization software for managing references, PDFs, and generating bibliographies. Useful for academic research related to ReShade and graphics.</p>
+</dd>
+<dt><a class="reference external" href="https://github.com/">GitHub</a></dt><dd><p>Web-based platform for version control and collaboration, primarily used for hosting source code repositories. Essential for contributing to open-source projects.</p>
+</dd>
+<dt><a class="reference external" href="https://github.com/microsoft/DirectXTex">DirectXTex</a></dt><dd><p>A library for reading, writing, and processing textures. Primarily for advanced shader developers working with specific texture formats and operations.</p>
+</dd>
+<dt><a class="reference external" href="https://gpuopen.com/compressonator/">AMD Compressonator</a></dt><dd><p>An application for viewing, analyzing, and compressing various texture and 3D model formats. Valuable for advanced shader developers optimizing asset pipelines.</p>
+</dd>
+<dt><a class="reference external" href="https://www.gimp.org/">GIMP (GNU Image Manipulation Program)</a></dt><dd><p>Free and open-source raster graphics editor. Useful for creating and modifying textures, icons, and other visual assets required for ReShade presets or documentation.</p>
+</dd>
+</dl>
+</section>
+<section id="courses-tutorials">
+<h2>Courses / Tutorials<a class="headerlink" href="#courses-tutorials" title="Link to this heading">¶</a></h2>
+<section id="computer-graphics">
+<h3>Computer Graphics<a class="headerlink" href="#computer-graphics" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>Introduction to Shaders (Unity Learn) <a class="footnote-reference brackets" href="#id32" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a><span class="classifier">Beginner Friendly</span></dt><dd><p>A beginner-friendly introduction to shaders specifically for Unity game developers, covering basic concepts and practical examples.</p>
+</dd>
+<dt>LearnOpenGL <a class="footnote-reference brackets" href="#id22" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></dt><dd><p>A comprehensive online tutorial series that teaches you how to use OpenGL. It covers a wide range of topics from basic concepts to advanced rendering techniques.</p>
+</dd>
+<dt>Scratchapixel <a class="footnote-reference brackets" href="#id29" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></dt><dd><p>A website dedicated to teaching computer graphics from first principles, covering topics like rasterization, ray tracing, and global illumination.</p>
+</dd>
+<dt>The Book of Shaders <a class="footnote-reference brackets" href="#id28" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a><span class="classifier">Beginner Friendly</span></dt><dd><p>An introductory guide to fragment shaders. It’s an excellent resource for beginners to understand the fundamentals of shader programming.</p>
+</dd>
+<dt>WebGPU Fundamentals <a class="footnote-reference brackets" href="#id34" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a><span class="classifier">Beginner Friendly</span></dt><dd><p>A comprehensive guide to WebGPU, which includes fundamental concepts of shader programming (WGSL) for web-based graphics.</p>
+</dd>
+</dl>
+</section>
+<section id="mathematics">
+<h3>Mathematics<a class="headerlink" href="#mathematics" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>Essence of Calculus by 3Blue1Brown <a class="footnote-reference brackets" href="#id19" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></dt><dd><p>Similar to the linear algebra series, this provides a visual understanding of calculus concepts.</p>
+</dd>
+<dt>Essence of Linear Algebra by 3Blue1Brown <a class="footnote-reference brackets" href="#id20" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></dt><dd><p>A visual and intuitive introduction to linear algebra, explaining core concepts with animations.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="platforms-tools">
+<h2>Platforms / Tools<a class="headerlink" href="#platforms-tools" title="Link to this heading">¶</a></h2>
+<section id="id8">
+<h3>Computer Graphics<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>ShaderToy <a class="footnote-reference brackets" href="#id30" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a><span class="classifier">Beginner Friendly</span></dt><dd><p>An online platform where users can create and share shaders, offering a visual and interactive way to learn shader programming through examples and experimentation.</p>
+</dd>
+</dl>
+</section>
+<section id="programming">
+<h3>Programming<a class="headerlink" href="#programming" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>GeeksforGeeks <a class="footnote-reference brackets" href="#id21" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></dt><dd><p>A popular platform for computer science and programming articles, tutorials, and interview preparations.</p>
+</dd>
+</dl>
+</section>
+<section id="code-repositories">
+<h3>Code Repositories<a class="headerlink" href="#code-repositories" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>Lygia <a class="footnote-reference brackets" href="#id24" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></dt><dd><p>A shader library that provides a collection of functions and utilities for real-time graphics.</p>
+</dd>
+<dt>DirectXTK <a class="footnote-reference brackets" href="#id26" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></dt><dd><p>A collection of helper classes for writing DirectX 11 and DirectX 12 applications.</p>
+</dd>
+<dt>Tixl <a class="footnote-reference brackets" href="#id31" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a></dt><dd><p>A functional reactive programming library for graphics.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">¶</a></h2>
+<section id="id14">
+<h3>Computer Graphics<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt>DirectX-Specs (Microsoft) <a class="footnote-reference brackets" href="#id25" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a></dt><dd><p>Official documentation and specifications for DirectX, including HLSL. Essential for understanding the intricacies of shader development on DirectX platforms.</p>
+</dd>
+<dt>HLSL (Microsoft Learn) <a class="footnote-reference brackets" href="#id27" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></dt><dd><p>Official documentation for High-Level Shading Language (HLSL) from Microsoft Learn.</p>
+</dd>
+<dt>OpenGL ES Shading Language (Khronos Group) <a class="footnote-reference brackets" href="#id23" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></dt><dd><p>The official reference for GLSL ES, providing detailed specifications for writing shaders for OpenGL ES.</p>
+</dd>
+<dt>Vulkan GLSL (Vulkan Docs) <a class="footnote-reference brackets" href="#id33" id="id18" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a></dt><dd><p>Official documentation for GLSL in Vulkan from Vulkan Docs.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">¶</a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id19" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">1</a><span class="fn-bracket">]</span></span>
+<p>3Blue1Brown. <em>Essence of Calculus</em>. <a class="reference external" href="https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr&amp;si=E8Sygk8ViNovV2ln">https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr&amp;si=E8Sygk8ViNovV2ln</a></p>
+</aside>
+<aside class="footnote brackets" id="id20" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">2</a><span class="fn-bracket">]</span></span>
+<p>3Blue1Brown. <em>Essence of Linear Algebra</em>. <a class="reference external" href="https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&amp;si=6QcJX6cvOFjU8VtU">https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&amp;si=6QcJX6cvOFjU8VtU</a></p>
+</aside>
+<aside class="footnote brackets" id="id21" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">3</a><span class="fn-bracket">]</span></span>
+<p>GeeksforGeeks. <a class="reference external" href="https://www.geeksforgeeks.org/">https://www.geeksforgeeks.org/</a></p>
+</aside>
+<aside class="footnote brackets" id="id22" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">4</a><span class="fn-bracket">]</span></span>
+<p>Joey de Vries. <em>LearnOpenGL</em>. <a class="reference external" href="https://learnopengl.com/">https://learnopengl.com/</a></p>
+</aside>
+<aside class="footnote brackets" id="id23" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">5</a><span class="fn-bracket">]</span></span>
+<p>Khronos Group. <em>OpenGL ES Shading Language</em>. <a class="reference external" href="https://www.khronos.org/registry/OpenGL/specs/es/3.2/GLSL_ES_Specification_3.20.pdf">https://www.khronos.org/registry/OpenGL/specs/es/3.2/GLSL_ES_Specification_3.20.pdf</a></p>
+</aside>
+<aside class="footnote brackets" id="id24" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">6</a><span class="fn-bracket">]</span></span>
+<p>Lygia. <a class="reference external" href="https://github.com/patriciogonzalezvivo/lygia">https://github.com/patriciogonzalezvivo/lygia</a></p>
+</aside>
+<aside class="footnote brackets" id="id25" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">7</a><span class="fn-bracket">]</span></span>
+<p>Microsoft. <em>DirectX-Specs</em>. <a class="reference external" href="https://microsoft.github.io/DirectX-Specs/">https://microsoft.github.io/DirectX-Specs/</a></p>
+</aside>
+<aside class="footnote brackets" id="id26" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">8</a><span class="fn-bracket">]</span></span>
+<p>Microsoft. <em>DirectXTK</em>. <a class="reference external" href="https://github.com/microsoft/DirectXTK">https://github.com/microsoft/DirectXTK</a></p>
+</aside>
+<aside class="footnote brackets" id="id27" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">9</a><span class="fn-bracket">]</span></span>
+<p>Microsoft Learn. <em>HLSL</em>. <a class="reference external" href="https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl">https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl</a></p>
+</aside>
+<aside class="footnote brackets" id="id28" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">10</a><span class="fn-bracket">]</span></span>
+<p>Patricio Gonzalez Vivo &amp; Jen Lowe. <em>The Book of Shaders</em>. <a class="reference external" href="https://thebookofshaders.com/">https://thebookofshaders.com/</a></p>
+</aside>
+<aside class="footnote brackets" id="id29" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">11</a><span class="fn-bracket">]</span></span>
+<p>Scratchapixel. <em>Scratchapixel 3.0</em>. <a class="reference external" href="https://www.scratchapixel.com/">https://www.scratchapixel.com/</a></p>
+</aside>
+<aside class="footnote brackets" id="id30" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">12</a><span class="fn-bracket">]</span></span>
+<p>ShaderToy. <a class="reference external" href="https://www.shadertoy.com/">https://www.shadertoy.com/</a></p>
+</aside>
+<aside class="footnote brackets" id="id31" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">13</a><span class="fn-bracket">]</span></span>
+<p>Tixl. <a class="reference external" href="https://github.com/tixl3d/tixl">https://github.com/tixl3d/tixl</a></p>
+</aside>
+<aside class="footnote brackets" id="id32" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">14</a><span class="fn-bracket">]</span></span>
+<p>Unity Learn. <em>Introduction to Shaders</em>. <a class="reference external" href="https://learn.unity.com/tutorial/introduction-to-shaders">https://learn.unity.com/tutorial/introduction-to-shaders</a></p>
+</aside>
+<aside class="footnote brackets" id="id33" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id18">15</a><span class="fn-bracket">]</span></span>
+<p>Vulkan Docs. <em>Vulkan GLSL</em>. <a class="reference external" href="https://docs.vulkan.org/glsl/latest/index.html">https://docs.vulkan.org/glsl/latest/index.html</a></p>
+</aside>
+<aside class="footnote brackets" id="id34" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">16</a><span class="fn-bracket">]</span></span>
+<p>WebGPU Fundamentals. <a class="reference external" href="https://webgpufundamentals.org/">https://webgpufundamentals.org/</a></p>
+</aside>
+</aside>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="index.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span><div class="title">Learning</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="literature.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">Literature</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2026, The ReadShade Team</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/shibuya.js?v=cac61aee"></script></body>
+</html>

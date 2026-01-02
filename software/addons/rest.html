@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="lime" data-content_root="../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Reshade Effect Shader Toggler (R.E.S.T) - ReadShade</title><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Shader Toggler" href="shadertoggler.html" /><link rel="prev" title="Generic Depth" href="genericdepth.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1c6635e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/shibuya.css?v=a318c5d4" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../_static/print.css?v=20ff2c19" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="Reshade Effect Shader Toggler (R.E.S.T)"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="../../index.html">
+      
+      
+      <strong>ReadShade</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"><ul>
+      <li class="link"><button class="js-menu" type="button" id="nav-trigger-1" aria-controls="nav-children-1">
+            <span>Contributors</span>
+            <i class="i-lucide chevron-down"></i>
+          </button>
+        <ul id="nav-children-1" aria-labelledby="nav-trigger-1"><li><a href="https://github.com/BlueSkyDefender">
+                <span>BlueSkyDefender</span>
+                <small>Author of SuperDepth3D, AstrayFX, and various secret projects.</small>
+              </a></li><li><a href="https://github.com/papadanku">
+                <span>papadanku</span>
+                <small>Hobbyist programmer. Contributor to the Project Reality game modification and CShade.</small>
+              </a></li><li><a href="https://github.com/PHARTGAMES">
+                <span>PHARTGAMES / PEZZALUCIFER</span>
+                <small>Developed WibbleWobble, turning your display into a window to virtual worlds.</small>
+              </a></li></ul>
+      </li><li class="link">
+          <a href="https://reshade.me/">
+            <span>ReShade Homepage</span></a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">ReShade Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../reshade/general/index.html">ReShade General</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/general/dlss.html">Disable DLSS Frame Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/general/dxvk.html">Install ReShade with DXVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/general/laa.html">Use Large Address Aware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/general/posteffects.html">Disable Unreal Engine’s Post Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/general/reshadeversions.html">Change ReShade Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/general/windpi.html">Game Windows DPI Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reshade/licensing/index.html">Licensing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/licensing/copyright.html">United States Copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/licensing/licensing.html">Software Licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../reshade/learning/index.html">Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/learning/resources.html">Tools &amp; Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/learning/literature.html">Literature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reshade/learning/reshadefx/index.html">Writing Shaders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/introduction.html">1. Introduction to Shaders and ReShade FX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/basic_structure.html">2. Basic Shader Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/step1.html">3. Create a New .fx File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/step2.html">4. Add the Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/step3.html">5. Implement the Grayscale Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/step4.html">6. Apply the Shader in ReShade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/key_concepts.html">7. Understanding Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reshade/learning/reshadefx/further_exploration.html">8. Further Exploration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Software guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Addons</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="genericdepth.html">Generic Depth</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Reshade Effect Shader Toggler (R.E.S.T)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shadertoggler.html">Shader Toggler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../emulators/index.html">Emulators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../emulators/pcsx2.html">PCSX2</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Third-Party Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/depth3d/index.html">Depth3D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/index.html">Hardware Guides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/sr.html">Simulated Reality Displays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../thirdparty/depth3d/hardwareguides/viture.html">VITURE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../thirdparty/wibblewobble/index.html">WibbleWobble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_monitor.html">Frame Sequential (Monitor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../thirdparty/wibblewobble/wibblewobble_projector.html">Frame Sequential (Projector)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#downloading-and-installing-the-add-on">Downloading and Installing the Add-on</a></li>
+<li><a class="reference internal" href="#installing-the-add-on">Installing the Add-on</a></li>
+<li><a class="reference internal" href="#choosing-a-game">Choosing a Game</a></li>
+<li><a class="reference internal" href="#setting-up-the-add-on">Setting Up the Add-on</a></li>
+<li><a class="reference internal" href="#launching-the-game-and-add-on">Launching the Game and Add-on</a></li>
+<li><a class="reference internal" href="#configuring-the-add-on">Configuring the Add-on</a></li>
+<li><a class="reference internal" href="#setting-up-the-add-on-in-game">Setting Up the Add-on in-game</a></li>
+<li><a class="reference internal" href="#enabling-3d-shader">Enabling 3D Shader</a></li>
+<li><a class="reference internal" href="#configuring-the-add-on-settings">Configuring the Add-on Settings</a></li>
+<li><a class="reference internal" href="#isolating-the-ui">Isolating the UI</a></li>
+<li><a class="reference internal" href="#saving-your-progress">Saving Your Progress</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li><a class="reference internal" href="#cursor-adjustments">Cursor Adjustments</a></li>
+<li><a class="reference internal" href="#sharing-your-configuration">Sharing Your Configuration</a></li>
+</ul>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../index.html"><span itemprop="name">ReadShade</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Addons</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">Reshade Effect Shader Toggler (R.E.S.T)</strong>
+        <meta itemprop="position" content="3" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="reshade-effect-shader-toggler-r-e-s-t">
+<span id="rest-guide"></span><h1>Reshade Effect Shader Toggler (R.E.S.T)<a class="headerlink" href="#reshade-effect-shader-toggler-r-e-s-t" title="Link to this heading">¶</a></h1>
+<p>The Reshade Effect Shader Toggler (R.E.S.T) is a powerful tool that lets you separate game effects and apply ReShade shaders to specific parts of the game.</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/rest.png" src="../../_images/rest.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the Reshade Effect Shader Toggler add-on.</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>To begin using R.E.S.T, you need to download the add-on from its <a class="reference external" href="https://github.com/4lex4nder/ReshadeEffectShaderToggler/releases/tag/v1.3.15">official GitHub page</a>.</p>
+</section>
+<section id="downloading-and-installing-the-add-on">
+<h2>Downloading and Installing the Add-on<a class="headerlink" href="#downloading-and-installing-the-add-on" title="Link to this heading">¶</a></h2>
+<p>The release folder contains several files, like shaders, FX files, a license, and a README. You can ignore the license and README files for now. You’ll need to use one of the <code class="file docutils literal notranslate"><span class="pre">.addon#</span></code> files; you can drag both into the same folder where your <code class="file docutils literal notranslate"><span class="pre">ReShade.dll</span></code> is. This guide will focus on the 64-bit add-on.</p>
+</section>
+<section id="installing-the-add-on">
+<h2>Installing the Add-on<a class="headerlink" href="#installing-the-add-on" title="Link to this heading">¶</a></h2>
+<p>Put the <code class="file docutils literal notranslate"><span class="pre">ReshadeEffectShaderToggler.addon64</span></code> file in the same place where you installed ReShade. This is usually in your game’s folder, next to the <code class="file docutils literal notranslate"><span class="pre">dxgi.dll</span></code> file.</p>
+</section>
+<section id="choosing-a-game">
+<h2>Choosing a Game<a class="headerlink" href="#choosing-a-game" title="Link to this heading">¶</a></h2>
+<p>For this guide, we will use the game <a class="reference external" href="https://store.steampowered.com/app/1715590/Wizordum/">Wiz⊙rdum</a>. However, you can use R.E.S.T with other games as well.</p>
+</section>
+<section id="setting-up-the-add-on">
+<h2>Setting Up the Add-on<a class="headerlink" href="#setting-up-the-add-on" title="Link to this heading">¶</a></h2>
+<p>Your game folder should look like this:</p>
+<figure class="align-default" id="id2">
+<img alt="../../_images/wizordum.png" src="../../_images/wizordum.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the game folder with the add-on installed.</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Make sure ReShade is installed and the add-on file is in the correct spot.</p>
+</section>
+<section id="launching-the-game-and-add-on">
+<h2>Launching the Game and Add-on<a class="headerlink" href="#launching-the-game-and-add-on" title="Link to this heading">¶</a></h2>
+<p>Start the game. ReShade should load with the add-on active. You can find the add-on in the <span class="guilabel">Add-on</span> Tab:</p>
+<figure class="align-default" id="id3">
+<img alt="../../_images/rest1.png" src="../../_images/rest1.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the ReShade add-on tab.</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Click the arrow to open the add-on, and close other add-ons to make it easier to see.</p>
+</section>
+<section id="configuring-the-add-on">
+<h2>Configuring the Add-on<a class="headerlink" href="#configuring-the-add-on" title="Link to this heading">¶</a></h2>
+<p>The add-on menu should look like this:</p>
+<figure class="align-default" id="id4">
+<img alt="../../_images/rest2.png" src="../../_images/rest2.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the opened add-on configuration menu.</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Close the ReShade menu and go back into the game to use the add-on.</p>
+</section>
+<section id="setting-up-the-add-on-in-game">
+<h2>Setting Up the Add-on in-game<a class="headerlink" href="#setting-up-the-add-on-in-game" title="Link to this heading">¶</a></h2>
+<p>Open ReShade, move it to the right, and click <span class="guilabel">New</span>.</p>
+<figure class="align-default" id="id5">
+<img alt="../../_images/rest3.png" src="../../_images/rest3.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot showing the <span class="guilabel">New</span> button in the ReShade menu.</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id6">
+<img alt="../../_images/rest4.png" src="../../_images/rest4.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the new window that appears.</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p class="rubric">A new window will open</p>
+<figure class="align-default" id="id7">
+<img alt="../../_images/rest5.png" src="../../_images/rest5.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the add-on configuration window.</span><a class="headerlink" href="#id7" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p class="rubric">Follow These Steps</p>
+<ol class="arabic simple">
+<li><p>Click <span class="guilabel">Activate [x]</span> (to turn it on)</p></li>
+<li><p>Click <span class="guilabel">Edit</span></p></li>
+<li><p>Type a name in the <span class="guilabel">Name</span> field</p></li>
+<li><p>Create a <span class="guilabel">Shortcut</span> (a key combination to quickly use it)</p></li>
+<li><p>Click <span class="guilabel">OK</span></p></li>
+</ol>
+</section>
+<section id="enabling-3d-shader">
+<h2>Enabling 3D Shader<a class="headerlink" href="#enabling-3d-shader" title="Link to this heading">¶</a></h2>
+<p>If you want to use SuperDepth3D with R.E.S.T, you need to turn on the 3D shader. Open the main menu, enable the 3D shader, and scroll to the very bottom of the shader settings. Set <code class="docutils literal notranslate"><span class="pre">REST_UI_MODE</span></code> to <code class="docutils literal notranslate"><span class="pre">1</span></code> to enable it:</p>
+<figure class="align-default" id="id8">
+<img alt="../../_images/rest8.png" src="../../_images/rest8.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the shader settings showing REST_UI_MODE.</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="configuring-the-add-on-settings">
+<h2>Configuring the Add-on Settings<a class="headerlink" href="#configuring-the-add-on-settings" title="Link to this heading">¶</a></h2>
+<p>Go back to the Add-on Tab and click <span class="guilabel">Settings</span>:</p>
+<figure class="align-default" id="id9">
+<img alt="../../_images/rest7.png" src="../../_images/rest7.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the “Settings” button.</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p class="rubric">A new window will open</p>
+<figure class="align-default" id="id10">
+<img alt="../../_images/rest9.png" src="../../_images/rest9.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the add-on settings window.</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p class="rubric">Follow These Steps</p>
+<ol class="arabic simple">
+<li><p>Uncheck <span class="guilabel">Apply all enabled techniques [ ]</span></p></li>
+<li><p>Check the 3D shader <span class="guilabel">[x]</span></p></li>
+</ol>
+<figure class="align-default" id="id11">
+<img alt="../../_images/rest11.png" src="../../_images/rest11.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the settings after marking the 3D shader.</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="isolating-the-ui">
+<h2>Isolating the UI<a class="headerlink" href="#isolating-the-ui" title="Link to this heading">¶</a></h2>
+<p>Look at the list of active buffers:</p>
+<figure class="align-default" id="id12">
+<img alt="../../_images/rest12.png" src="../../_images/rest12.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the active buffers list.</span><a class="headerlink" href="#id12" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Find the buffer that controls the UI. Double-click its hex value to select it:</p>
+<figure class="align-default" id="id13">
+<img alt="../../_images/rest14.png" src="../../_images/rest14.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of a selected hex value.</span><a class="headerlink" href="#id13" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The selected buffer should turn yellow.</p>
+</section>
+<section id="saving-your-progress">
+<h2>Saving Your Progress<a class="headerlink" href="#saving-your-progress" title="Link to this heading">¶</a></h2>
+<p>Close the window and click <span class="guilabel">Save all Toggle Groups</span> to save your changes:</p>
+<figure class="align-default" id="id14">
+<img alt="../../_images/rest15.png" src="../../_images/rest15.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the “Save all Toggle Groups” button.</span><a class="headerlink" href="#id14" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h2>
+<p>You might see problems with the center crosshair. Here are three ways to fix this:</p>
+<ol class="arabic simple">
+<li><p>See if the game lets you remove it.</p></li>
+<li><p>Use the <a class="reference internal" href="shadertoggler.html"><span class="doc">ShaderToggler</span></a>.</p></li>
+<li><p>Change the game files (mod) to remove the texture.</p></li>
+</ol>
+</section>
+<section id="cursor-adjustments">
+<h2>Cursor Adjustments<a class="headerlink" href="#cursor-adjustments" title="Link to this heading">¶</a></h2>
+<p>If your cursor has issues in Side by Side and Top n Bottom modes, go to <span class="guilabel">Shader Settings</span> and find <span class="guilabel">Cursor Adjustments</span>:</p>
+<figure class="align-default" id="id15">
+<img alt="../../_images/rest18.png" src="../../_images/rest18.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the “Cursor Adjustments” menu.</span><a class="headerlink" href="#id15" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Choose your preferred cursor type:</p>
+<figure class="align-default" id="id16">
+<img alt="../../_images/rest19.png" src="../../_images/rest19.png" />
+<figcaption>
+<p><span class="caption-text">Screenshot of the cursor type options.</span><a class="headerlink" href="#id16" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>You can press <kbd class="kbd docutils literal notranslate">Mouse</kbd> <kbd class="kbd docutils literal notranslate">5</kbd> to switch between layers.</p>
+</section>
+<section id="sharing-your-configuration">
+<h2>Sharing Your Configuration<a class="headerlink" href="#sharing-your-configuration" title="Link to this heading">¶</a></h2>
+<p>When you click <span class="guilabel">Save all Toggle Groups</span>, a file named <code class="file docutils literal notranslate"><span class="pre">ReshadeEffectShaderToggler.ini</span></code> is created in the same folder as the add-on. You can share this file with others by posting it on the <a class="reference external" href="https://discord.com/channels/305472403977404416/1248039510244065410">ReShade forum</a>.</p>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="genericdepth.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span><div class="title">Generic Depth</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="shadertoggler.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">Shader Toggler</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2026, The ReadShade Team</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/shibuya.js?v=cac61aee"></script></body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" data-accent-color="lime" data-content_root="../../../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>VITURE - ReadShade</title><link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="WibbleWobble" href="../../wibblewobble/index.html" /><link rel="prev" title="Simulated Reality Displays" href="sr.html" /><script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(localStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d1c6635e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/shibuya.css?v=a318c5d4" />
+    <link media="print" rel="stylesheet" type="text/css" href="../../../_static/print.css?v=20ff2c19" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="VITURE"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+<body><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand" href="../../../index.html">
+      
+      
+      <strong>ReadShade</strong>
+    </a>
+    <div class="sy-head-nav" id="head-nav">
+      <nav class="sy-head-links"><ul>
+      <li class="link"><button class="js-menu" type="button" id="nav-trigger-1" aria-controls="nav-children-1">
+            <span>Contributors</span>
+            <i class="i-lucide chevron-down"></i>
+          </button>
+        <ul id="nav-children-1" aria-labelledby="nav-trigger-1"><li><a href="https://github.com/BlueSkyDefender">
+                <span>BlueSkyDefender</span>
+                <small>Author of SuperDepth3D, AstrayFX, and various secret projects.</small>
+              </a></li><li><a href="https://github.com/papadanku">
+                <span>papadanku</span>
+                <small>Hobbyist programmer. Contributor to the Project Reality game modification and CShade.</small>
+              </a></li><li><a href="https://github.com/PHARTGAMES">
+                <span>PHARTGAMES / PEZZALUCIFER</span>
+                <small>Developed WibbleWobble, turning your display into a window to virtual worlds.</small>
+              </a></li></ul>
+      </li><li class="link">
+          <a href="https://reshade.me/">
+            <span>ReShade Homepage</span></a>
+        </li></ul></nav>
+      <div class="sy-head-extra flex items-center print:hidden"><form class="searchbox flex items-center" action="../../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form><div class="sy-head-socials">
+  <a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+    <iconify-icon icon="simple-icons:github"></iconify-icon>
+  </a></div></div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden"><button class="js-theme theme-switch flex items-center"
+data-aria-auto="Switch to light color mode"
+data-aria-light="Switch to dark color mode"
+data-aria-dark="Switch to auto color mode">
+<i class="i-lucide theme-icon"></i>
+</button><button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="head-nav" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2"></span>
+          <span class="hamburger_3"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading" aria-level="3"><span class="caption-text">ReShade Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../reshade/general/index.html">ReShade General</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../reshade/general/dlss.html">Disable DLSS Frame Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reshade/general/dxvk.html">Install ReShade with DXVK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reshade/general/laa.html">Use Large Address Aware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reshade/general/posteffects.html">Disable Unreal Engine’s Post Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reshade/general/reshadeversions.html">Change ReShade Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reshade/general/windpi.html">Game Windows DPI Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reshade/licensing/index.html">Licensing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../reshade/licensing/copyright.html">United States Copyright</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reshade/licensing/licensing.html">Software Licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reshade/learning/index.html">Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../reshade/learning/resources.html">Tools &amp; Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reshade/learning/literature.html">Literature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reshade/learning/reshadefx/index.html">Writing Shaders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reshade/learning/reshadefx/introduction.html">1. Introduction to Shaders and ReShade FX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reshade/learning/reshadefx/basic_structure.html">2. Basic Shader Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reshade/learning/reshadefx/step1.html">3. Create a New .fx File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reshade/learning/reshadefx/step2.html">4. Add the Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reshade/learning/reshadefx/step3.html">5. Implement the Grayscale Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reshade/learning/reshadefx/step4.html">6. Apply the Shader in ReShade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reshade/learning/reshadefx/key_concepts.html">7. Understanding Key Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../reshade/learning/reshadefx/further_exploration.html">8. Further Exploration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Software guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/addons/index.html">Addons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/addons/genericdepth.html">Generic Depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/addons/rest.html">Reshade Effect Shader Toggler (R.E.S.T)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/addons/shadertoggler.html">Shader Toggler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/emulators/index.html">Emulators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../software/emulators/pcsx2.html">PCSX2</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading" aria-level="3"><span class="caption-text">Third-Party Guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Depth3D</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hardware Guides</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sr.html">Simulated Reality Displays</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">VITURE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../wibblewobble/index.html">WibbleWobble</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../wibblewobble/wibblewobble_monitor.html">Frame Sequential (Monitor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../wibblewobble/wibblewobble_projector.html">Frame Sequential (Projector)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-lucide close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4"><div class="localtoc"><h3>On this page</h3><ul>
+<li><a class="reference internal" href="#setting-up-viture-with-intel-gpu">Setting Up VITURE with Intel GPU</a><ul>
+<li><a class="reference internal" href="#initial-steps">Initial Steps</a></li>
+<li><a class="reference internal" href="#configuring-viture-with-intel-gpu">Configuring VITURE with Intel GPU</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#setting-up-viture-with-nvidia-gpu">Setting Up VITURE with NVIDIA GPU</a></li>
+</ul>
+</div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div></div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+<div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-lucide menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../../../index.html"><span itemprop="name">ReadShade</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../index.html"><span itemprop="name">Depth3D</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="2" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Hardware Guides</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="3" />
+      </li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">VITURE</strong>
+        <meta itemprop="position" content="4" />
+      </li></ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-lucide outdent"></i>
+      </button>
+    </div>
+  </div>
+</div><div class="flex flex-col break-words justify-between">
+      <div class="relative min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+  <article class="yue" role="main">
+          <section id="viture">
+<h1>VITURE<a class="headerlink" href="#viture" title="Link to this heading">¶</a></h1>
+<p>VITURE is a top brand in AR glasses, providing a special gaming experience. This guide will help you set up your VITURE Gen 1 Glasses with SuperDepth3D, based on your graphics card (GPU).</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../../_images/viture1.jpg"><img alt="../../../_images/viture1.jpg" src="../../../_images/viture1.jpg" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">VITURE is one of the key players in the AR glasses industry.</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="setting-up-viture-with-intel-gpu">
+<h2>Setting Up VITURE with Intel GPU<a class="headerlink" href="#setting-up-viture-with-intel-gpu" title="Link to this heading">¶</a></h2>
+<p>To use your VITURE AR Glasses with an Intel GPU, follow these steps:</p>
+<section id="initial-steps">
+<h3>Initial Steps<a class="headerlink" href="#initial-steps" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p><strong>Update your Arc Drivers</strong>: Make sure you have the newest <a class="reference external" href="https://www.intel.com/content/www/us/en/products/docs/discrete-gpus/arc/software/drivers.html">Arc Drivers</a> installed.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../../_images/viture2.png"><img alt="../../../_images/viture2.png" src="../../../_images/viture2.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot of the Intel Arc Drivers page.</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Download Intel Graphics Command Center</strong>: Install the beta version of the <a class="reference external" href="https://apps.microsoft.com/detail/9nmr79ztjftc?rtc=1&amp;hl=en-us&amp;gl=us">Intel Graphics Command Center</a> application.</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../../../_images/viture3.png"><img alt="../../../_images/viture3.png" src="../../../_images/viture3.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot of the Intel Graphics Command Center app page.</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+<section id="configuring-viture-with-intel-gpu">
+<h3>Configuring VITURE with Intel GPU<a class="headerlink" href="#configuring-viture-with-intel-gpu" title="Link to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p><strong>Switch to 3D Mode</strong>: Plug in your VITURE AR Glasses. Hold down the first button for a few seconds to switch them to 3D Mode.</p>
+<p>Windows should see it as a 3840 x 1080p screen:</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../../_images/viture4.png"><img alt="../../../_images/viture4.png" src="../../../_images/viture4.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot of Windows display settings showing the VITURE screen.</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
+<div class="legend">
+<p>If you see this, it’s a good sign.</p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Launch Intel Graphics Command Center</strong>: Open the Intel Graphics Command Center (BETA).</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../../_images/viture5.png"><img alt="../../../_images/viture5.png" src="../../../_images/viture5.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot of the Intel Graphics Command Center application.</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Select Display Settings</strong>: Click on <span class="guilabel">Display</span>.</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../../_images/viture6.png"><img alt="../../../_images/viture6.png" src="../../../_images/viture6.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot showing the <span class="guilabel">Display</span> option in Intel Graphics Command Center.</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Select VITURE Screen</strong>: Click on the screen labeled <span class="guilabel">VITURE</span>.</p>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../../../_images/viture7.png"><img alt="../../../_images/viture7.png" src="../../../_images/viture7.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot showing the VITURE screen selected.</span><a class="headerlink" href="#id7" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Change Resolution</strong>: Go to settings and change the resolution from <span class="guilabel">3840 x 1080</span> to <span class="guilabel">1920 x 1080</span>.</p>
+<figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="../../../_images/viture8.png"><img alt="../../../_images/viture8.png" src="../../../_images/viture8.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot showing the resolution settings.</span><a class="headerlink" href="#id8" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id9">
+<a class="reference internal image-reference" href="../../../_images/viture9.png"><img alt="../../../_images/viture9.png" src="../../../_images/viture9.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot showing the resolution changed.</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Set Scale Size</strong>: Change the scale size to <span class="guilabel">Stretched</span>.</p>
+<figure class="align-default" id="id10">
+<a class="reference internal image-reference" href="../../../_images/viture10.png"><img alt="../../../_images/viture10.png" src="../../../_images/viture10.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot of the scale size options.</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Verify Settings</strong>: Your settings should now look like this:</p>
+<figure class="align-default" id="id11">
+<a class="reference internal image-reference" href="../../../_images/viture11.png"><img alt="../../../_images/viture11.png" src="../../../_images/viture11.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot of the final display settings.</span><a class="headerlink" href="#id11" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+<p>Now you can start your game with SuperDepth3D and enjoy it in stereo 3D.</p>
+</section>
+</section>
+<section id="setting-up-viture-with-nvidia-gpu">
+<h2>Setting Up VITURE with NVIDIA GPU<a class="headerlink" href="#setting-up-viture-with-nvidia-gpu" title="Link to this heading">¶</a></h2>
+<p>To use your VITURE AR Glasses with an NVIDIA GPU, follow these steps:</p>
+<ol class="arabic">
+<li><p><strong>Update your NVIDIA Drivers</strong>: Make sure you have the newest <a class="reference external" href="https://www.nvidia.com/en-us/drivers/">NVIDIA Drivers</a> installed.</p>
+<figure class="align-default" id="id12">
+<a class="reference internal image-reference" href="../../../_images/viture12.png"><img alt="../../../_images/viture12.png" src="../../../_images/viture12.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot of the NVIDIA drivers page.</span><a class="headerlink" href="#id12" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Switch to 3D Mode</strong>: Plug in your VITURE AR Glasses. Hold down the first button for a few seconds to switch them to 3D Mode.</p>
+<figure class="align-default" id="id13">
+<a class="reference internal image-reference" href="../../../_images/viture13.jpg"><img alt="../../../_images/viture13.jpg" src="../../../_images/viture13.jpg" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Image of VITURE glasses showing the button location.</span><a class="headerlink" href="#id13" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Windows should see it as a 3840 x 1080p screen:</p>
+<figure class="align-default" id="id14">
+<a class="reference internal image-reference" href="../../../_images/viture14.png"><img alt="../../../_images/viture14.png" src="../../../_images/viture14.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot of Windows display settings showing the VITURE screen.</span><a class="headerlink" href="#id14" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>If you see this, it’s a good sign.</p>
+</li>
+<li><p><strong>Launch NVIDIA Control Panel</strong>: Open the NVIDIA Control Panel.</p>
+<figure class="align-default" id="id15">
+<a class="reference internal image-reference" href="../../../_images/viture15.png"><img alt="../../../_images/viture15.png" src="../../../_images/viture15.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot of the NVIDIA Control Panel.</span><a class="headerlink" href="#id15" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Change Resolution</strong>: Click on <span class="guilabel">Change Resolution</span> and set it to 1920 x 1080.</p>
+<figure class="align-default" id="id16">
+<a class="reference internal image-reference" href="../../../_images/viture16.png"><img alt="../../../_images/viture16.png" src="../../../_images/viture16.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot of the NVIDIA resolution settings.</span><a class="headerlink" href="#id16" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p><strong>Adjust Desktop Size and Position</strong>: Go to <span class="guilabel">Adjust Desktop size and Position</span>. Set it to <span class="guilabel">Fullscreen</span>, and the other settings should automatically be correct.</p>
+<figure class="align-default" id="id17">
+<a class="reference internal image-reference" href="../../../_images/viture17.png"><img alt="../../../_images/viture17.png" src="../../../_images/viture17.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Screenshot of the NVIDIA desktop size and position settings.</span><a class="headerlink" href="#id17" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+<p>Now you can start your game with SuperDepth3D and enjoy it in stereo 3D.</p>
+</section>
+</section>
+
+        </article><button class="back-to-top" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+  </svg>
+  <span>Back to top</span>
+</button><div class="navigation flex print:hidden"><div class="navigation-prev">
+    <a href="sr.html">
+      <i class="i-lucide chevron-left"></i>
+      <div class="page-info">
+        <span>Previous</span><div class="title">Simulated Reality Displays</div></div>
+    </a>
+  </div><div class="navigation-next">
+    <a href="../../wibblewobble/index.html">
+      <div class="page-info">
+        <span>Next</span>
+        <div class="title">WibbleWobble</div>
+      </div>
+      <i class="i-lucide chevron-right"></i>
+    </a>
+  </div></div></div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2026, The ReadShade Team</p>
+  
+  <p>
+    Made with
+    
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    
+    <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+  </p>
+</div>
+      <div class="sy-foot-socials">
+<a href="https://github.com/ReadShade/ReadShade" aria-label="GitHub">
+  <iconify-icon icon="simple-icons:github"></iconify-icon>
+</a></div>
+    </div>
+  </div>
+</footer>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../../_static/shibuya.js?v=cac61aee"></script></body>
+</html>
