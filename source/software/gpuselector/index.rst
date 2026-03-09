@@ -22,9 +22,9 @@ Key Features
 - **Emulator Support**: Built-in ROM scanning and per-emulator configuration management.
 - **Graphics Translation Layers**: Integrated support for:
 
-  - **DXVK / VKD3D-Proton**: Translate DirectX 9/10/11/12 to Vulkan for better performance or compatibility.
-  - **dgVoodoo2**: For legacy DirectX 1-8 and 3dfx Glide support.
-  - **WineD3D / Zink**: Additional translation options for OpenGL and Vulkan.
+   - **DXVK / VKD3D-Proton**: Translate DirectX 9/10/11/12 to Vulkan for better performance or compatibility.
+   - **dgVoodoo2**: For legacy DirectX 1-8 and 3dfx Glide support.
+   - **WineD3D / Zink**: Additional translation options for OpenGL and Vulkan.
 
 - **Modding Codex**: A curated database of community-driven modding projects and game preservation resources.
 - **Accessibility**: Includes an "OpenDyslexic" font mode and high DPI scaling support.
@@ -42,13 +42,13 @@ GPU Selector is designed with ReShade users in mind. It simplifies the process o
 Getting Started
 ---------------
 
-1. **Download**: Get the latest version of `GPU Selector from the GitHub Releases page <https://github.com/BlueSkyDefender/GPUSelector/releases>`_.
-2. **Install**: Run the setup executable and follow the installation prompts.
-3. **Scan**: On first launch, GPU Selector will scan your system for installed games. You can also manually add executables.
-4. **Configure**:
+#. **Download**: Get the latest version of `GPU Selector from the GitHub Releases page <https://github.com/BlueSkyDefender/GPUSelector/releases>`_.
+#. **Install**: Run the setup executable and follow the installation prompts.
+#. **Scan**: On first launch, GPU Selector will scan your system for installed games. You can also manually add executables.
+#. **Configure**:
 
-  - Select a game from the list.
-  - Choose your preferred GPU from the dropdown menu.
-  - (Optional) Enable translation layers like DXVK or install ReShade.
+   - Select a game from the list.
+   - Choose your preferred GPU from the dropdown menu.
+   - (Optional) Enable translation layers like DXVK or install ReShade.
 
-5. **Launch**: Click the **Launch** button to start your game with the applied settings.
+#. **Launch**: Click the **Launch** button to start your game with the applied settings.
