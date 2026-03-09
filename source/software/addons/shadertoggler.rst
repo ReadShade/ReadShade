@@ -2,6 +2,9 @@
 Shader Toggler
 ==============
 
+:Author: `Frans Bouma <https://github.com/FransBouma>`_
+:Source Code: https://github.com/FransBouma/ShaderToggler/
+
 The Shader Toggler is a powerful tool for disabling or toggling shaders in games. This guide will walk you through the process of using the Shader Toggler add-on with ReShade.
 
 For this guide, we will be using a free game called *Mimic Search*, which can be downloaded from `Steam <https://store.steampowered.com/app/2713460/Mimic_Search/>`_.

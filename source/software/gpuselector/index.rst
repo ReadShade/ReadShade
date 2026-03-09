@@ -2,7 +2,7 @@
 GPU Selector
 ============
 
-:GitHub Repository: `BlueSkyDefender/GPUSelector <https://github.com/BlueSkyDefender/GPUSelector>`_
+:Author: Jose Negrete (BlueSkyDefender)
 :Website: `GPU Selector Online <https://blueskydefender.github.io/GPUSelector/ >`_
 :License: Personal Non-Commercial License (NC-ND-NR)
 

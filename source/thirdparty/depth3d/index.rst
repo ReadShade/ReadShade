@@ -2,6 +2,9 @@
 Depth3D
 =======
 
+:Author: Jose Negrete (BlueSkyDefender)
+:Website: https://blueskydefender.github.io/Depth3D/
+
 Depth3D is a comprehensive suite of post-process shaders and tools designed for ReShade, primarily focused on bringing depth map-based 3D effects to video games. Developed by BlueSkyDefender, it aims to enhance the visual experience by enabling stereoscopic 3D rendering and offering extensive control over these effects.
 
 At its core, Depth3D features **SuperDepth3D**, a powerful shader that generates depth map-based 3D, akin to NVIDIA's Compatibility Mode 3D. This allows users to experience games in a more immersive, three-dimensional way. To simplify the setup process, :file:`Overwatch.fxh` acts as a companion tool, automatically configuring depth and 3D settings for a wide range of games.

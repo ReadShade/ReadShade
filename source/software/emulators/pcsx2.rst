@@ -3,6 +3,10 @@
 PCSX2
 =====
 
+:Website: https://pcsx2.net/
+:Download: https://pcsx2.net/downloads
+:Documentation: https://pcsx2.net/docs
+
 This guide shows you how to set up ReShade with the PCSX2 emulator.
 
 Introduction to PCSX2 Settings

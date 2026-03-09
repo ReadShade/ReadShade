@@ -3,6 +3,10 @@
 Reshade Effect Shader Toggler (R.E.S.T)
 =======================================
 
+:Author (Fork): `4lex4nder <https://github.com/4lex4nder>`_
+:Author (Original): `Frans Bouma <https://github.com/FransBouma>`_
+:Source Code: https://github.com/4lex4nder/ReshadeEffectShaderToggler/
+
 The Reshade Effect Shader Toggler (R.E.S.T) is a powerful tool that lets you separate game effects and apply ReShade shaders to specific parts of the game.
 
 .. figure:: images/rest/rest.png
@@ -12,7 +16,7 @@ The Reshade Effect Shader Toggler (R.E.S.T) is a powerful tool that lets you sep
 Introduction
 ------------
 
-To begin using R.E.S.T, you need to download the add-on from its `official GitHub page <https://github.com/4lex4nder/ReshadeEffectShaderToggler/releases/tag/v1.3.15>`_.
+To begin using R.E.S.T, you need to download the add-on from its `official GitHub page <https://github.com/4lex4nder/ReshadeEffectShaderToggler/releases>`_.
 
 Downloading and Installing the Add-on
 -------------------------------------
