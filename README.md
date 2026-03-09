@@ -10,9 +10,9 @@ The documentation is organized into thematic domains within the `source/` direct
 
 - **ReShade General**: Covers optimization, DXVK integration, and engine-specific tweaks.
 - **Learning**: Focuses on ReShadeFX shader development with step-by-step guides for creating and understanding shaders.
-- **Software**: Includes detailed guides for specific software like the PCSX2 emulator and ReShade add-ons such as ShaderToggler and REST.
-- **Third-Party**: Features documentation for external tools like Depth3D and specialized hardware like Viture.
-- **Licensing**: Contains copyright information and software licenses relevant to the project.
+- **Software**: Includes detailed guides for emulators (PCSX2), ReShade add-ons (ShaderToggler, REST), and comprehensive documentation for the CShade shader collection.
+- **Third-Party**: Features documentation for external tools like Depth3D and WibbleWobble, along with specialized hardware guides for Viture and Super Reality (SR) devices.
+- **Licensing**: Contains copyright information and software licenses relevant to the project components.
 
 ## Organization & Navigation
 
