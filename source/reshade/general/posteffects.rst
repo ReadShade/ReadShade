@@ -79,7 +79,7 @@ To get rid of letterboxing, add these lines:
 Shader Toggler
 --------------
 
-The Shader Toggler is a free ReShade add-on that can turn off certain effects that might cause problems with Depth3D. You can find out more about it in our `ReShade guide <../reshade/reshadeversions>`_.
+The Shader Toggler is a free ReShade add-on that can turn off certain effects that might cause problems with Depth3D. You can find out more about it in our :doc:`ReShade guide <reshadeversions>`.
 
 Upcoming Content
 ----------------

@@ -29,13 +29,19 @@ To find the display settings, go to the menu shown below.
 
       Screenshot showing :guilabel:`Fit to Window` aspect ratio selected.
 
-   This is important because the depth buffer is set this way internally.
+   .. important::
+
+      This is important because the depth buffer is set this way internally.
 
 #. **Anti-Blur**: Turn on this option to reduce blurry effects.
 
    .. figure:: images/pcsx2/PCSX2_Anti-Blur.png
 
       Screenshot showing the :guilabel:`Anti-Blur` option enabled.
+
+   .. tip::
+
+      This will help make the image sharper and clearer.
 
 Rendering
 ---------
@@ -72,7 +78,7 @@ Installing and Configuring ReShade
 
 To use ReShade with PCSX2, follow these steps:
 
-#. **Install ReShade**: Install ReShade using your current API setting. You can find the installation guide `here <../reshade/reshadeversions.md>`_.
+#. **Install ReShade**: Install ReShade using your current API setting. You can find the installation guide :doc:`here <../../reshade/general/reshadeversions>`.
 #. **Turn off the emulator and install ReShade.**
 #. **Start your game and open the ReShade menu.**
 #. **Check the depth buffer**: In the add-ons tab, check the depth buffer.

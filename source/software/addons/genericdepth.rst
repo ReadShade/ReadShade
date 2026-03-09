@@ -5,7 +5,7 @@ Generic Depth
 Introduction to Generic Depth
 -----------------------------
 
-The Generic Depth add-on makes depth effects in your games look better. To start, you need the add-on version of ReShade. Learn more about ReShade versions `here <../../reshade/reshadeversions>`_.
+The Generic Depth add-on makes depth effects in your games look better. To start, you need the add-on version of ReShade. Learn more about ReShade versions :doc:`here <../../reshade/general/reshadeversions>`.
 
 Downloading the Generic Depth Add-on
 ------------------------------------

@@ -12,7 +12,7 @@ For this guide, we will be using a free game called *Mimic Search*, which can be
 Preface
 -------
 
-First, download the ReShade add-on version. You can find more details `here <../reshade/reshadeversions.md>`_.
+First, download the ReShade add-on version. You can find more details :doc:`here <../../reshade/general/reshadeversions>`.
 
 Requirements
 ------------
@@ -26,7 +26,11 @@ To use the Shader Toggler, download the add-on from its `official GitHub page <h
 Installation
 ------------
 
-Install the game and ReShade along with the :file:`ShaderToggler.addon64`. Turn off all other ReShade shaders to prevent problems.
+Install the game and ReShade along with the :file:`ShaderToggler.addon64`.
+
+.. warning::
+
+   Turn off all other ReShade shaders to prevent problems.
 
 1. Accessing the Add-on
 -----------------------

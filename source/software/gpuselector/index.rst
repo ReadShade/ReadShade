@@ -22,9 +22,9 @@ Key Features
 - **Emulator Support**: Built-in ROM scanning and per-emulator configuration management.
 - **Graphics Translation Layers**: Integrated support for:
 
-   - **DXVK / VKD3D-Proton**: Translate DirectX 9/10/11/12 to Vulkan for better performance or compatibility.
-   - **dgVoodoo2**: For legacy DirectX 1-8 and 3dfx Glide support.
-   - **WineD3D / Zink**: Additional translation options for OpenGL and Vulkan.
+  - **DXVK / VKD3D-Proton**: Translate DirectX 9/10/11/12 to Vulkan for better performance or compatibility.
+  - **dgVoodoo2**: For legacy DirectX 1-8 and 3dfx Glide support.
+  - **WineD3D / Zink**: Additional translation options for OpenGL and Vulkan.
 
 - **Modding Codex**: A curated database of community-driven modding projects and game preservation resources.
 - **Accessibility**: Includes an "OpenDyslexic" font mode and high DPI scaling support.
