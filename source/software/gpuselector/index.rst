@@ -6,7 +6,7 @@ GPU Selector
 :Website: `GPU Selector Online <https://blueskydefender.github.io/GPUSelector/ >`_
 :License: Personal Non-Commercial License (NC-ND-NR)
 
-.. figure:: images/pcsx2/PCSX2_Settings00.png
+.. figure:: images/GPUSelectorIcon.png
 
    The GPU Selector logo.
 
