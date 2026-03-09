@@ -3,7 +3,7 @@ GPU Selector
 ============
 
 :Author: Jose Negrete (BlueSkyDefender)
-:Website: `GPU Selector Online <https://blueskydefender.github.io/GPUSelector/ >`_
+:Website: `GPU Selector Online <https://blueskydefender.github.io/GPUSelector/>`_
 :License: Personal Non-Commercial License (NC-ND-NR)
 
 .. figure:: images/GPUSelectorIcon.png
@@ -21,9 +21,11 @@ Key Features
 - **Centralized Game Library**: Automatically scans and imports games from Steam, GOG, Epic Games, and other launchers.
 - **Emulator Support**: Built-in ROM scanning and per-emulator configuration management.
 - **Graphics Translation Layers**: Integrated support for:
-    - **DXVK / VKD3D-Proton**: Translate DirectX 9/10/11/12 to Vulkan for better performance or compatibility.
-    - **dgVoodoo2**: For legacy DirectX 1-8 and 3dfx Glide support.
-    - **WineD3D / Zink**: Additional translation options for OpenGL and Vulkan.
+
+  - **DXVK / VKD3D-Proton**: Translate DirectX 9/10/11/12 to Vulkan for better performance or compatibility.
+  - **dgVoodoo2**: For legacy DirectX 1-8 and 3dfx Glide support.
+  - **WineD3D / Zink**: Additional translation options for OpenGL and Vulkan.
+
 - **Modding Codex**: A curated database of community-driven modding projects and game preservation resources.
 - **Accessibility**: Includes an "OpenDyslexic" font mode and high DPI scaling support.
 
@@ -44,7 +46,9 @@ Getting Started
 2. **Install**: Run the setup executable and follow the installation prompts.
 3. **Scan**: On first launch, GPU Selector will scan your system for installed games. You can also manually add executables.
 4. **Configure**:
-    - Select a game from the list.
-    - Choose your preferred GPU from the dropdown menu.
-    - (Optional) Enable translation layers like DXVK or install ReShade.
+
+  - Select a game from the list.
+  - Choose your preferred GPU from the dropdown menu.
+  - (Optional) Enable translation layers like DXVK or install ReShade.
+
 5. **Launch**: Click the **Launch** button to start your game with the applied settings.
