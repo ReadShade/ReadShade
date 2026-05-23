@@ -102,19 +102,19 @@ Vulkan GLSL (Vulkan Docs) [15]_
 References
 ----------
 
-.. [1] 3Blue1Brown. *Essence of Calculus*. https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr&si=E8Sygk8ViNovV2ln
-.. [2] 3Blue1Brown. *Essence of Linear Algebra*. https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&si=6QcJX6cvOFjU8VtU
-.. [3] GeeksforGeeks. https://www.geeksforgeeks.org/
-.. [4] Joey de Vries. *LearnOpenGL*. https://learnopengl.com/
-.. [5] Khronos Group. *OpenGL ES Shading Language*. https://www.khronos.org/registry/OpenGL/specs/es/3.2/GLSL_ES_Specification_3.20.pdf
-.. [6] Lygia. https://github.com/patriciogonzalezvivo/lygia
-.. [7] Microsoft. *DirectX-Specs*. https://microsoft.github.io/DirectX-Specs/
-.. [8] Microsoft. *DirectXTK*. https://github.com/microsoft/DirectXTK
-.. [9] Microsoft Learn. *HLSL*. https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl
-.. [10] Patricio Gonzalez Vivo & Jen Lowe. *The Book of Shaders*. https://thebookofshaders.com/
-.. [11] Scratchapixel. *Scratchapixel 3.0*. https://www.scratchapixel.com/
-.. [12] ShaderToy. https://www.shadertoy.com/
-.. [13] Tixl. https://github.com/tixl3d/tixl
-.. [14] Unity Learn. *Introduction to Shaders*. https://learn.unity.com/tutorial/introduction-to-shaders
-.. [15] Vulkan Docs. *Vulkan GLSL*. https://docs.vulkan.org/glsl/latest/index.html
-.. [16] WebGPU Fundamentals. https://webgpufundamentals.org/
+.. [#] 3Blue1Brown. *Essence of Calculus*. https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr&si=E8Sygk8ViNovV2ln
+.. [#] 3Blue1Brown. *Essence of Linear Algebra*. https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&si=6QcJX6cvOFjU8VtU
+.. [#] GeeksforGeeks. https://www.geeksforgeeks.org/
+.. [#] Joey de Vries. *LearnOpenGL*. https://learnopengl.com/
+.. [#] Khronos Group. *OpenGL ES Shading Language*. https://www.khronos.org/registry/OpenGL/specs/es/3.2/GLSL_ES_Specification_3.20.pdf
+.. [#] Lygia. https://github.com/patriciogonzalezvivo/lygia
+.. [#] Microsoft. *DirectX-Specs*. https://microsoft.github.io/DirectX-Specs/
+.. [#] Microsoft. *DirectXTK*. https://github.com/microsoft/DirectXTK
+.. [#] Microsoft Learn. *HLSL*. https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl
+.. [#] Patricio Gonzalez Vivo & Jen Lowe. *The Book of Shaders*. https://thebookofshaders.com/
+.. [#] Scratchapixel. *Scratchapixel 3.0*. https://www.scratchapixel.com/
+.. [#] ShaderToy. https://www.shadertoy.com/
+.. [#] Tixl. https://github.com/tixl3d/tixl
+.. [#] Unity Learn. *Introduction to Shaders*. https://learn.unity.com/tutorial/introduction-to-shaders
+.. [#] Vulkan Docs. *Vulkan GLSL*. https://docs.vulkan.org/glsl/latest/index.html
+.. [#] WebGPU Fundamentals. https://webgpufundamentals.org/

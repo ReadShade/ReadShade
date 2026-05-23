@@ -29,8 +29,8 @@ Mathematics (MDPI) [5]_
 
 ----
 
-.. [1] arXiv.org e-Print archive. https://arxiv.org/
-.. [2] Directory of Open Access Journals. https://doaj.org/
-.. [3] International Journal of Computer Graphics & Animation. https://airccse.org/journal/ijcga/ijcga.html
-.. [4] Journal of Computer Graphics Techniques. https://jcgt.org/
-.. [5] Mathematics (MDPI). https://www.mdpi.com/journal/mathematics
+.. [#] arXiv.org e-Print archive. https://arxiv.org/
+.. [#] Directory of Open Access Journals. https://doaj.org/
+.. [#] International Journal of Computer Graphics & Animation. https://airccse.org/journal/ijcga/ijcga.html
+.. [#] Journal of Computer Graphics Techniques. https://jcgt.org/
+.. [#] Mathematics (MDPI). https://www.mdpi.com/journal/mathematics
